@@ -525,7 +525,7 @@ class urlDomains:
     def getParams(self):
         params = []
         for subDomain in self.subDomains:
-            params.append(subDomains.params)
+            params.append(self.subDomains.params)
         return params
     
     def tearDown(self):
