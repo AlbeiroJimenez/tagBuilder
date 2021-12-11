@@ -335,7 +335,7 @@ class urlDomains:
         # for section in mainSections:
         #if len(mainSections)>9: self.debugMainSections(mainSections)
         mainSections.sort(key=len)
-        #if len(mainSections)>15:
+        #if len(mainSections)>25:
             #self.debugMainSections(mainSections)
         mainSections.insert(0, '')
         return mainSections
@@ -396,12 +396,12 @@ class urlDomains:
             
     # This function receive a list_ where finding if it 
     # contain the any similarity with the words in the subpath
-    def similarity_basic(self, list_, subpath):
+    def similarity_basic(self, list_, subpath, size_word = 2):
         similarity = False
         subpath_words = subpath.split('-')
         self.deleteItemList(subpath_words, '')
         for word in subpath_words:
-            if len(word)>2:
+            if len(word)>size_word:
                 similarity, s = self.searchWord(list_, word, None)
                 if similarity:
                     return similarity
@@ -435,12 +435,12 @@ class urlDomains:
     # Dumping in the differents sections of the landings founded in the website
     def getArraySections(self):
         self.arraySections = []
-        arraySections = []
-        arrayOtros    = []
+        self.mainSections  = []
+        arraySections      = []
         mainSections  = self.getMainSections()
         urls          = self.getArrayURLs()
         paths         = self.getPaths()
-        self.mainSections = []
+        
         # Create and Fill out each Sections with urls
         # Firts sort of the URLs by exact category
         for section in mainSections[1:]:
@@ -450,9 +450,10 @@ class urlDomains:
             # Strategy to labeled each section within the array of URLs
             arraySections[-1].insert(0,section)
             flat = 0
+            section_ = section.split('/')
+            self.deleteItemList(section_, '')
             # Examine of urls finding to determine if own to the section or not
             for path, url in zip(paths[1:],urls[1:]):
-                deleteUrls = []
                 flat += 1
                 print(flat)
                 path_list = path.split('/')
@@ -464,34 +465,40 @@ class urlDomains:
                         paths.pop(paths.index(path))
                         urls.pop(urls.index(url))
                         continue
+                    elif path_list[0] == section_[0]:
+                        arraySections[-1].append(url)
+                        paths.pop(paths.index(path))
+                        urls.pop(urls.index(url))
+                        continue
                 elif len(path_list)>0 and path_list[0] in section:
                     arraySections[-1].append(url)
                     paths.pop(paths.index(path))
                     urls.pop(urls.index(url))
                     continue
-        # Second sort of the URLs by similarity category        
+        #Second sort of the URLs by similarity category 
         for section, arraySection in zip(mainSections[1:], arraySections):
             print("Seccion II: "+section)
             flat = 0
             # Examine of urls finding to determine if own to the section or not
             for path, url in zip(paths[1:],urls[1:]):
-                #deleteUrls = []
                 flat += 1
                 print(flat)
                 path_list = path.split('/')
                 self.deleteItemList(path_list, '')
                 if len(path_list)>1:
-                    if self.similarity_basic([section], path_list[0]) or self.similarity_basic([section], path_list[1]):
+                    if self.similarity_basic([section], path_list[0],4) or self.similarity_basic([section], path_list[1],4):
                         arraySection.append(url)
                         paths.pop(paths.index(path))
                         urls.pop(urls.index(url))
                         continue
                 elif len(path_list)>0:
-                    if self.similarity_basic([section], path_list[0]):
+                    if self.similarity_basic([section], path_list[0],4):
                         arraySection.append(url)
                         paths.pop(paths.index(path))
                         urls.pop(urls.index(url))
-                        continue   
+                        continue  
+        
+        #Process to sort of the most dominants categories by number of landings
         arraySections.sort(key=len, reverse=True)
         for i in range(len(arraySections)):
             self.mainSections[i] = arraySections[i][0]
@@ -502,7 +509,7 @@ class urlDomains:
             self.mainSections.append('Otros')
             arraySections.append(urls[1:])
            
-        if len(arraySections)>20:
+        if len(arraySections)>25:
             for i, j in zip(range(len(arraySections)-1, -1, -1), range(len(self.mainSections)-1, -1, -1)):
                 if len(arraySections[i]) > 2:
                     continue
