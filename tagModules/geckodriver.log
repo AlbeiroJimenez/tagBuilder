@@ -9222,3 +9222,553 @@ JavaScript error: https://cdn.embluemail.com/pixeltracking/pixeltracking.js?code
 JavaScript error: https://connect.facebook.net/en_US/fbevents.js, line 25: SecurityError: The operation is insecure.
 1637557213980	Marionette	INFO	Stopped listening on port 45785
 JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1639143238448	geckodriver	INFO	Listening on 127.0.0.1:58942
+1639143241454	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "58943" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileJHOBOu"
+*** You are running in headless mode.
+1639143243285	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileJHOBOu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58943/devtools/browser/7b674b42-2687-44e0-87dc-320a380f586b
+1639143244576	Marionette	INFO	Listening on port 58948
+1639143244769	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014A,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1639156776074	Marionette	INFO	Stopped listening on port 58948
+[Parent 16748, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639163788286	geckodriver	INFO	Listening on 127.0.0.1:61603
+1639163791263	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "61604" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileewEcR9"
+*** You are running in headless mode.
+1639163793021	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileewEcR9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61604/devtools/browser/f03f886d-fffb-4e3b-b507-20b87c2a88cf
+1639163794348	Marionette	INFO	Listening on port 61609
+1639163794482	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js?id=4658, line 108: ReferenceError: bsResponseObj is not defined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1639175521591	Marionette	INFO	Stopped listening on port 61609
+[Parent 4904, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+IR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileDthr5b"
+*** You are running in headless mode.
+1639168946666	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileDthr5b\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57000/devtools/browser/e765bad7-7599-4694-b3c4-14e6cf34298c
+1639168947965	Marionette	INFO	Listening on port 57007
+1639168948020	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+JavaScript error: https://s.go-mpulse.net/boomerang/VM2D5-QRDVT-82P4X-PYWQ6-JE6WW, line 10: SecurityError: Permission denied to access property "requestIdleCallback" on cross-origin object
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014A,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1639169131422	Marionette	INFO	Stopped listening on port 57007
+[Parent 16604, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639169147783	geckodriver	INFO	Listening on 127.0.0.1:61965
+1639169150800	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "61966" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilec7mG4m"
+*** You are running in headless mode.
+1639169152552	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilec7mG4m\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61966/devtools/browser/fd04dc9f-9d53-47a2-a0a0-c0e37f0e4d1f
+1639169153917	Marionette	INFO	Listening on port 61971
+1639169154002	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+[Child 14044, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:542
+Exiting due to channel error.
+Exiting due to channel error.
+x\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "51108" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileG0jw2Z"
+*** You are running in headless mode.
+1639170936589	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileG0jw2Z\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51108/devtools/browser/de5c61ef-512a-4c12-b7b9-a577d5e56d5e
+1639170938728	Marionette	INFO	Listening on port 51113
+1639170938813	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+1639171111546	Marionette	INFO	Stopped listening on port 51113
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390147,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390147,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639171122697	geckodriver	INFO	Listening on 127.0.0.1:62715
+1639171125699	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "62716" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileFljAaU"
+*** You are running in headless mode.
+1639171127644	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileFljAaU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62716/devtools/browser/daefdc2e-67b6-49c2-bb85-6770bb1ff35e
+1639171129601	Marionette	INFO	Listening on port 62724
+1639171129922	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+[Child 22108, MediaDecoderStateMachine #1] WARNING: Decoder=23c35f8e100 Decode error: NS_ERROR_FAILURE (0x80004005) - Couldn't start RDD process: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3568
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639174658026	Marionette	INFO	Stopped listening on port 62724
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639174688806	geckodriver	INFO	Listening on 127.0.0.1:56165
+1639174719015	geckodriver	INFO	Listening on 127.0.0.1:56180
+1639174722013	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "56181" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofile552Gge"
+*** You are running in headless mode.
+1639174724167	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofile552Gge\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56181/devtools/browser/4b7da0a8-8849-4c0a-8caa-14dcb8dff33e
+1639174727155	Marionette	INFO	Listening on port 56186
+1639174727370	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639175497760	Marionette	INFO	Stopped listening on port 56186
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639175532191	geckodriver	INFO	Listening on 127.0.0.1:51582
+1639175535108	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "51583" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileV4LaWB"
+*** You are running in headless mode.
+1639175537341	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileV4LaWB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51583/devtools/browser/bf6a0096-b156-4188-a2fd-9c895fe78650
+1639175539319	Marionette	INFO	Listening on port 51589
+1639175539429	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+1639175952874	Marionette	INFO	Stopped listening on port 51589
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639175961103	geckodriver	INFO	Listening on 127.0.0.1:56267
+1639175964093	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "56268" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileRaOW2E"
+*** You are running in headless mode.
+1639175965807	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileRaOW2E\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56268/devtools/browser/248d0b12-19bc-4896-a34c-710b5bb01349
+1639175967495	Marionette	INFO	Listening on port 56274
+1639175967834	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+Exiting due to channel error.
+1639195483620	geckodriver	INFO	Listening on 127.0.0.1:58803
+1639195486607	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "58804" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileEQEj0E"
+*** You are running in headless mode.
+1639195488932	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileEQEj0E\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58804/devtools/browser/d7fea12a-8327-49e9-b3ee-4aff16ad615c
+1639195490380	Marionette	INFO	Listening on port 58811
+1639195490837	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639196079646	Marionette	INFO	Stopped listening on port 58811
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: OperationError: Could not move temporary file(C:\Users\albeiro.jimenez\AppData\Local\Temp\rust_mozprofileEQEj0E\sessionCheckpoints.json.tmp) to destination(C:\Users\albeiro.jimenez\AppData\Local\Temp\rust_mozprofileEQEj0E\sessionCheckpoints.json)
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1639196281101	geckodriver	INFO	Listening on 127.0.0.1:62743
+1639196284144	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "62744" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofile7ykFeB"
+*** You are running in headless mode.
+1639196286347	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofile7ykFeB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62744/devtools/browser/9d5f7d56-43e3-4898-8ad0-16b1735f799a
+1639196287842	Marionette	INFO	Listening on port 62750
+1639196288356	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+JavaScript error: https://s.go-mpulse.net/boomerang/VM2D5-QRDVT-82P4X-PYWQ6-JE6WW, line 10: SecurityError: Permission denied to access property "requestIdleCallback" on cross-origin object
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639196980217	Marionette	INFO	Stopped listening on port 62750
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639197017145	geckodriver	INFO	Listening on 127.0.0.1:53864
+1639197036167	geckodriver	INFO	Listening on 127.0.0.1:53880
+1639197108018	geckodriver	INFO	Listening on 127.0.0.1:53900
+1639197111017	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "53901" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileJTRH4o"
+*** You are running in headless mode.
+1639197113145	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileJTRH4o\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53901/devtools/browser/13795d6f-802f-47c9-b1a8-c76106fb7d1d
+1639197114340	Marionette	INFO	Listening on port 53906
+1639197114714	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+1639197337178	Marionette	INFO	Stopped listening on port 53906
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639197354460	geckodriver	INFO	Listening on 127.0.0.1:49836
+1639197362227	geckodriver	INFO	Listening on 127.0.0.1:49847
+1639197365248	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "49848" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileyjqWiJ"
+*** You are running in headless mode.
+1639197367235	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileyjqWiJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49848/devtools/browser/b0ef0047-614b-4b3c-80f1-e539a2963a51
+1639197368545	Marionette	INFO	Listening on port 49853
+1639197368937	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+JavaScript error: https://www.ford.com.co/akam-sw.js, line 1: TypeError: r is undefined
+JavaScript error: https://www.ford.com.co/akam-sw.js, line 1: TypeError: r is undefined
+JavaScript error: https://s.go-mpulse.net/boomerang/VM2D5-QRDVT-82P4X-PYWQ6-JE6WW, line 10: SecurityError: Permission denied to access property "requestIdleCallback" on cross-origin object
+1639197458233	Marionette	INFO	Stopped listening on port 49853
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639197755986	geckodriver	INFO	Listening on 127.0.0.1:61563
+1639197758989	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "61564" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileuHEnyb"
+*** You are running in headless mode.
+1639197761121	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileuHEnyb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61564/devtools/browser/b45eede5-428e-40e6-a63d-34ffddc23019
+1639197762518	Marionette	INFO	Listening on port 61570
+1639197762745	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+JavaScript error: https://s.go-mpulse.net/boomerang/VM2D5-QRDVT-82P4X-PYWQ6-JE6WW, line 10: SecurityError: Permission denied to access property "requestIdleCallback" on cross-origin object
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639198373896	Marionette	INFO	Stopped listening on port 61570
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639198420419	geckodriver	INFO	Listening on 127.0.0.1:55300
+1639198427684	geckodriver	INFO	Listening on 127.0.0.1:55310
+1639198430702	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "55311" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileUOi9t0"
+*** You are running in headless mode.
+1639198432767	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileUOi9t0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55311/devtools/browser/84919da0-669b-4ec1-8c0a-198527501e99
+1639198434155	Marionette	INFO	Listening on port 55317
+1639198434422	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+JavaScript error: https://s.go-mpulse.net/boomerang/VM2D5-QRDVT-82P4X-PYWQ6-JE6WW, line 10: SecurityError: Permission denied to access property "requestIdleCallback" on cross-origin object
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639199125673	Marionette	INFO	Stopped listening on port 55317
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: OperationError: Could not move temporary file(C:\Users\albeiro.jimenez\AppData\Local\Temp\rust_mozprofileUOi9t0\sessionCheckpoints.json.tmp) to destination(C:\Users\albeiro.jimenez\AppData\Local\Temp\rust_mozprofileUOi9t0\sessionCheckpoints.json)
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639199164189	geckodriver	INFO	Listening on 127.0.0.1:53021
+1639199171882	geckodriver	INFO	Listening on 127.0.0.1:53032
+1639199174917	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "53033" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileZiDZdP"
+*** You are running in headless mode.
+1639199177073	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileZiDZdP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53033/devtools/browser/e512bc4a-c661-4d56-990c-e0a1cc5ad542
+1639199178409	Marionette	INFO	Listening on port 53038
+1639199178616	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639199767598	Marionette	INFO	Stopped listening on port 53038
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: OperationError: Could not move temporary file(C:\Users\albeiro.jimenez\AppData\Local\Temp\rust_mozprofileZiDZdP\sessionCheckpoints.json.tmp) to destination(C:\Users\albeiro.jimenez\AppData\Local\Temp\rust_mozprofileZiDZdP\sessionCheckpoints.json)
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1639199805999	geckodriver	INFO	Listening on 127.0.0.1:60207
+1639199811286	geckodriver	INFO	Listening on 127.0.0.1:60218
+1639199814278	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "60219" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileQ00wVv"
+*** You are running in headless mode.
+1639199816292	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileQ00wVv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60219/devtools/browser/32c732bc-5e5c-4a76-897e-5f8d6429e742
+1639199817628	Marionette	INFO	Listening on port 60226
+1639199818007	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://www.avon.co/ line 283 > injectedScript, line 1: ReferenceError: _satellite is not defined
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: https://www.avon.co/ line 283 > injectedScript, line 4: TypeError: window.app.loadRecommendations is not a function
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyBPAio2ARk4ncI8rFiXh30X_qtXRHBSm4k, line 87: Error: Could not load "util".
+JavaScript warning: https://www.primax.com.pe/bonus/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.primax.com.pe/bonus/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://optimumpet.cl/, line 555: ReferenceError: ga is not defined
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript warning: https://www.coliseum.com.pe/ line 1 > injectedScript, line 48: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.coliseum.com.pe/ line 1 > injectedScript, line 43: WebGL context was lost.

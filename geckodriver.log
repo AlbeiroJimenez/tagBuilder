@@ -1,0 +1,116 @@
+1639107385368	geckodriver	INFO	Listening on 127.0.0.1:56328
+1639107388442	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "56329" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilekwifhu"
+*** You are running in headless mode.
+1639107390124	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilekwifhu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56329/devtools/browser/e2453477-da55-45a9-8e22-53a74776cd7c
+1639107391314	Marionette	INFO	Listening on port 56336
+1639107391640	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+-headless" "--remote-debugging-port" "64609" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofiley86gKI"
+*** You are running in headless mode.
+1639107881332	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofiley86gKI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64609/devtools/browser/9ce07db5-9004-45ed-bace-545fa60633db
+1639107882795	Marionette	INFO	Listening on port 57250
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1639107883245	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+Exiting due to channel error.
+1639144926892	geckodriver	INFO	Listening on 127.0.0.1:61542
+1639144929975	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "61543" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileqgMNAG"
+*** You are running in headless mode.
+1639144931754	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileqgMNAG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61543/devtools/browser/17eb1cce-a825-47bb-8ea2-70812bc3961b
+1639144933262	Marionette	INFO	Listening on port 61548
+1639144933694	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1639145113170	Marionette	INFO	Stopped listening on port 61548
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639156713768	geckodriver	INFO	Listening on 127.0.0.1:50381
+1639156971563	geckodriver	INFO	Listening on 127.0.0.1:53430
+1639157064450	geckodriver	INFO	Listening on 127.0.0.1:53468
+1639157067507	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "53469" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofile9AJJGv"
+*** You are running in headless mode.
+1639157069313	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofile9AJJGv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53469/devtools/browser/e4f85baa-5531-48e8-9889-3ad2bc3cbc41
+1639157070625	Marionette	INFO	Listening on port 53477
+1639157070728	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+1639157239677	Marionette	INFO	Stopped listening on port 53477
+1639158223616	geckodriver	INFO	Listening on 127.0.0.1:61503
+1639158226692	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "61504" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilenTGOQC"
+*** You are running in headless mode.
+1639158228481	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilenTGOQC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61504/devtools/browser/ca307129-1d33-4d55-8aee-474ee08434d9
+1639158229724	Marionette	INFO	Listening on port 61509
+1639158229862	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+1639158392833	Marionette	INFO	Stopped listening on port 61509
+1639158566978	geckodriver	INFO	Listening on 127.0.0.1:61805
+1639158570026	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "61806" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilevgEEhD"
+*** You are running in headless mode.
+1639158571870	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilevgEEhD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61806/devtools/browser/c95455d8-e4a0-4fd1-9eb8-e9165d0e8a68
+1639158573273	Marionette	INFO	Listening on port 61811
+1639158573718	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+console.warn: services.settings: main/search-config Signature verified failed. Retry from scratch
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1639159726975	Marionette	INFO	Stopped listening on port 61811
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

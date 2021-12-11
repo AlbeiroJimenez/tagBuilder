@@ -9,9 +9,6 @@ from selenium.common.exceptions import StaleElementReferenceException
 
 
 URL           = 'https://www.xaxis.com/'
-CONTRIES      = (
-    'co', 'cl', 'ar', 'pe'
-    )
 
 SITEMAP_PATH  = (
     'sitemap.xml', '1_index_sitemap.xml', 'sitemap-index.html', 'sitemap_index.xml', 'sitemap'
@@ -43,8 +40,7 @@ class urlDomains:
         self.stop          = False
         #self.loadPage()
     
-    # This function validate if a url has a valid
-    # connection to server in the internet
+    # This function validate if a url has a valid connection to server in the internet
     # Receive a string url
     def validURL(self, url):
         try:
@@ -90,6 +86,8 @@ class urlDomains:
                 return True
         return False
     
+    # This method receive a URL parameter and determine if the landing owns to right page
+    # or this URL redirect to type file type as pdf, excel, image or other type of file.
     def opt_url(self, url, type_ = None):
         if type_ == None:
             url_ = url
@@ -103,8 +101,8 @@ class urlDomains:
         else:
             return True
     
-    # This function receive a url string and optional position where
-    # the element wanted to put
+    # This function receive a url string and optional parameter if it's necesary to parse URL 
+    # If this URL isn't in the URLs founded until the moment and it's a valid URL then it's added
     def addSudDomain(self, subDomain, index = None, type_ = None):
         if type_ == None:
             subDomain = urlparse(subDomain)
@@ -113,7 +111,8 @@ class urlDomains:
                 self.subDomains.append(subDomain)
             else:
                 self.subDomains.insert(index, subDomain)
-            
+
+    # Delete all URL or one URL  from the array of URLs founded in the website        
     def deleteSubDomain(self, index = None):
         if index == None:
             self.subDomains.pop()
@@ -143,12 +142,6 @@ class urlDomains:
                     for sitemap_url in sitemap_urls:
                         self.loadPage(sitemap_url)
                         self.findTagAttributes(tag)
-                    
-#                 for sitemap in sitemaps:
-#                     #sitemaps_url.append(sitemap.text)
-#                     sitemaps_url.append(sitemap.get_attribute('textContent'))
-#                     print(sitemap.get_attribute('textContent'))
-#                 return sitemaps_url
             except:
                 try:
                     self.findTagAttributes(tag)
@@ -270,9 +263,6 @@ class urlDomains:
         for url in self.allDomains:
             if urlparse(self.url_target).netloc == url.netloc:
                 self.addSudDomain(url, type_ = 1)
-#                 if not self.searchURL(url):
-#                     self.subDomains.append(url)
-#                     print(url.geturl())
             elif len(url.netloc) > 0 and not self.searchURL(url, self.domains):
                 self.domains.append(url)
                 
@@ -317,13 +307,13 @@ class urlDomains:
     def deleteItemList(self, list_, item):
         for i in range(list_.count(item)):
             list_.pop(list_.index(item))
-            
+    
+    # This method creates all sections under that we can organize the landings founded       
     def getMainSections(self):
         mainSections = []
         for path in self.getPaths():
             listPath = path.split('/')
             self.deleteItemList(listPath, '')
-            url = urlparse(self.url_target)
             # Create Posible Sections to the SiteMap
             if len(listPath)>2:
                 continue
@@ -332,44 +322,55 @@ class urlDomains:
                 if self.valid_category(path_) and path_ not in mainSections:
                     if not self.similarity_basic(mainSections, listPath[0]) and not self.similarity_basic(mainSections, listPath[1]):
                         mainSections.append(path_)
-                    elif self.similarity_basic(mainSections, listPath[0]) and not self.similarity_basic(mainSections, listPath[1]):
+                    elif not self.similarity_basic(mainSections, listPath[0]):
                         mainSections.append(path_)
             elif len(listPath)>0 and listPath[0] not in mainSections:
                 if self.valid_category(listPath[0]):
-                    if not self.similarity_basic(mainSections, listPath[0]):
-                        mainSections.append(listPath[0])
+                    mainSections.append(listPath[0])
+                    #if not self.similarity_basic(mainSections, listPath[0]):
+                        #mainSections.append(listPath[0])
             else:
                 pass           
         # I need to a process to filter or reduce the number of sections
         # for section in mainSections:
         #if len(mainSections)>9: self.debugMainSections(mainSections)
         mainSections.sort(key=len)
-        if len(mainSections)>15:
-            self.debugMainSections(mainSections)
+        #if len(mainSections)>15:
+            #self.debugMainSections(mainSections)
         mainSections.insert(0, '')
         return mainSections
     
+    # Determine if a path is valid to be a candidate to section
     def valid_category(self, path):
         paths = path.split('/')
         self.deleteItemList(paths, '')
         if len(paths)>1:
-            words = paths[1].split('-')
+            words = []
+            for subPath in paths:
+                words.append(subPath.split('-'))
+                self.deleteItemList(words[-1],'')
+                for word in words[-1]:
+                    if len(word)<4:
+                        words[-1].remove(word)
+            if paths[1].isdigit() or len(words[0])>2 or len(words[1])>2 or '_' in subPath or '%' in subPath:
+                return False
+            elif len(words[0])==0 and len(words[1])==0:
+                return False
+            elif paths[0].isdigit() and paths[1].isdigit():
+                return False
+            else:
+                return True 
+        elif len(paths)>0:
+            words = paths[0].split('-')
             self.deleteItemList(words,'')
-            for w in words:
-                if len(w)<4:
-                    words.remove(w)
-            if paths[1].isdigit():
+            for word in words:
+                if len(word)<4:
+                    words.remove(word)
+            if paths[0].isdigit() or len(words)>2 or '_' in paths[0] or '%' in paths[0]:
                 return False
-            elif len(words)>2:
-                return False
-        for path_ in paths:
-            path_words = path_.split('-')
-            self.deleteItemList(path_words, '')
-            if len(path_words)>4 or '_' in path_ or '%' in path_:
-                return False
-        else:
-            return True
-    
+            else:
+                return True
+
     # This function allows to search a word in paragraph or a list_
     # If paragraph parameter is True, then list_ will be a string paragraph
     # If it's False, then list will be a list of words
@@ -394,30 +395,44 @@ class urlDomains:
                 return False, None
             
     # This function receive a list_ where finding if it 
-    # contain the any similarity with the words in the path
-    def similarity_basic(self, list_, path):
+    # contain the any similarity with the words in the subpath
+    def similarity_basic(self, list_, subpath):
         similarity = False
-        path_words = path.split('-')
-        self.deleteItemList(path_words, '')
-        for word in path_words:
-            if len(word)>3:
+        subpath_words = subpath.split('-')
+        self.deleteItemList(subpath_words, '')
+        for word in subpath_words:
+            if len(word)>2:
                 similarity, s = self.searchWord(list_, word, None)
                 if similarity:
                     return similarity
         return similarity
     
     def debugMainSections(self, mainSections):
-        sections = mainSections[:]
+        sections   = mainSections[:]
         for i in range(len(mainSections)-1, -1, -1):
+            path_words = []
             section_words = mainSections[i] 
             section_words = section_words.split('/')
             self.deleteItemList(section_words, '')
-            if len(section_words)>1 and i>0:
-                for j in range(i-1):
-                    if section_words[0] in mainSections[j]:
+            for section_word in section_words:
+                section_word = section_word.split('-')
+                self.deleteItemList(section_word, '')
+                # Doing the test with len(word)>4 and 3
+                for word in section_word:
+                    if len(word)>3:
+                        path_words.append(word)
+            if i>0:
+                print(path_words)
+                print(i)
+                for word in path_words:
+                    exist, h = self.searchWord(sections[:i], word, None)
+                    #exist1, h = self.searchWord(sections[:i], word[:-1], None)
+                    if exist:
+                        print('Delete Section:  '+mainSections[i])
                         mainSections.pop(i)
-                        break    
+                        break
 
+    # Dumping in the differents sections of the landings founded in the website
     def getArraySections(self):
         self.arraySections = []
         arraySections = []
@@ -454,7 +469,6 @@ class urlDomains:
                     paths.pop(paths.index(path))
                     urls.pop(urls.index(url))
                     continue
-        
         # Second sort of the URLs by similarity category        
         for section, arraySection in zip(mainSections[1:], arraySections):
             print("Seccion II: "+section)
@@ -477,11 +491,7 @@ class urlDomains:
                         arraySection.append(url)
                         paths.pop(paths.index(path))
                         urls.pop(urls.index(url))
-                        continue
-#                 if len(deleteUrls)>0:
-#                     paths.pop(paths.index(deleteUrls[-1][0]))
-#                     urls.pop(urls.index(deleteUrls[-1][1]))
-        
+                        continue   
         arraySections.sort(key=len, reverse=True)
         for i in range(len(arraySections)):
             self.mainSections[i] = arraySections[i][0]
@@ -525,9 +535,9 @@ class urlDomains:
     def getParams(self):
         params = []
         for subDomain in self.subDomains:
-            params.append(subDomains.params)
+            params.append(self.subDomains.params)
         return params
-    
+
     def tearDown(self):
         if not self.driver == None:
             self.driver.quit()
@@ -535,9 +545,14 @@ class urlDomains:
 
 if __name__ == '__main__':
 #     write test code module
-    webSite = urlDomains('https://www.stevemaddenperu.com/')
-#     webSite.driver = webSite.setHeadlessMode()
-#     webSite.loadPage()
+    webSite = urlDomains('https://www.ford.com.co/')
+    webSite.driver = webSite.setHeadlessMode()
+    webSite.loadPage()
+    webSite.buildSiteMap('https://www.xaxis.com/')
+    index = 0
+    for section in webSite.getMainSections():
+        print('Section '+str(index)+':'+'  '+section)
+        index += 1
 #     webSite.findAnchors()
 #     webSite.getSubDomains()
 #     for path in webSite.getPaths():
