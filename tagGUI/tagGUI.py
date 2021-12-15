@@ -2,7 +2,9 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from threading import Thread
 
-from os import path as p
+from os import closerange, path as p
+from tkinter import font
+from tkinter.constants import OFF
 
 MENU_DEFINITION = (
             'File- &New/Ctrl+N/self.newFile, Save/Ctrl+S/self.save_file, SaveAs/Ctrl+Shift+S/self.save_as, sep, Exit/Ctrl+Q/self.exitCalcTag',
@@ -31,8 +33,8 @@ class FrameWork2D(ttk.Frame):
     def set_CCS(self):
         self.root.title(PROGRAM_NAME)
         #785x400+300+100
-        self.root.geometry("795x400+300+100")
-        self.root.resizable(False,True)
+        self.root.geometry("795x415+300+100")
+        self.root.resizable(False,False)
         self.root.configure(bg='white')
         style = ttk.Style()
         if 'xpnative' in style.theme_names():
@@ -43,6 +45,8 @@ class FrameWork2D(ttk.Frame):
             style.theme_use('clam')
         else:
             style.theme_use('default')
+        style.configure('.', padding=3, font=('Arial',9,'bold'))
+        
 ##        style.configure('TFrame', background='red')
 ##        style.configure('TLabelframe', background='red')
 ##        style.configure('TLabel', background='red')
@@ -77,6 +81,7 @@ class FrameWork2D(ttk.Frame):
         for definition in tabs_definition:
             self.tabs.append(ttk.Frame(self.tabPages))
             self.tabPages.add(self.tabs[-1], text = definition)
+        self.tabPages.hide(1)
         self.tabPages.pack(expand=1, fill="both")
     
     def newFile(self):
@@ -124,8 +129,15 @@ class tagFrontEnd(FrameWork2D):
         self.pathTR.set(self.xlsxFile.PATH)
         self.urlAdvertiser = tk.StringVar()
         self.urlAdvertiser.set(self.webDOM.url_target)
-        self.advertiser = tk.StringVar()
+        self.advertiser  = tk.StringVar()
         self.advertiser.set(self.xlsxFile.readCell('C13'))
+        self.searchXML   = tk.BooleanVar()
+        self.maxCategory = tk.IntVar()
+        self.minSizeWord = tk.IntVar()
+        self.maxLandings = tk.IntVar()
+        self.maxCategory.set(15)
+        self.minSizeWord.set(3)
+        self.maxLandings.set(50)
         self.buildTab(0)
     
     # Function to build diferents tabs: Sitemap and GTM
@@ -152,16 +164,34 @@ class tagFrontEnd(FrameWork2D):
         
         parameters_frame.grid(column = 0, row=0)
 
-        ttk.Label(parameters_frame, text="Temple TR: ", style = 'BW.TLabel').grid(column=0, row=0)
-        ttk.Entry(parameters_frame, width=75, textvariable = self.pathTR).grid(column=1, row=0, columnspan=3)
-        ttk.Button(parameters_frame, text='...', command=self.loadTemple).grid(column=4, row=0)
+        # ttk.Label(parameters_frame, text="Temple TR: ", style = 'BW.TLabel').grid(column=0, row=0)
+        # ttk.Entry(parameters_frame, width=75, textvariable = self.pathTR).grid(column=1, row=0, columnspan=3)
+        # ttk.Button(parameters_frame, text='...', command=self.loadTemple).grid(column=4, row=0)
         
-        ttk.Label(parameters_frame, text="URL Target : ").grid(column=0, row=1)
-        ttk.Entry(parameters_frame, textvariable = self.urlAdvertiser).grid(column=1, row=1, columnspan=3, sticky='WE')
+        ttk.Label(parameters_frame, text="URL Target:").grid(column=0, row=0, sticky=tk.W)
+        tk.Entry(parameters_frame, width=30, textvariable = self.urlAdvertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=0, sticky=tk.W)
+        ttk.Label(parameters_frame, text="Advertiser:").grid(column=2, row=0, sticky=tk.W)
+        tk.Entry(parameters_frame, textvariable = self.advertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=3, row=0, sticky=tk.W)
+        ttk.Label(parameters_frame, text="Only HomePV:").grid(column=4, row=0, sticky=tk.W)
+        ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=5, row=0)
+        
+        ttk.Label(parameters_frame, text="Max Categories:").grid(column=0, row=1, sticky=tk.W)
+        self.maxCategories = ttk.Scale(parameters_frame, from_=10, to=50, command=self.set_maxCategories, variable=self.maxCategory)
+        self.maxCategories.grid(column=1, row=2, sticky=tk.W)
+        ttk.Label(parameters_frame, textvariable=self.maxCategory, font=('Arial',8,'italic')).grid(column=1, row=1, sticky=tk.W)
+
+        ttk.Label(parameters_frame, text="Min. Size Word:").grid(column=2, row=1, sticky=tk.W)
+        self.sizeWord = ttk.Scale(parameters_frame, from_=2, to=15, command=self.set_sizeWord, variable=self.minSizeWord)
+        self.sizeWord.grid(column=3, row=2)
+        self.sizeWord.set(3)
+        ttk.Label(parameters_frame, textvariable=self.minSizeWord, font=('Arial',8,'italic')).grid(column=3, row=1, sticky=tk.W)
+
+        ttk.Label(parameters_frame, text="Max. Landings:").grid(column=4, row=1, sticky=tk.W)
+        self.landings = ttk.Scale(parameters_frame, from_=50, to=500, command=self.set_maxLandings, variable=self.maxLandings)
+        self.landings.grid(column=5, row=2)
+        self.landings.set(100)
+        ttk.Label(parameters_frame, textvariable=self.maxLandings, font=('Arial',8,'italic')).grid(column=5, row=1, sticky=tk.W)
         #ttk.Button(parameters_frame, text='.').grid(column=4, row=1)
-        
-        ttk.Label(parameters_frame, text="Advertiser : ").grid(column=0, row=2)
-        ttk.Entry(parameters_frame, textvariable = self.advertiser).grid(column=1, row=2, sticky=tk.W)
         
     def createDataSection(self, indexTab):
         data_label_frame  = ttk.LabelFrame(self.tabs[indexTab], text='Data', width=780, height=295)
@@ -277,6 +307,21 @@ class tagFrontEnd(FrameWork2D):
     def save_threaded(self):
         thread = Thread(target = self.save)
         thread.start()
+
+    def set_search(self):
+        self.webDOM.setSearchXML(self.searchXML.get())
+    
+    def set_maxCategories(self, event=None):
+        self.maxCategory.set(self.maxCategory.get())
+        self.webDOM.setMaxCategories(self.maxCategory.get())
+
+    def set_sizeWord(self, event=None):
+        self.minSizeWord.set(self.minSizeWord.get())
+        self.webDOM.setSizeWord(self.minSizeWord.get())
+    
+    def set_maxLandings(self, event=None):
+        self.maxLandings.set(self.maxLandings.get())
+        self.webDOM.setMaxLandings(self.maxLandings.get())
 
     def find(self):
         self.btn_find.configure(state='disable')

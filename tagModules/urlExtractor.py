@@ -35,6 +35,10 @@ class urlDomains:
         self.mainSections  = []
         self.arraySections = []
         self.urlsets       = []
+        self.searchXML     = True
+        self.maxLandings   = 100
+        self.sizeWord      = 4
+        self.maxCategories = 15
         self.pathToSave    = ''
         self.__indexSearch = 0
         self.stop          = False
@@ -56,9 +60,27 @@ class urlDomains:
     
     def setUrlTarget(self, url):
         self.url_target = url
+
+    def setSearchXML(self, searchXML):
+        self.searchXML = searchXML
+
+    def setMaxLandings(self, maxLandings):
+        self.maxLandings = maxLandings
+
+    def setMaxCategories(self, maxCategories):
+        self.maxCategories = maxCategories
+
+    def setSizeWord(self, sizeWord):
+        self.sizeWord = sizeWord
         
     def getUrlTarget(self):
         return self.url_target
+
+    def getSearchXML(self):
+        return self.searchXML
+
+    def getMaxLandings(self):
+        return self.maxLandings
     
     def resetMainSections(self):
         self.mainSections  = []
@@ -191,42 +213,35 @@ class urlDomains:
         exist_sitemap = False
         if self.validURL(url):
             exist_url = True
-            for siteMap in SITEMAP_PATH:
-                # Try to connect to the generic sitemap url, as: domain.com/sitemap.xml
-                url_sitemap = urlparse(url)._replace(path=siteMap, params='',query='',fragment='').geturl()
-                if self.validURL(url_sitemap):
-                    self.setDriver(url_sitemap, True if self.driver == None else False)
-                    xml_title, w = self.searchWord(self.driver.title, 'xml', paragraph=True)
-                    print('Ha cargado el emulador')
-                    # In this level we need to validate and implement solution to differents
-                    # sitemap format even to the sitemap that it's no exist.
-                    if self.validTag(self.driver, 'sitemapindex'):
-                        self.findTagAttributes('sitemapindex')
-                        exist_sitemap = True if len(self.subDomains)>0 else False
-                        break
-                    elif self.validTag(self.driver, 'urlset'):
-                        self.findTagAttributes('urlset')
-                        exist_sitemap = True if len(self.subDomains)>0 else False
-                        break
-                    #elif: Continue implement other formats the sitemap
-                    elif xml_title:
-                        print("With get in by Web Title")
-                        self.findTagAttributes('a')
-                        exist_sitemap = True if len(self.subDomains)>0 else False
-                        break      
-            #Use this else-for to capture the temporal variable? what?
+            if self.searchXML:
+                for siteMap in SITEMAP_PATH:
+                    # Try to connect to the generic sitemap url, as: domain.com/sitemap.xml
+                    url_sitemap = urlparse(url)._replace(path=siteMap, params='',query='',fragment='').geturl()
+                    if self.validURL(url_sitemap):
+                        self.setDriver(url_sitemap, True if self.driver == None else False)
+                        xml_title, w = self.searchWord(self.driver.title, 'xml', paragraph=True)
+                        print('Ha cargado el emulador')
+                        # In this level we need to validate and implement solution to differents
+                        # sitemap format even to the sitemap that it's no exist.
+                        if self.validTag(self.driver, 'sitemapindex'):
+                            self.findTagAttributes('sitemapindex')
+                            exist_sitemap = True if len(self.subDomains)>0 else False
+                            break
+                        elif self.validTag(self.driver, 'urlset'):
+                            self.findTagAttributes('urlset')
+                            exist_sitemap = True if len(self.subDomains)>0 else False
+                            break
+                        #elif: Continue implement other formats the sitemap
+                        elif xml_title:
+                            print("With get in by Web Title")
+                            self.findTagAttributes('a')
+                            exist_sitemap = True if len(self.subDomains)>0 else False
+                            break                  
             self.setDriver(url, True if self.driver == None else False)
-            if not exist_sitemap:
-                # Implement code to other methods to build the sitemap
-                # As Apply scraping to Homepage to build sitemap
-                self.findAnchors()
-                self.getSubDomains()
-                self.deeperSubDomains()
-                exist_sitemap = True if len(self.subDomains)>0 else False
-            else:
-                if len(self.subDomains) < 100:
-                    self.deeperSubDomains()
-                    exist_sitemap = True if len(self.subDomains)>0 else False
+            self.findAnchors()
+            self.getSubDomains()
+            self.deeperSubDomains()
+            exist_sitemap = True if len(self.subDomains)>0 else False
             print('Hemos terminado la validación')
             return exist_url, exist_sitemap
         else:
@@ -275,7 +290,7 @@ class urlDomains:
                     
     def deeperSubDomains(self):
         if len(self.subDomains) > 0:
-            while len(self.subDomains) <100 and self.__indexSearch < len(self.subDomains) and self.subDomains[self.__indexSearch].netloc == urlparse(self.url_target).netloc:
+            while len(self.subDomains)<self.maxLandings and self.__indexSearch<len(self.subDomains) and self.subDomains[self.__indexSearch].netloc == urlparse(self.url_target).netloc:
                 try:
                     self.loadPage(self.subDomains[self.__indexSearch].geturl())
                     self.findAnchors()
@@ -335,8 +350,8 @@ class urlDomains:
         # for section in mainSections:
         #if len(mainSections)>9: self.debugMainSections(mainSections)
         mainSections.sort(key=len)
-        #if len(mainSections)>25:
-            #self.debugMainSections(mainSections)
+        if len(mainSections)>self.maxCategories:
+            self.debugMainSections(mainSections)
         mainSections.insert(0, '')
         return mainSections
     
@@ -350,7 +365,7 @@ class urlDomains:
                 words.append(subPath.split('-'))
                 self.deleteItemList(words[-1],'')
                 for word in words[-1]:
-                    if len(word)<4:
+                    if len(word)<self.sizeWord:
                         words[-1].remove(word)
             if paths[1].isdigit() or len(words[0])>2 or len(words[1])>2 or '_' in subPath or '%' in subPath:
                 return False
@@ -509,7 +524,7 @@ class urlDomains:
             self.mainSections.append('Otros')
             arraySections.append(urls[1:])
            
-        if len(arraySections)>25:
+        if len(arraySections)>self.maxCategories:
             for i, j in zip(range(len(arraySections)-1, -1, -1), range(len(self.mainSections)-1, -1, -1)):
                 if len(arraySections[i]) > 2:
                     continue

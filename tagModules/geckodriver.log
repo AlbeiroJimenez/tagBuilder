@@ -10023,3 +10023,66 @@ JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=71
 JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1205874248, line 1: unreachable code after return statement
 JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1205874248 line 1 > eval, line 1: unreachable code after return statement
 JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1205874248 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1665915498, line 1: unreachable code after return statement
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1665915498, line 1: unreachable code after return statement
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1665915498, line 1: unreachable code after return statement
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1665915498 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1665915498 line 1 > eval, line 1: unreachable code after return statement
+1639255050077	Marionette	INFO	Stopped listening on port 51881
+1639255136476	geckodriver	INFO	Listening on 127.0.0.1:50778
+1639255139482	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "50779" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileDTbMgw"
+*** You are running in headless mode.
+1639255141277	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileDTbMgw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50779/devtools/browser/e0de76ce-d255-4e21-95b7-5cafd6645425
+1639255142378	Marionette	INFO	Listening on port 50786
+1639255142685	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+Exiting due to channel error.
+Exiting due to channel error.
+1639432728186	geckodriver	INFO	Listening on 127.0.0.1:53163
+1639432740740	geckodriver	INFO	Listening on 127.0.0.1:53178
+1639432747639	geckodriver	INFO	Listening on 127.0.0.1:53187
+1639432753565	geckodriver	INFO	Listening on 127.0.0.1:53195
+1639432810868	geckodriver	INFO	Listening on 127.0.0.1:53297
+1639432813869	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "53298" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilevX2WZM"
+*** You are running in headless mode.
+1639432815526	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilevX2WZM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53298/devtools/browser/fde31aa9-0eed-4e5e-8f1e-c23d35216051
+1639432816856	Marionette	INFO	Listening on port 53303
+1639432817054	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+JavaScript error: https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js, line 108: ReferenceError: bsResponseObj is not defined
+1639432902766	Marionette	INFO	Stopped listening on port 53303
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x230030,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
