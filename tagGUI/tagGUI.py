@@ -32,6 +32,9 @@ class FrameWork2D(ttk.Frame):
         
     def set_CCS(self):
         self.root.title(PROGRAM_NAME)
+        self.root.iconbitmap('xaxis_.ico')
+        #self.root.iconify()
+        #self.root.attributes("-alpha", 0.5)
         #785x400+300+100
         self.root.geometry("795x415+300+100")
         self.root.resizable(False,False)
@@ -47,10 +50,10 @@ class FrameWork2D(ttk.Frame):
             style.theme_use('default')
         style.configure('.', padding=3, font=('Arial',9,'bold'))
         
-##        style.configure('TFrame', background='red')
-##        style.configure('TLabelframe', background='red')
-##        style.configure('TLabel', background='red')
-##        style.configure('.', background='red')
+        #style.configure('TFrame', background='red')
+        #style.configure('TLabelframe', background='red')
+        #style.configure('TLabel', background='red')
+        #style.configure('.', background='red')
     
     def build_menu(self, menu_definitions):
         menu_bar = tk.Menu(self.root)
@@ -123,23 +126,30 @@ class FrameWork2D(ttk.Frame):
 class tagFrontEnd(FrameWork2D):
     def __init__(self, root, webDOM, xlsxFile, *args, **kwargs):
         super().__init__(root, *args, **kwargs)
-        self.webDOM     = webDOM
-        self.xlsxFile   = xlsxFile
-        self.pathTR = tk.StringVar()
-        self.pathTR.set(self.xlsxFile.PATH)
+        self.webDOM        = webDOM
+        self.xlsxFile      = xlsxFile
+        self.pathTR        = tk.StringVar()  
         self.urlAdvertiser = tk.StringVar()
-        self.urlAdvertiser.set(self.webDOM.url_target)
-        self.advertiser  = tk.StringVar()
-        self.advertiser.set(self.xlsxFile.readCell('C13'))
-        self.searchXML   = tk.BooleanVar()
-        self.maxCategory = tk.IntVar()
-        self.minSizeWord = tk.IntVar()
-        self.maxLandings = tk.IntVar()
-        self.maxCategory.set(15)
-        self.minSizeWord.set(3)
-        self.maxLandings.set(50)
-        self.buildTab(0)
+        self.advertiser    = tk.StringVar()
+        self.searchXML     = tk.BooleanVar()
+        self.maxCategory   = tk.IntVar()
+        self.minSizeWord   = tk.IntVar()
+        self.maxLandings   = tk.IntVar()
+        self._init_params()
+
     
+    def _init_params(self):
+        self.pathTR.set(self.xlsxFile.PATH)
+        self.urlAdvertiser.set(self.webDOM.url_target)
+        self.advertiser.set(self.xlsxFile.readCell('C13'))
+        self.maxCategory.set(15)
+        self.webDOM.setMaxCategories(self.maxCategory.get())
+        self.minSizeWord.set(3)
+        self.webDOM.setSizeWord(self.minSizeWord.get())
+        self.maxLandings.set(50)
+        self.webDOM.setMaxLandings(self.maxLandings.get())
+        self.buildTab(0)
+
     # Function to build diferents tabs: Sitemap and GTM
     def buildTab(self, indexTab):
         self.createParameterSection(indexTab)
@@ -207,8 +217,10 @@ class tagFrontEnd(FrameWork2D):
         
         self.btn_find = ttk.Button(data_button_frame, text='Find', command = self.find_threaded)
         self.btn_find.grid(column=0, row=0)
-#         self.btn_stop = ttk.Button(data_button_frame, text='Stop', command = self.stopSearch, state = 'disable')
-#         self.btn_stop.grid(column=1, row=0)
+
+        self.btn_stop = ttk.Button(data_button_frame, text='Stop', command = self.stopSearch, state = 'disable')
+        self.btn_stop.grid(column=1, row=0)
+
         self.btn_sections = ttk.Button(data_button_frame, text='Sections', command = self.draw_threaded, state = 'disable')
         self.btn_sections.grid(column=2, row=0)
         self.btn_save = ttk.Button(data_button_frame, text='Save', command = self.save_threaded, state = 'disable')
@@ -227,13 +239,13 @@ class tagFrontEnd(FrameWork2D):
         self.dataTable.column('Landing', stretch=True, width=520)
         self.dataTable.column('Path', stretch=True, width=110)
         
-##        self.scrollbar = ttk.Scrollbar(self.data_table_frame, orient=tk.VERTICAL, command=self.dataTable.yview)
-##        self.dataTable.configure(yscrollcommand=self.scrollbar.set)
-##        self.scrollbar.grid(row=0, column=1, sticky='NS')
+        #self.scrollbar = ttk.Scrollbar(self.data_table_frame, orient=tk.VERTICAL, command=self.dataTable.yview)
+        #self.dataTable.configure(yscrollcommand=self.scrollbar.set)
+        #self.scrollbar.grid(row=0, column=1, sticky='NS')
 
-##        self.scrollbar_ = ttk.Scrollbar(self.data_table_frame, orient=tk.HORIZONTAL, command=self.dataTable.xview)
-##        self.dataTable.configure(xscrollcommand=self.scrollbar_.set)
-##        self.scrollbar_.grid(row=1, sticky='WE')
+        #self.scrollbar_ = ttk.Scrollbar(self.data_table_frame, orient=tk.HORIZONTAL, command=self.dataTable.xview)
+        #self.dataTable.configure(xscrollcommand=self.scrollbar_.set)
+        #self.scrollbar_.grid(row=1, sticky='WE')
         
         self.dataTable.grid(column=0, row=0, sticky='NESW')
         
@@ -324,19 +336,24 @@ class tagFrontEnd(FrameWork2D):
         self.webDOM.setMaxLandings(self.maxLandings.get())
 
     def find(self):
+        self.webDOM.setStop(False)
         self.btn_find.configure(state='disable')
+        self.btn_stop.configure(state='active')
         self.deleteItemsTreeView()
         exists_url, exists_sitemap = self.webDOM.buildSiteMap(self.urlAdvertiser.get())
-        self.btn_find.configure(state='active')
-        self.btn_sections.configure(state='active')
         self.lanchPopUps('Landings', 'The process of find landings has finished!', 'Press "Ok" to exit.')
         if exists_url:
             self.lanchPopUps('Landings', 'The process of find landings has finished!', 'Press "Ok" to exit.')
         else:
             self.lanchPopUps('URL Error!', "The URL given not found or it's incorrect!", 'Press "Ok" to exit.')
+        self.btn_find.configure(state='active')
+        self.btn_sections.configure(state='active')
         
     def stopSearch(self):
-        pass
+        self.btn_stop.configure(state='disable')
+        self.webDOM.setStop(True)
+        self.btn_find.configure(state='active')
+        self.btn_stop.configure(state='active')
     
     def deep(self):
         self.webDOM.deeperSubDomains()

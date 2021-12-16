@@ -36,8 +36,8 @@ class urlDomains:
         self.arraySections = []
         self.urlsets       = []
         self.searchXML     = True
-        self.maxLandings   = 100
-        self.sizeWord      = 4
+        self.maxLandings   = 50
+        self.sizeWord      = 3
         self.maxCategories = 15
         self.pathToSave    = ''
         self.__indexSearch = 0
@@ -72,6 +72,9 @@ class urlDomains:
 
     def setSizeWord(self, sizeWord):
         self.sizeWord = sizeWord
+
+    def setStop(self, stop):
+        self.stop = stop
         
     def getUrlTarget(self):
         return self.url_target
@@ -177,6 +180,8 @@ class urlDomains:
                 for url in urls:
                     #self.addSudDomain(sitemap.text)
                     self.addSudDomain(url.get_attribute('textContent'))
+                    if self.stop:
+                        break
                     print(url.get_attribute('textContent'))
             except:
                 try:
@@ -191,6 +196,8 @@ class urlDomains:
                 urls         = self.driver.find_elements(By.TAG_NAME, 'a')
                 for url in urls:
                     print(url.get_attribute('textContent'))
+                    if self.stop:
+                        break
                     if '.xml' in url.get_attribute('textContent'):
                         sitemaps_url.append(url.get_attribute('textContent'))
                     else:
@@ -215,6 +222,8 @@ class urlDomains:
             exist_url = True
             if self.searchXML:
                 for siteMap in SITEMAP_PATH:
+                    if self.stop:
+                        break
                     # Try to connect to the generic sitemap url, as: domain.com/sitemap.xml
                     url_sitemap = urlparse(url)._replace(path=siteMap, params='',query='',fragment='').geturl()
                     if self.validURL(url_sitemap):
@@ -280,6 +289,8 @@ class urlDomains:
                 self.addSudDomain(url, type_ = 1)
             elif len(url.netloc) > 0 and not self.searchURL(url, self.domains):
                 self.domains.append(url)
+            if self.stop:
+                break
                 
     def getArrayURLs(self):
         urls = []
@@ -290,7 +301,7 @@ class urlDomains:
                     
     def deeperSubDomains(self):
         if len(self.subDomains) > 0:
-            while len(self.subDomains)<self.maxLandings and self.__indexSearch<len(self.subDomains) and self.subDomains[self.__indexSearch].netloc == urlparse(self.url_target).netloc:
+            while len(self.subDomains)<self.maxLandings and self.__indexSearch<len(self.subDomains) and self.subDomains[self.__indexSearch].netloc == urlparse(self.url_target).netloc and not self.stop:
                 try:
                     self.loadPage(self.subDomains[self.__indexSearch].geturl())
                     self.findAnchors()
@@ -379,7 +390,7 @@ class urlDomains:
             words = paths[0].split('-')
             self.deleteItemList(words,'')
             for word in words:
-                if len(word)<4:
+                if len(word)<self.sizeWord:
                     words.remove(word)
             if paths[0].isdigit() or len(words)>2 or '_' in paths[0] or '%' in paths[0]:
                 return False
@@ -434,7 +445,7 @@ class urlDomains:
                 self.deleteItemList(section_word, '')
                 # Doing the test with len(word)>4 and 3
                 for word in section_word:
-                    if len(word)>3:
+                    if len(word)>self.sizeWord:
                         path_words.append(word)
             if i>0:
                 print(path_words)
@@ -539,7 +550,8 @@ class urlDomains:
                     self.mainSections.pop(j)
                     arraySections[-1].append(arraySections[i][0])
                     arraySections.pop(i)
-                    
+        for i in range(len(arraySections)):
+            arraySections[i].sort()
         self.mainSections.insert(0,'') 
         self.arraySections = arraySections
         #return arraySections
