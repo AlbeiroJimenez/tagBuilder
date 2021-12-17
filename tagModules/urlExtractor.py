@@ -42,6 +42,7 @@ class urlDomains:
         self.pathToSave    = ''
         self.__indexSearch = 0
         self.stop          = False
+        self.thirdSubPath  = False
         #self.loadPage()
     
     # This function validate if a url has a valid connection to server in the internet
@@ -339,19 +340,25 @@ class urlDomains:
     def getMainSections(self):
         mainSections = []
         for path in self.getPaths():
+            path     = path.replace('.html','') 
             listPath = path.split('/')
             self.deleteItemList(listPath, '')
             # Create Posible Sections to the SiteMap
-            if len(listPath)>2:
+            
+            if len(listPath)>3:
                 continue
-            elif len(listPath)>1:
+            elif len(listPath)>2 and self.thirdSubPath and listPath[2] not in mainSections:
+                if self.valid_category(listPath[2]):
+                    path_ = listPath[0]+'/'+listPath[1]+'/'+listPath[2]
+                    mainSections.append(path_)
+            elif len(listPath)>1 and not self.thirdSubPath:
                 path_ = listPath[0]+'/'+listPath[1]
                 if self.valid_category(path_) and path_ not in mainSections:
                     if not self.similarity_basic(mainSections, listPath[0]) and not self.similarity_basic(mainSections, listPath[1]):
                         mainSections.append(path_)
                     elif not self.similarity_basic(mainSections, listPath[0]):
                         mainSections.append(path_)
-            elif len(listPath)>0 and listPath[0] not in mainSections:
+            elif len(listPath)>0 and listPath[0] not in mainSections and not self.thirdSubPath:
                 if self.valid_category(listPath[0]):
                     mainSections.append(listPath[0])
                     #if not self.similarity_basic(mainSections, listPath[0]):
@@ -361,14 +368,22 @@ class urlDomains:
         # I need to a process to filter or reduce the number of sections
         # for section in mainSections:
         #if len(mainSections)>9: self.debugMainSections(mainSections)
+        if len(mainSections)<2:
+            print('Hemos entrado a Third Path Categorize')
+            self.thirdSubPath = True
+            for newSection in self.getMainSections():
+                mainSections.append(newSection)
+            self.thirdSubPath = False
         mainSections.sort(key=len)
         if len(mainSections)>self.maxCategories:
             self.debugMainSections(mainSections)
-        mainSections.insert(0, '')
+        if not mainSections[0]=='':
+            mainSections.insert(0, '')
         return mainSections
     
     # Determine if a path is valid to be a candidate to section
     def valid_category(self, path):
+        path  = path.replace('.html','')
         paths = path.split('/')
         self.deleteItemList(paths, '')
         if len(paths)>1:
@@ -379,13 +394,14 @@ class urlDomains:
                 for word in words[-1]:
                     if len(word)<self.sizeWord:
                         words[-1].remove(word)
-            if paths[1].isdigit() or len(words[0])>2 or len(words[1])>2 or '_' in subPath or '%' in subPath:
+            if paths[1].isdigit() or len(words[0])>2 or len(words[1])>2 or '%' in subPath:
                 return False
-            elif len(words[0])==0 and len(words[1])==0:
+            elif len(words[0])<1 and len(words[1])<1:
                 return False
             elif paths[0].isdigit() and paths[1].isdigit():
                 return False
             else:
+                print(words)
                 return True 
         elif len(paths)>0:
             words = paths[0].split('-')
@@ -393,7 +409,7 @@ class urlDomains:
             for word in words:
                 if len(word)<self.sizeWord:
                     words.remove(word)
-            if paths[0].isdigit() or len(words)>2 or '_' in paths[0] or '%' in paths[0]:
+            if paths[0].isdigit() or len(words)>2 or len(words)==0 or '_' in paths[0] or '%' in paths[0]:
                 return False
             else:
                 return True
@@ -487,7 +503,7 @@ class urlDomains:
                 self.deleteItemList(path_list, '')
                 if len(path_list)>1:
                     path_list_ = path_list[0]+'/'+path_list[1]
-                    if path_list_ in section:
+                    if path_list_ in section or section in path_list:
                         arraySections[-1].append(url)
                         paths.pop(paths.index(path))
                         urls.pop(urls.index(url))
