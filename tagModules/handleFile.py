@@ -1,4 +1,5 @@
 from openpyxl import Workbook,load_workbook
+from openpyxl.styles import Alignment
 from datetime import date as dt
 
 from os import path as p
@@ -45,7 +46,7 @@ class xlsxFile:
         for section in sectionList:
             self.duplicateSheet(nameSheetFrom, section)
     
-    def loadList(self, dataList, cellOrigin = 'G31'):
+    def loadList(self, dataList, cellOrigin = 'F31'):
         cell = cellOrigin
         for item in dataList:
             cell = self.getCellDown(cell)
@@ -54,8 +55,10 @@ class xlsxFile:
     def readCell(self, cell):
         return self.sheet[cell].value
     
-    def writeCell(self, cell, value):
+    def writeCell(self, cell, value, aligment_=['center','center']):
         self.sheet[cell] = value
+        cell = self.sheet[cell]
+        cell.alignment = Alignment(horizontal=aligment_[0], vertical=aligment_[1])
 
     def getCellDown(self, cell):
         for i in range(0,len(cell)):
@@ -81,6 +84,10 @@ class xlsxFile:
         advertiser  = self.readCell(cell)
         month, year = self.getDate()
         return 'TagReq_'+advertiser+'_'+month+year+'.xlsx'
+
+    def getNameSection(self, advertiserName, sectionName, typeTrigger='PV'):
+        month, year = self.getDate()
+        return advertiserName+'_'+sectionName+typeTrigger+'_'+month+year
     
     def getTagName(self, path, cell):
         advertiser  = self.readCell(cell) 

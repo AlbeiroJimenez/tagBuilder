@@ -153,11 +153,12 @@ class urlDomains:
         self.loadPage()
         
     def findTagAttributes(self, tag, return_attribute = 'url'):
-        if tag == 'sitemapindex':
-            try:
+        if tag == 'sitemapindex' and not self.stop:
+            try: 
                 sitemap_urls = []
                 sitemaps = self.driver.find_elements(By.TAG_NAME, 'loc')
                 for sitemap in sitemaps:
+                    if self.stop: break
                     print(sitemap.get_attribute('textContent'))
                     if '.xml' in sitemap.get_attribute('textContent'):
                         sitemap_urls.append(sitemap.get_attribute('textContent'))
@@ -165,6 +166,7 @@ class urlDomains:
                         self.addSudDomain(sitemap.get_attribute('textContent'))
                 if len(sitemap_urls) > 0:
                     for sitemap_url in sitemap_urls:
+                        if self.stop: break
                         self.loadPage(sitemap_url)
                         self.findTagAttributes(tag)
             except:
@@ -173,15 +175,14 @@ class urlDomains:
                 except:
                     self.loadPage()
                     self.findTagAttributes(tag)
-        elif tag == 'urlset':
+        elif tag == 'urlset' and not self.stop:
             try:
                 urls = []
                 urls = self.driver.find_elements(By.TAG_NAME, 'loc')
                 for url in urls:
                     #self.addSudDomain(sitemap.text)
+                    if self.stop: break
                     self.addSudDomain(url.get_attribute('textContent'))
-                    if self.stop:
-                        break
                     print(url.get_attribute('textContent'))
             except:
                 try:
@@ -189,21 +190,21 @@ class urlDomains:
                 except:
                     self.loadPage()
                     self.findTagAttributes(tag)
-        elif tag == 'a':
+        elif tag == 'a' and not self.stop:
             try:
                 sitemaps_url = []
                 urls         = []
                 urls         = self.driver.find_elements(By.TAG_NAME, 'a')
                 for url in urls:
                     print(url.get_attribute('textContent'))
-                    if self.stop:
-                        break
+                    if self.stop: break
                     if '.xml' in url.get_attribute('textContent'):
                         sitemaps_url.append(url.get_attribute('textContent'))
                     else:
                         self.addSudDomain(url.get_attribute('textContent'))
                 if len(sitemaps_url) > 0:
                     for sitemap in sitemaps_url:
+                        if self.stop: break
                         self.setUrlTarget(sitemap)
                         self.loadPage()
                         self.findTagAttributes(tag)
@@ -245,7 +246,7 @@ class urlDomains:
                             print("With get in by Web Title")
                             self.findTagAttributes('a')
                             exist_sitemap = True if len(self.subDomains)>0 else False
-                            break                  
+                            break                 
             self.setDriver(url, True if self.driver == None else False)
             self.findAnchors()
             self.getSubDomains()

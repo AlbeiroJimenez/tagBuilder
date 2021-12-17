@@ -18,6 +18,10 @@ TABS_DEFINITION = (
     'GTM'
     )
 
+SPECIAL_CELLS   = (
+    'C31', 'D31', 'G31'
+)
+
 PROGRAM_NAME = 'TagCalc'
 
 class FrameWork2D(ttk.Frame):
@@ -32,7 +36,7 @@ class FrameWork2D(ttk.Frame):
         
     def set_CCS(self):
         self.root.title(PROGRAM_NAME)
-        self.root.iconbitmap('xaxis_.ico')
+        self.root.iconbitmap('xaxis32x32.ico')
         #self.root.iconify()
         #self.root.attributes("-alpha", 0.5)
         #785x400+300+100
@@ -148,6 +152,8 @@ class tagFrontEnd(FrameWork2D):
         self.webDOM.setSizeWord(self.minSizeWord.get())
         self.maxLandings.set(50)
         self.webDOM.setMaxLandings(self.maxLandings.get())
+        self.searchXML.set(False)
+        self.webDOM.setSearchXML(self.searchXML.get())
         self.buildTab(0)
 
     # Function to build diferents tabs: Sitemap and GTM
@@ -291,22 +297,40 @@ class tagFrontEnd(FrameWork2D):
                     continue
         
     def createSectionSheets(self, mainSections):
+        self.xlsxFile.setSheet('Sections')
+        self.xlsxFile.writeCell('C13', self.advertiser.get(), ['left','center'])
+        self.xlsxFile.writeCell('C31', 'Section')
+        self.xlsxFile.writeCell('D31', 'Page View')
+        self.xlsxFile.writeCell('G31', 'u/p')
         for mainSection in mainSections:
             mainSection_ = mainSection.replace('/','-')
-            self.xlsxFile.duplicateSheet(self.xlsxFile.book.sheetnames[1], mainSection_)
+            self.xlsxFile.duplicateSheet('Sections', mainSection_)
+        self.xlsxFile.setSheet('Tagging Request')
         self.xlsxFile.sheet = self.xlsxFile.book['Tagging Request']
         self.xlsxFile.sheet.title = 'Home'
+
+    def aligmentCells(self):
+        pass
             
     def loadData(self, dataSections):
-        index_sheet = 3
+        index_sheet = 4
         print(len(dataSections))
         print(self.xlsxFile.book.sheetnames)
         for dataSection in dataSections:
             self.xlsxFile.setSheet(self.xlsxFile.book.sheetnames[index_sheet])
-            self.xlsxFile.loadList(dataSection, 'G30')
+            nameSection = self.xlsxFile.book.sheetnames[index_sheet]
+            nameSection = nameSection.split('-')
+            self.webDOM.deleteItemList(nameSection, '')
+            nameSection.sort(key=len, reverse=True)
+            if len(nameSection)>1:
+                nameSection = nameSection[0]+'-'+nameSection[1]
+            else:
+                nameSection = nameSection[0]
+            self.xlsxFile.writeCell('E31', self.xlsxFile.getNameSection(self.advertiser.get(), nameSection))
+            self.xlsxFile.loadList(dataSection, 'F30')
             index_sheet += 1
         self.xlsxFile.setSheet(self.xlsxFile.book.sheetnames[1])
-        self.xlsxFile.loadList([self.urlAdvertiser.get()], 'G30')
+        self.xlsxFile.loadList([self.urlAdvertiser.get()], 'F30')
         
     def find_threaded(self):
         thread = Thread(target = self.find)
@@ -338,6 +362,7 @@ class tagFrontEnd(FrameWork2D):
     def find(self):
         self.webDOM.setStop(False)
         self.btn_find.configure(state='disable')
+        #self.maxCategories.configure(state='disable')
         self.btn_stop.configure(state='active')
         self.deleteItemsTreeView()
         exists_url, exists_sitemap = self.webDOM.buildSiteMap(self.urlAdvertiser.get())
@@ -348,6 +373,7 @@ class tagFrontEnd(FrameWork2D):
             self.lanchPopUps('URL Error!', "The URL given not found or it's incorrect!", 'Press "Ok" to exit.')
         self.btn_find.configure(state='active')
         self.btn_sections.configure(state='active')
+        #self.maxCategories.configure(state='active')
         
     def stopSearch(self):
         self.btn_stop.configure(state='disable')
@@ -374,9 +400,15 @@ class tagFrontEnd(FrameWork2D):
         self.xlsxFile.setPATH(self.pathTR.get())
         self.xlsxFile.setBook()
         self.xlsxFile.setSheet()
-        self.xlsxFile.writeCell('C13', self.advertiser.get())
+        self.xlsxFile.writeCell('C13', self.advertiser.get(), ['left','center'])
         self.createSectionSheets(self.webDOM.mainSections[1:])
+        self.xlsxFile.setSheet('Home')
+        self.xlsxFile.writeCell('C31', 'Home')
+        self.xlsxFile.writeCell('D31', 'Page View')
+        self.xlsxFile.writeCell('G31', 'u')
+        self.xlsxFile.writeCell('E31', self.xlsxFile.getNameSection(self.advertiser.get(), 'Home'))
         self.loadData(self.webDOM.arraySections)
+        self.xlsxFile.book.remove(self.xlsxFile.book['Sections'])
         directory = filedialog.askdirectory()
         if len(directory) > 0:
             self.xlsxFile.saveBook(directory)
