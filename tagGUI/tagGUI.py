@@ -269,8 +269,6 @@ class tagFrontEnd(FrameWork2D):
         self.deleteItemsTreeView()
         index_section = 0
         idd = 0
-        print("Numero de Secciones: "+str(len(arraySections)))
-        print(self.webDOM.mainSections)
         for mainSection in self.webDOM.mainSections:
             if mainSection == '':
                 if self.dataTable.exists('MainDomain'):
@@ -279,7 +277,6 @@ class tagFrontEnd(FrameWork2D):
                     self.addItem('', 'Main', ['/','',''])
                     self.addItem('Main', 'MainDomain', ['', self.webDOM.getUrlTarget(),''])
             else:
-                print("Index Section: "+str(index_section))
                 parent = r'/'+mainSection
                 self.addItem('', mainSection, [parent,'',''])
                 for subDomain in arraySections[index_section]:
@@ -314,8 +311,6 @@ class tagFrontEnd(FrameWork2D):
             
     def loadData(self, dataSections):
         index_sheet = 4
-        print(len(dataSections))
-        print(self.xlsxFile.book.sheetnames)
         for dataSection in dataSections:
             self.xlsxFile.setSheet(self.xlsxFile.book.sheetnames[index_sheet])
             nameSection = self.xlsxFile.book.sheetnames[index_sheet]

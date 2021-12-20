@@ -160,7 +160,6 @@ class urlDomains:
                 sitemaps = self.driver.find_elements(By.TAG_NAME, 'loc')
                 for sitemap in sitemaps:
                     if self.stop: break
-                    print(sitemap.get_attribute('textContent'))
                     if '.xml' in sitemap.get_attribute('textContent'):
                         sitemap_urls.append(sitemap.get_attribute('textContent'))
                     else:
@@ -184,7 +183,6 @@ class urlDomains:
                     #self.addSudDomain(sitemap.text)
                     if self.stop: break
                     self.addSudDomain(url.get_attribute('textContent'))
-                    print(url.get_attribute('textContent'))
             except:
                 try:
                     self.findTagAttributes(tag)
@@ -197,7 +195,6 @@ class urlDomains:
                 urls         = []
                 urls         = self.driver.find_elements(By.TAG_NAME, 'a')
                 for url in urls:
-                    print(url.get_attribute('textContent'))
                     if self.stop: break
                     if '.xml' in url.get_attribute('textContent'):
                         sitemaps_url.append(url.get_attribute('textContent'))
@@ -231,7 +228,6 @@ class urlDomains:
                     if self.validURL(url_sitemap):
                         self.setDriver(url_sitemap, True if self.driver == None else False)
                         xml_title, w = self.searchWord(self.driver.title, 'xml', paragraph=True)
-                        print('Ha cargado el emulador')
                         # In this level we need to validate and implement solution to differents
                         # sitemap format even to the sitemap that it's no exist.
                         if self.validTag(self.driver, 'sitemapindex'):
@@ -244,7 +240,6 @@ class urlDomains:
                             break
                         #elif: Continue implement other formats the sitemap
                         elif xml_title:
-                            print("With get in by Web Title")
                             self.findTagAttributes('a')
                             exist_sitemap = True if len(self.subDomains)>0 else False
                             break                 
@@ -253,7 +248,6 @@ class urlDomains:
             self.getSubDomains()
             self.deeperSubDomains()
             exist_sitemap = True if len(self.subDomains)>0 else False
-            print('Hemos terminado la validación')
             return exist_url, exist_sitemap
         else:
             # Return False if the url is invalid 
@@ -310,7 +304,6 @@ class urlDomains:
                     self.getSubDomains()
                     self.__indexSearch += 1
                 except StaleElementReferenceException as e:
-                    print('Ha ocurrido un error')
                     try:
                         self.driver.refresh()
                         self.findAnchors()
@@ -318,11 +311,9 @@ class urlDomains:
                         self.__indexSearch += 1
                     except StaleElementReferenceException as e:
                         self.__indexSearch += 1
-                print('Index URL/Total: '+ str(self.__indexSearch) + '/' + str(len(self.subDomains)))
-            print("Hemos Terminado")
             self.__indexSearch = 0
         else:
-            print('No hay Dominios Principales')
+            pass
     # This function return a array of paths with the character /        
     def getPaths(self):
         paths = []
@@ -369,7 +360,6 @@ class urlDomains:
         # for section in mainSections:
         #if len(mainSections)>9: self.debugMainSections(mainSections)
         if len(mainSections)<2:
-            print('Hemos entrado a Third Path Categorize')
             self.thirdSubPath = True
             for newSection in self.getMainSections():
                 mainSections.append(newSection)
@@ -401,7 +391,6 @@ class urlDomains:
             elif paths[0].isdigit() and paths[1].isdigit():
                 return False
             else:
-                print(words)
                 return True 
         elif len(paths)>0:
             words = paths[0].split('-')
@@ -465,13 +454,10 @@ class urlDomains:
                     if len(word)>self.sizeWord:
                         path_words.append(word)
             if i>0:
-                print(path_words)
-                print(i)
                 for word in path_words:
                     exist, h = self.searchWord(sections[:i], word, None)
                     #exist1, h = self.searchWord(sections[:i], word[:-1], None)
                     if exist:
-                        print('Delete Section:  '+mainSections[i])
                         mainSections.pop(i)
                         break
 
@@ -487,18 +473,14 @@ class urlDomains:
         # Create and Fill out each Sections with urls
         # Firts sort of the URLs by exact category
         for section in mainSections[1:]:
-            print("Seccion I: "+section)
             self.mainSections.append(section)
             arraySections.append([])
             # Strategy to labeled each section within the array of URLs
             arraySections[-1].insert(0,section)
-            flat = 0
             section_ = section.split('/')
             self.deleteItemList(section_, '')
             # Examine of urls finding to determine if own to the section or not
             for path, url in zip(paths[1:],urls[1:]):
-                flat += 1
-                print(flat)
                 path_list = path.split('/')
                 self.deleteItemList(path_list, '')
                 if len(path_list)>1:
@@ -520,12 +502,8 @@ class urlDomains:
                     continue
         #Second sort of the URLs by similarity category 
         for section, arraySection in zip(mainSections[1:], arraySections):
-            print("Seccion II: "+section)
-            flat = 0
             # Examine of urls finding to determine if own to the section or not
             for path, url in zip(paths[1:],urls[1:]):
-                flat += 1
-                print(flat)
                 path_list = path.split('/')
                 self.deleteItemList(path_list, '')
                 if len(path_list)>1:
@@ -557,18 +535,16 @@ class urlDomains:
                 if len(arraySections[i]) > 2:
                     continue
                 elif len(arraySections[i]) > 1:
-                    print('Delete Section: '+ self.mainSections[j]+'  With index: '+str(j))
                     self.mainSections.pop(j)
                     arraySections[-1].insert(0, arraySections[i][0])
                     arraySections[-1].insert(0, arraySections[i][1])
                     arraySections.pop(i)
                 elif len(arraySections[i]) > 0:
-                    print('Delete Section: '+ self.mainSections[j]+'  With index: '+str(j))
                     self.mainSections.pop(j)
                     arraySections[-1].append(arraySections[i][0])
                     arraySections.pop(i)
         for i in range(len(arraySections)):
-            arraySections[i].sort()
+            arraySections[i].sort(key=len)
         self.mainSections.insert(0,'') 
         self.arraySections = arraySections
         #return arraySections

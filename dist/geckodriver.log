@@ -1,0 +1,14 @@
+1639784436550	geckodriver	INFO	Listening on 127.0.0.1:54722
+1639784439492	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "54723" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileIdMp7G"
+*** You are running in headless mode.
+1639784441152	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileIdMp7G\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54723/devtools/browser/69a01135-1040-4966-8b6a-de341adc7ba7
+1639784442487	Marionette	INFO	Listening on port 54728
+1639784442695	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: https://cdn.cookielaw.org/scripttemplates/6.22.0/otBannerSdk.js, line 7: TypeError: r is undefined
+JavaScript error: https://cdn.cookielaw.org/scripttemplates/6.22.0/otBannerSdk.js, line 7: TypeError: this.selector is null
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1639784864742	Marionette	INFO	Stopped listening on port 54728
