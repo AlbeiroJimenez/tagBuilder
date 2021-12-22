@@ -35,3 +35,12 @@ JavaScript error: https://www.mazda.mx/vehiculos/cx-30, line 1639: TypeError: da
 JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 220: TypeError: a.slice is not a function
 JavaScript error: https://www.mazda.mx/vehiculos/cx-5, line 1841: TypeError: dataLayer.push is not a function
 JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 220: TypeError: a.slice is not a function
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1640183782936	Marionette	INFO	Stopped listening on port 61548
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
