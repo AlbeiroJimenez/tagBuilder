@@ -3,6 +3,7 @@ from tkinter import filedialog, messagebox, ttk
 from threading import Thread
 
 from os import closerange, path as p
+from urllib.parse import urlparse
 from tkinter import font
 from tkinter.constants import OFF
 
@@ -141,7 +142,6 @@ class tagFrontEnd(FrameWork2D):
         self.maxLandings   = tk.IntVar()
         self._init_params()
 
-    
     def _init_params(self):
         self.pathTR.set(self.xlsxFile.PATH)
         self.urlAdvertiser.set(self.webDOM.url_target)
@@ -237,14 +237,14 @@ class tagFrontEnd(FrameWork2D):
         self.createTableData()
         
     def createTableData(self):
-        self.dataTable = ttk.Treeview(self.data_table_frame, columns=['Landing', 'Path'], selectmode='none')
+        self.dataTable = ttk.Treeview(self.data_table_frame, columns=['Landing', 'Path'], selectmode='extended')
         self.dataTable.heading('#0', text='Section', anchor='w')
         self.dataTable.heading('Landing', text='Landing', anchor='w')
         self.dataTable.heading('Path', text='Path', anchor='w')
         self.dataTable.column('#0', stretch=True, width=140)
         self.dataTable.column('Landing', stretch=True, width=520)
         self.dataTable.column('Path', stretch=True, width=110)
-        
+        self.dataTable.bind("<KeyPress-Delete>",self.deleteBranch)
         #self.scrollbar = ttk.Scrollbar(self.data_table_frame, orient=tk.VERTICAL, command=self.dataTable.yview)
         #self.dataTable.configure(yscrollcommand=self.scrollbar.set)
         #self.scrollbar.grid(row=0, column=1, sticky='NS')
@@ -261,9 +261,6 @@ class tagFrontEnd(FrameWork2D):
             return True
         except:
             return False
-        
-#         for child in self.tabs[indexTab].winfo_children():
-#             child.grid_configure(sticky='W')
 
     def addItemTreeView(self, arraySections):
         self.deleteItemsTreeView()
@@ -277,7 +274,7 @@ class tagFrontEnd(FrameWork2D):
                     self.addItem('', 'Main', ['/','',''])
                     self.addItem('Main', 'MainDomain', ['', self.webDOM.getUrlTarget(),''])
             else:
-                parent = r'/'+mainSection
+                parent = '/'+mainSection
                 self.addItem('', mainSection, [parent,'',''])
                 for subDomain in arraySections[index_section]:
                     #iid = subDomain.split('/')[-2] + subDomain.split('/')[-3]
@@ -353,6 +350,34 @@ class tagFrontEnd(FrameWork2D):
     def set_maxLandings(self, event=None):
         self.maxLandings.set(self.maxLandings.get())
         self.webDOM.setMaxLandings(self.maxLandings.get())
+
+    def deleteBranch(self, event):
+        for item_ in self.dataTable.selection():
+            if self.dataTable.parent(item_)=='':
+                index = self.webDOM.mainSections.index(self.dataTable.focus())
+                remove_ = list(self.dataTable.selection())
+                remove_.remove(item_)
+                self.dataTable.selection_remove(remove_)
+                break
+        for item_ in self.dataTable.selection():
+            if self.dataTable.parent(item_)=='':
+                index = self.webDOM.mainSections.index(self.dataTable.focus())
+                if index>0:
+                    for url in self.webDOM.arraySections[index-1]:
+                        url_ = urlparse(url)
+                        if url_ in self.webDOM.subDomains: self.webDOM.subDomains.remove(url_)
+                    self.webDOM.mainSections.pop(index)
+                    self.webDOM.arraySections.pop(index-1)
+                    self.dataTable.delete(item_)
+            else:
+                section = self.dataTable.parent(item_)
+                index = self.webDOM.mainSections.index(section)
+                values = self.dataTable.item(item_,'values')
+                if index>0:
+                    url_ = urlparse(values[0])
+                    if url_ in self.webDOM.subDomains: self.webDOM.subDomains.remove(url_)
+                    self.webDOM.arraySections[index-1].remove(values[0])
+                    self.dataTable.delete(item_)
 
     def find(self):
         self.webDOM.setStop(False)
