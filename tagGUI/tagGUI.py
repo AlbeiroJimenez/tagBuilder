@@ -1,11 +1,14 @@
 import tkinter as tk
-from tkinter import Button, filedialog, messagebox, ttk
+from tkinter import filedialog, messagebox, ttk, simpledialog
 from threading import Thread
+import time
 
 from os import closerange, path as p
 from urllib.parse import urlparse
 from tkinter import font
 from tkinter.constants import OFF
+
+from tagModules.pixelBot import pixelBot
 
 MENU_DEFINITION = (
             'File- &New/Ctrl+N/self.newFile, Save/Ctrl+S/self.save_file, SaveAs/Ctrl+Shift+S/self.save_as, sep, Exit/Ctrl+Q/self.exitCalcTag',
@@ -32,7 +35,7 @@ class FrameWork2D(ttk.Frame):
         self.tabPages = ttk.Notebook(self.root)
         self.build_menu(MENU_DEFINITION)
         self.build_tabs(TABS_DEFINITION)
-        self.GTM = True
+        self.GTM = False
         self.set_CCS()
         
     def set_CCS(self):
@@ -129,10 +132,11 @@ class FrameWork2D(ttk.Frame):
         pass
     
 class tagFrontEnd(FrameWork2D):
-    def __init__(self, root, webDOM, xlsxFile, *args, **kwargs):
+    def __init__(self, root, webDOM, xlsxFile, pixelBot, *args, **kwargs):
         super().__init__(root, *args, **kwargs)
         self.webDOM        = webDOM
         self.xlsxFile      = xlsxFile
+        self.pixelBot      = pixelBot
         self.pathTR        = tk.StringVar()  
         self.urlAdvertiser = tk.StringVar()
         self.advertiser    = tk.StringVar()
@@ -156,11 +160,16 @@ class tagFrontEnd(FrameWork2D):
         self.searchXML.set(False)
         self.webDOM.setSearchXML(self.searchXML.get())
         self.buildTab(0)
+        self.buildTab(1)
 
     # Function to build diferents tabs: Sitemap and GTM
     def buildTab(self, indexTab):
-        self.createParameterSection(indexTab)
-        self.createDataSection(indexTab)
+        if   indexTab == 0:
+            self.createParameterSection(indexTab)
+            self.createDataSection(indexTab)
+        elif indexTab == 1:
+            self.createParameterSection(indexTab)
+            self.createPixelSection(indexTab)
         
     def loadTemple(self):
         self.pathTR.set(filedialog.askopenfilename(title = 'Select a Tagging Request Temple', filetypes=[('XLSX', '*.xlsx *.XLSX')]))
@@ -177,38 +186,41 @@ class tagFrontEnd(FrameWork2D):
         parameters_label_frame = ttk.LabelFrame(self.tabs[indexTab], text='Parameters', width=780, height=100)
         parameters_frame       = ttk.Frame(parameters_label_frame)
         parameters_label_frame.grid(column = 0, row=0)
-        parameters_label_frame.grid_propagate(0)
         
+        parameters_label_frame.grid_propagate(0)
         parameters_frame.grid(column = 0, row=0)
 
         # ttk.Label(parameters_frame, text="Temple TR: ", style = 'BW.TLabel').grid(column=0, row=0)
         # ttk.Entry(parameters_frame, width=75, textvariable = self.pathTR).grid(column=1, row=0, columnspan=3)
         # ttk.Button(parameters_frame, text='...', command=self.loadTemple).grid(column=4, row=0)
         
-        ttk.Label(parameters_frame, text="URL Target:").grid(column=0, row=0, sticky=tk.W)
-        tk.Entry(parameters_frame, width=30, textvariable = self.urlAdvertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=0, sticky=tk.W)
-        ttk.Label(parameters_frame, text="Advertiser:").grid(column=2, row=0, sticky=tk.W)
-        tk.Entry(parameters_frame, textvariable = self.advertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=3, row=0, sticky=tk.W)
-        ttk.Label(parameters_frame, text="Only HomePV:").grid(column=4, row=0, sticky=tk.W)
-        ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=5, row=0)
-        
-        ttk.Label(parameters_frame, text="Max Categories:").grid(column=0, row=1, sticky=tk.W)
-        self.maxCategories = ttk.Scale(parameters_frame, from_=10, to=50, command=self.set_maxCategories, variable=self.maxCategory)
-        self.maxCategories.grid(column=1, row=2, sticky=tk.W)
-        ttk.Label(parameters_frame, textvariable=self.maxCategory, font=('Arial',8,'italic')).grid(column=1, row=1, sticky=tk.W)
-
-        ttk.Label(parameters_frame, text="Min. Size Word:").grid(column=2, row=1, sticky=tk.W)
-        self.sizeWord = ttk.Scale(parameters_frame, from_=2, to=15, command=self.set_sizeWord, variable=self.minSizeWord)
-        self.sizeWord.grid(column=3, row=2)
-        self.sizeWord.set(3)
-        ttk.Label(parameters_frame, textvariable=self.minSizeWord, font=('Arial',8,'italic')).grid(column=3, row=1, sticky=tk.W)
-
-        ttk.Label(parameters_frame, text="Max. Landings:").grid(column=4, row=1, sticky=tk.W)
-        self.landings = ttk.Scale(parameters_frame, from_=50, to=500, command=self.set_maxLandings, variable=self.maxLandings)
-        self.landings.grid(column=5, row=2)
-        self.landings.set(100)
-        ttk.Label(parameters_frame, textvariable=self.maxLandings, font=('Arial',8,'italic')).grid(column=5, row=1, sticky=tk.W)
-        #ttk.Button(parameters_frame, text='.').grid(column=4, row=1)
+        if indexTab == 0:
+            ttk.Label(parameters_frame, text="URL Target:").grid(column=0, row=0, sticky=tk.W)
+            tk.Entry(parameters_frame, width=30, textvariable = self.urlAdvertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=0, sticky=tk.W)
+            ttk.Label(parameters_frame, text="Advertiser:").grid(column=2, row=0, sticky=tk.W)
+            tk.Entry(parameters_frame, textvariable = self.advertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=3, row=0, sticky=tk.W)
+            ttk.Label(parameters_frame, text="Only HomePV:").grid(column=4, row=0, sticky=tk.W)
+            ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=5, row=0)
+            
+            ttk.Label(parameters_frame, text="Max Categories:").grid(column=0, row=1, sticky=tk.W)
+            self.maxCategories = ttk.Scale(parameters_frame, from_=10, to=50, command=self.set_maxCategories, variable=self.maxCategory)
+            self.maxCategories.grid(column=1, row=2, sticky=tk.W)
+            ttk.Label(parameters_frame, textvariable=self.maxCategory, font=('Arial',8,'italic')).grid(column=1, row=1, sticky=tk.W)
+    
+            ttk.Label(parameters_frame, text="Min. Size Word:").grid(column=2, row=1, sticky=tk.W)
+            self.sizeWord = ttk.Scale(parameters_frame, from_=2, to=15, command=self.set_sizeWord, variable=self.minSizeWord)
+            self.sizeWord.grid(column=3, row=2)
+            self.sizeWord.set(3)
+            ttk.Label(parameters_frame, textvariable=self.minSizeWord, font=('Arial',8,'italic')).grid(column=3, row=1, sticky=tk.W)
+    
+            ttk.Label(parameters_frame, text="Max. Landings:").grid(column=4, row=1, sticky=tk.W)
+            self.landings = ttk.Scale(parameters_frame, from_=50, to=500, command=self.set_maxLandings, variable=self.maxLandings)
+            self.landings.grid(column=5, row=2)
+            self.landings.set(100)
+            ttk.Label(parameters_frame, textvariable=self.maxLandings, font=('Arial',8,'italic')).grid(column=5, row=1, sticky=tk.W)
+            #ttk.Button(parameters_frame, text='.').grid(column=4, row=1)
+        elif indexTab == 1:
+            pass
         
     def createDataSection(self, indexTab):
         data_label_frame  = ttk.LabelFrame(self.tabs[indexTab], text='Data', width=780, height=295)
@@ -237,24 +249,59 @@ class tagFrontEnd(FrameWork2D):
         
         self.createTableData()
         
-    def createTableData(self):
-        self.dataTable = ttk.Treeview(self.data_table_frame, columns=['Landing', 'Path'], selectmode='extended')
-        self.dataTable.heading('#0', text='Section', anchor='w')
-        self.dataTable.heading('Landing', text='Landing', anchor='w')
-        self.dataTable.heading('Path', text='Path', anchor='w')
-        self.dataTable.column('#0', stretch=True, width=140)
-        self.dataTable.column('Landing', stretch=True, width=520)
-        self.dataTable.column('Path', stretch=True, width=110)
-        self.dataTable.bind("<KeyPress-Delete>",self.deleteBranch)
-        #self.scrollbar = ttk.Scrollbar(self.data_table_frame, orient=tk.VERTICAL, command=self.dataTable.yview)
-        #self.dataTable.configure(yscrollcommand=self.scrollbar.set)
-        #self.scrollbar.grid(row=0, column=1, sticky='NS')
+    def createPixelSection(self, indexTab):
+        pixel_label_frame  = ttk.LabelFrame(self.tabs[indexTab], text='Pixels', width=780, height=295)
+        pixel_label_frame.grid(column = 0, row=1)
+        pixel_label_frame.grid_propagate(0)
+        
+        self.pixel_table_frame  = ttk.Frame(pixel_label_frame, borderwidth=3, relief='ridge', width=780, height=230)
+        self.pixel_table_frame.grid(column = 0, row=0)
+        self.pixel_table_frame.grid_propagate(0)
+        # Frame's child data_label_frame
+        pixel_button_frame = ttk.Frame(pixel_label_frame)
+        pixel_button_frame.grid(column = 0, row=1)
+        
+        self.btn_create = ttk.Button(pixel_button_frame, text='Create', command = self.createPixels)
+        self.btn_create.grid(column=0, row=0)
 
-        #self.scrollbar_ = ttk.Scrollbar(self.data_table_frame, orient=tk.HORIZONTAL, command=self.dataTable.xview)
-        #self.dataTable.configure(xscrollcommand=self.scrollbar_.set)
-        #self.scrollbar_.grid(row=1, sticky='WE')
+        self.btn_stop_GTM = ttk.Button(pixel_button_frame, text='Stop', command = self.stopSearch, state = 'disable')
+        self.btn_stop_GTM.grid(column=1, row=0)
 
-        self.dataTable.grid(column=0, row=0, sticky='NESW')
+        self.btn_GTM = ttk.Button(pixel_button_frame, text='GTM', command = self.draw_threaded, state = 'disable')
+        self.btn_GTM.grid(column=2, row=0)
+        self.btn_save_GTM = ttk.Button(pixel_button_frame, text='Save', command = self.save_threaded, state = 'disable')
+        self.btn_save_GTM.grid(column=3, row=0)
+        
+        ttk.Button(pixel_button_frame, text='exit', command = self.exitCalcTag).grid(column=4, row=0)
+        self.createTableData(1)
+        
+    def createTableData(self, indexTab=0):
+        if indexTab == 0:
+            self.dataTable = ttk.Treeview(self.data_table_frame, columns=['Landing', 'Path'], selectmode='extended')
+            self.dataTable.heading('#0', text='Section', anchor='w')
+            self.dataTable.heading('Landing', text='Landing', anchor='w')
+            self.dataTable.heading('Path', text='Path', anchor='w')
+            self.dataTable.column('#0', stretch=True, width=140)
+            self.dataTable.column('Landing', stretch=True, width=520)
+            self.dataTable.column('Path', stretch=True, width=110)
+            self.dataTable.bind("<KeyPress-Delete>",self.deleteBranch)
+            #self.scrollbar = ttk.Scrollbar(self.data_table_frame, orient=tk.VERTICAL, command=self.dataTable.yview)
+            #self.dataTable.configure(yscrollcommand=self.scrollbar.set)
+            #self.scrollbar.grid(row=0, column=1, sticky='NS')
+            #self.scrollbar_ = ttk.Scrollbar(self.data_table_frame, orient=tk.HORIZONTAL, command=self.dataTable.xview)
+            #self.dataTable.configure(xscrollcommand=self.scrollbar_.set)
+            #self.scrollbar_.grid(row=1, sticky='WE')
+            self.dataTable.grid(column=0, row=0, sticky='NESW')
+        elif indexTab == 1:
+            self.pixelTable = ttk.Treeview(self.pixel_table_frame, columns=['Type Trigger', 'Variables'], selectmode='extended')
+            self.pixelTable.heading('#0', text='Name', anchor='w')
+            self.pixelTable.heading('Type Trigger', text='Type Trigger', anchor='w')
+            self.pixelTable.heading('Variables', text='Variables', anchor='w')
+            self.pixelTable.column('#0', stretch=True, width=140)
+            self.pixelTable.column('Type Trigger', stretch=True, width=520)
+            self.pixelTable.column('Variables', stretch=True, width=110)
+            self.pixelTable.bind("<KeyPress-Delete>",self.deleteBranch)
+            self.pixelTable.grid(column=0, row=0, sticky='NESW')
         
     def addItem(self, parent, itemID, data):
         try:
@@ -342,6 +389,10 @@ class tagFrontEnd(FrameWork2D):
         thread = Thread(target = self.save)
         thread.start()
 
+    def createPixels_threaded(self):
+        thread = Thread(target = self.createPixels)
+        thread.start()
+
     def set_search(self):
         self.webDOM.setSearchXML(self.searchXML.get())
     
@@ -425,6 +476,26 @@ class tagFrontEnd(FrameWork2D):
         self.btn_save.configure(state='active')
         self.lanchPopUps('Sectioned', 'The process of categorized has finished!', 'Press "Ok" to exit.')
         
+    def createPixels(self):
+        print('Hemos empezado')
+        login = False
+        self.pixelBot.setDriver('https://monetize.xandr.com/login')
+        while True:
+            login = self.pixelBot.doLogin('albeiro.jimenez@groupm.com', 'xAXIS_2021*!')
+            time.sleep(7)
+            self.pixelBot.authFail = self.pixelBot.auth_alert()
+            if login or self.pixelBot.authFail:
+                if self.pixelBot.authFail:
+                    print('Ha habido un problema de authenticación')
+                    return False
+                else:
+                    return True
+            elif self.pixelBot.reqCode:
+                self.pixelBot.code = simpledialog.askstring('Verification','What is the code?')
+                print(self.pixelBot.code)
+            elif not login and not self.pixelBot.startLog:
+                return False
+    
     def validsSections(self, mainSections, arraySections):
         sections = []
     
@@ -459,6 +530,7 @@ class tagFrontEnd(FrameWork2D):
         
     def exitCalcTag(self):
         self.webDOM.tearDown()
+        self.pixelBot.tearDown()
         self.root.quit()
         self.root.destroy()
         exit()

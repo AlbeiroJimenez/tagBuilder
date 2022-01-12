@@ -1,0 +1,1416 @@
+1640183937984	geckodriver	INFO	Listening on 127.0.0.1:63111
+1640183941062	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "63112" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileoyEFXp"
+*** You are running in headless mode.
+1640183942560	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileoyEFXp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63112/devtools/browser/7d994d2c-c896-4634-bde4-f07159195fa1
+1640183943666	Marionette	INFO	Listening on port 63117
+1640183943727	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: https://www.mazda.mx/, line 861: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+JavaScript error: https://www.mazda.mx/localizar-distribuidor, line 659: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+JavaScript error: https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyByU0FuisWYsFMuKMu7VY3GprqnvtAMCi8, line 113: Error: Could not load "util".
+JavaScript error: https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyByU0FuisWYsFMuKMu7VY3GprqnvtAMCi8, line 113: Error: Could not load "map".
+JavaScript error: https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyByU0FuisWYsFMuKMu7VY3GprqnvtAMCi8, line 113: Error: Could not load "map".
+JavaScript error: https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyByU0FuisWYsFMuKMu7VY3GprqnvtAMCi8, line 113: Error: Could not load "places_impl".
+JavaScript error: https://www.mazda.mx/contactanos, line 759: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+JavaScript error: https://www.mazda.mx/, line 861: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+JavaScript error: https://www.mazda.mx/mi-mazda/seminuevos, line 993: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+JavaScript error: https://www.mazda.mx/tecnologia-mazda, line 879: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+JavaScript error: https://www.mazda.mx/vehiculos/mazda-2-sedan, line 1732: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+JavaScript error: https://www.mazda.mx/vehiculos/mazda-2-hatchback, line 1683: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+JavaScript error: https://www.mazda.mx/vehiculos/mazda-3-sedan, line 1748: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://www.mazda.mx/, line 861: TypeError: dataLayer.push is not a function
+JavaScript error: https://www.googletagmanager.com/gtag/js?id=AW-780918303, line 221: TypeError: a.slice is not a function
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1640184779341	Marionette	INFO	Stopped listening on port 63117
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640193082979	geckodriver	INFO	Listening on 127.0.0.1:56190
+1640193085976	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56191" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileRyASTt"
+1640193087488	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileRyASTt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56191/devtools/browser/f23c271b-bb1f-4d7b-bb66-ce5895ca44dc
+1640193090222	Marionette	INFO	Listening on port 56196
+1640193090265	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 4090 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640193442138	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://accounts.google.com/signin/continue?sarp=1&scc=0&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&plt=AKgnsbvjnGBw8oxyRG4jYkd34qVWM7mMI0Q3UwNouWqqNm3woQhlS248nx3W-Jzp_BFyG3AgQBcKrjWR_bIVz-w11rZBADa59mVdGjb5VREYKPCo9gUmFTMzZawLoITtM0VWJ0VM7Jy8&PersistentCookie=1&service=xbid line 1 > eval line 7726 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1135929241, line 1: unreachable code after return statement
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1135929241, line 1: unreachable code after return statement
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1135929241, line 1: unreachable code after return statement
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1135929241 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.decathlon.com.co/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1135929241 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://www.decathlon.com.co/themes/decashop_v5/assets/cache/bottom-c18d5b45.js, line 357: TypeError: $(...).find(...).scrollbox is not a function
+JavaScript error: https://www.decathlon.com.co/themes/decashop_v5/assets/cache/bottom-c18d5b45.js, line 440: TypeError: $quantityInput.TouchSpin is not a function
+JavaScript error: https://www.decathlon.com.co/ line 423 > injectedScript, line 1: TypeError: $.fancybox(...) is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1765: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1767: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1765: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1767: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1765: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1767: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1765: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1767: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1765: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1767: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1765: TypeError: $(...).doTimeout is not a function
+JavaScript error: https://www.decathlon.com.co/, line 1767: TypeError: $(...).doTimeout is not a function
+1640193539934	Marionette	INFO	Stopped listening on port 56196
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x59000B,name=PHttpChannel::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640193594357	geckodriver	INFO	Listening on 127.0.0.1:50825
+1640193597341	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50826" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileNwqIcp"
+1640193598921	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileNwqIcp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50826/devtools/browser/68aa53c6-0cb7-4cbd-901b-4b725a4bc2d1
+1640193601443	Marionette	INFO	Listening on port 50831
+1640193601536	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 817 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640193656293	Marionette	INFO	Stopped listening on port 50831
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1640194939338	geckodriver	INFO	Listening on 127.0.0.1:57072
+1640194942313	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57073" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileWi2ZPN"
+1640194943863	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileWi2ZPN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57073/devtools/browser/43fccd13-4983-4be0-9c6f-9c2f8cb25dc9
+1640194946502	Marionette	INFO	Listening on port 57078
+1640194946618	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1640195673934	Marionette	INFO	Stopped listening on port 57078
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+\rust_mozprofilekBA22w"
+1640195549185	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilekBA22w\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51782/devtools/browser/04fdbdb7-271a-454c-bd9e-a7bda8f524b6
+1640195551685	Marionette	INFO	Listening on port 51788
+1640195551893	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640195675414	Marionette	INFO	Stopped listening on port 51788
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1640195780903	geckodriver	INFO	Listening on 127.0.0.1:50218
+1640195783906	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50219" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilep0XATk"
+1640195785477	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilep0XATk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50219/devtools/browser/104dda80-3d96-4cc0-83a7-bd4df1666e9e
+1640195788074	Marionette	INFO	Listening on port 50225
+1640195788117	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 5852 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640195862611	Marionette	INFO	Stopped listening on port 50225
+1640198650551	geckodriver	INFO	Listening on 127.0.0.1:60358
+1640198653576	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60359" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilePuGOXp"
+1640198655063	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilePuGOXp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60359/devtools/browser/62289703-5759-4f98-aa28-7d8befeb5686
+1640198657592	Marionette	INFO	Listening on port 60364
+1640198657783	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640198812299	Marionette	INFO	Stopped listening on port 60364
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+le exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilemL8JZe\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52686/devtools/browser/611706cc-3c14-48fe-9175-d7651851b4e4
+1640198728172	Marionette	INFO	Listening on port 52691
+1640198728570	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 3717 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640198830229	Marionette	INFO	Stopped listening on port 52691
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640198844183	geckodriver	INFO	Listening on 127.0.0.1:52475
+1640198847170	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52476" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilepUcIlv"
+1640198848758	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilepUcIlv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52476/devtools/browser/1f3870b2-6ce7-4ae7-bb5a-f7f2726994f9
+1640198851178	Marionette	INFO	Listening on port 52486
+1640198851411	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640199069011	Marionette	INFO	Stopped listening on port 52486
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640199465705	geckodriver	INFO	Listening on 127.0.0.1:51264
+1640199468709	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51265" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileUK3Tox"
+1640199470259	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileUK3Tox\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51265/devtools/browser/2e0e4154-1332-44a6-af84-26bb4bd4fea1
+1640199472672	Marionette	INFO	Listening on port 51272
+1640199472938	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640199618481	Marionette	INFO	Stopped listening on port 51272
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+Local\\Temp\\rust_mozprofileHVbGGN"
+*** You are running in headless mode.
+1640199539585	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileHVbGGN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51366/devtools/browser/f7fade3a-bcb3-4217-8e2a-9327db205c8a
+1640199540982	Marionette	INFO	Listening on port 51371
+1640199541154	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 3909 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640199626056	Marionette	INFO	Stopped listening on port 51371
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640199663914	geckodriver	INFO	Listening on 127.0.0.1:49696
+1640199666907	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49697" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileloR8WS"
+1640199668455	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileloR8WS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49697/devtools/browser/02c0dff9-69d0-43ae-8288-219c827c03cd
+1640199670924	Marionette	INFO	Listening on port 49703
+1640199671164	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640199857481	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://assets.taboola.com/set-expo-ab?ab=99, line 1: SyntaxError: unexpected token: identifier
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://anxconsole-a.akamaihd.net/trader-home/assets/vendor-754b19a638179880c1c908a439cd00cd.js, line 2: Script terminated by timeout at:
+trigger@https://anxconsole-a.akamaihd.net/trader-home/assets/vendor-754b19a638179880c1c908a439cd00cd.js:2:18774
+simulate@https://anxconsole-a.akamaihd.net/trader-home/assets/vendor-754b19a638179880c1c908a439cd00cd.js:2:22289
+r@https://anxconsole-a.akamaihd.net/trader-home/assets/vendor-754b19a638179880c1c908a439cd00cd.js:2:25478
+
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://assets.taboola.com/set-expo-ab?ab=99, line 1: SyntaxError: unexpected token: identifier
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to get property "href" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript error: https://js.intercomcdn.com/frame.f6396db4.js, line 1: SecurityError: Permission denied to access property "requestAnimationFrame" on cross-origin object
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 4328 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1640201105647	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://devtools/client/inspector/markup/markup.js, line 1445: TypeError: this.resourceCommand is null
+JavaScript warning: https://accounts.google.com/signin/continue?sarp=1&scc=0&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&plt=AKgnsbvpye7GlIChoU9acfKNb_aelBvKycoOw5lvc6j9t40vNv2l46cpntntUJmoh31-ZwKwHwtP-9EKI4JMx5apKJVbWnnNTMPyR379ie0mUmBUeCFPNgppuBH5-BcndGSz1wIUB2Ht&PersistentCookie=1&service=xbid line 1 > eval line 7823 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640201859735	Marionette	INFO	Stopped listening on port 49703
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640201903881	geckodriver	INFO	Listening on 127.0.0.1:64377
+1640201906894	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64378" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofiledtchO0"
+1640201908432	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofiledtchO0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64378/devtools/browser/947db525-1a1d-4396-b783-7b7f526f107b
+1640201911229	Marionette	INFO	Listening on port 64383
+1640201911723	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 1739 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640202205633	Marionette	INFO	Stopped listening on port 64383
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640202222679	geckodriver	INFO	Listening on 127.0.0.1:52808
+1640202225676	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52809" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileE64chQ"
+1640202227322	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileE64chQ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52809/devtools/browser/b2cda320-6d4a-410d-8db8-63609837e4ef
+1640202229797	Marionette	INFO	Listening on port 52814
+1640202229916	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 2169 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&followup=https%3A%2F%2Fdisplayvideo.google.com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin line 1 > eval line 5940 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1640204084342	Marionette	INFO	Stopped listening on port 52814
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640204763315	geckodriver	INFO	Listening on 127.0.0.1:49712
+1640204766343	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49713" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilea7IaPh"
+1640204767853	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilea7IaPh\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49713/devtools/browser/c4724121-4615-40b1-b469-77887e6df45b
+1640204770303	Marionette	INFO	Listening on port 49718
+1640204770547	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 1453 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript error: https://login.microsoftonline.com/86cbe1bb-213f-4271-b174-bd59d03c87a3/saml2?SAMLRequest=fVJdT4MwFH038T80fQcGJkabgZmaxSV%2BkA198K2UDsraXuwtm%2F57GZtRH%2FSxp6fn4%2FZOr96NJlvpUIFNaRxOKJFWQKVsndLnYh5c0Kvs9GSK3OiOzXrf2KV86yV6Mry0yMaLlPbOMuCokFluJDIv2Gr2cM%2BScMI6Bx4EaEoWtynl0LW2a2DTNJt6swHTNp2ubWsNL20r1lVVtWVZNZS8fMVK9rEWiL1cWPTc%2BgGaJHEQJ0GSFMmEJefs7PKVkvzodK3socF%2FscoDCdldUeRB%2FrQqRoGtqqR7HNgprQFqLUMBZm%2Bfc0S1HeA11ygpmSFK54eAN2CxN9KtpNsqIZ%2BX9yltvO%2BQRdFutwu%2FZSIe1Q76zhwOAmk2TpaN5dyPkf4fnX9Z0%2BwP8Wn0Qzc7ft%2B%2B1eI2B63EB5lpDbsbJ7kfKnnXD43m4Az3f1vHYTwiqgrWI5X1Fjsp1FrJipIoO7j%2B3pNhez4B&RelayState=https%3A%2F%2Faccounts.google.com%2FCheckCookie%3Fcontinue%3Dhttps%253A%252F%252Fdisplayvideo.google.com%252F%26service%3Dxbid%26ifkv%3DAU9NCcymdygSZ-uqWnEUrPKbFwUgOuZ7JQPK3Y2VCs5aW654TPlUIQ_vHk-QI-z9xhN1YSK7kaZcEg, line 51: uncaught exception: [Retry 0] Failed to load external resource ['https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg'], reloading from fallback CDN endpoint
+JavaScript error: https://login.microsoftonline.com/86cbe1bb-213f-4271-b174-bd59d03c87a3/saml2?SAMLRequest=fVJdT4MwFH038T80fQcGJkabgZmaxSV%2BkA198K2UDsraXuwtm%2F57GZtRH%2FSxp6fn4%2FZOr96NJlvpUIFNaRxOKJFWQKVsndLnYh5c0Kvs9GSK3OiOzXrf2KV86yV6Mry0yMaLlPbOMuCokFluJDIv2Gr2cM%2BScMI6Bx4EaEoWtynl0LW2a2DTNJt6swHTNp2ubWsNL20r1lVVtWVZNZS8fMVK9rEWiL1cWPTc%2BgGaJHEQJ0GSFMmEJefs7PKVkvzodK3socF%2FscoDCdldUeRB%2FrQqRoGtqqR7HNgprQFqLUMBZm%2Bfc0S1HeA11ygpmSFK54eAN2CxN9KtpNsqIZ%2BX9yltvO%2BQRdFutwu%2FZSIe1Q76zhwOAmk2TpaN5dyPkf4fnX9Z0%2BwP8Wn0Qzc7ft%2B%2B1eI2B63EB5lpDbsbJ7kfKnnXD43m4Az3f1vHYTwiqgrWI5X1Fjsp1FrJipIoO7j%2B3pNhez4B&RelayState=https%3A%2F%2Faccounts.google.com%2FCheckCookie%3Fcontinue%3Dhttps%253A%252F%252Fdisplayvideo.google.com%252F%26service%3Dxbid%26ifkv%3DAU9NCcymdygSZ-uqWnEUrPKbFwUgOuZ7JQPK3Y2VCs5aW654TPlUIQ_vHk-QI-z9xhN1YSK7kaZcEg, line 51: uncaught exception: [Retry 0] Failed to load external resource ['https://aadcdn.msauth.net/shared/1.0/content/images/backgrounds/2_bc3d32a696895f78c19df6c717586a5d.svg'], reloading from fallback CDN endpoint
+JavaScript error: resource://devtools/client/shared/widgets/tooltip/HTMLTooltip.js, line 926: TypeError: node.ownerDocument is null
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: resource://devtools/client/shared/widgets/tooltip/HTMLTooltip.js, line 926: TypeError: node.ownerDocument is null
+1640268659769	Marionette	INFO	Stopped listening on port 49718
+1640270364258	geckodriver	INFO	Listening on 127.0.0.1:62376
+1640270367273	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62377" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileahiLt3"
+1640270368765	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileahiLt3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62377/devtools/browser/01cc7a41-0eaa-4426-a89a-f9dfeb1985e5
+1640270371196	Marionette	INFO	Listening on port 62382
+1640270371484	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 956 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("currentNode is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 66))
+TypeError: currentNode is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:66:20
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640279628503	Marionette	INFO	Stopped listening on port 62382
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640279756963	geckodriver	INFO	Listening on 127.0.0.1:62229
+1640279760014	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62230" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilemLCpyr"
+1640279761527	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilemLCpyr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62230/devtools/browser/11182800-e627-46ea-87f0-7d4a8d5a963f
+1640279764148	Marionette	INFO	Listening on port 62236
+1640279764238	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 1965 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.error: (new InvalidStateError("JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment", (void 0), 437))
+InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment: sendPacket@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:437:10
+send@resource://devtools/shared/transport/js-window-actor-transport.js:53:25
+send@resource://devtools/server/devtools-server-connection.js:99:20
+_sendEvent@resource://devtools/shared/protocol/Actor.js:72:15
+initialize/<@resource://devtools/shared/protocol/Actor.js:46:16
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+_notifyDocShellsUpdate@resource://devtools/server/actors/targets/window-global.js:1022:10
+DebuggerProgressListener.prototype.onStateChange<@resource://devtools/server/actors/targets/window-global.js:1955:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.error: (new InvalidStateError("JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment", (void 0), 437))
+InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment: sendPacket@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:437:10
+send@resource://devtools/shared/transport/js-window-actor-transport.js:53:25
+send@resource://devtools/server/devtools-server-connection.js:99:20
+_sendEvent@resource://devtools/shared/protocol/Actor.js:72:15
+initialize/<@resource://devtools/shared/protocol/Actor.js:46:16
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+_notifyDocShellsUpdate@resource://devtools/server/actors/targets/window-global.js:1022:10
+_updateChildDocShells@resource://devtools/server/actors/targets/window-global.js:1028:10
+_windowReady@resource://devtools/server/actors/targets/window-global.js:1474:12
+DebuggerProgressListener.prototype.onWindowCreated<@resource://devtools/server/actors/targets/window-global.js:1862:23
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.error: "Unable to find target with innerWindowId:2147483658"
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://www.educba.com/xpath-contains/?source=leftnav, line 446: TypeError: jQuery(...).offset() is undefined
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 863: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1171: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1337: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1490: unreachable code after return statement
+1640280659506	Marionette	INFO	Stopped listening on port 62236
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640280693796	geckodriver	INFO	Listening on 127.0.0.1:61814
+1640280696808	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61815" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilevKb8rX"
+1640280698354	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilevKb8rX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61815/devtools/browser/23ff1d6e-ae87-4313-82d5-0558d8e66d40
+1640280700791	Marionette	INFO	Listening on port 61821
+1640280701027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.educba.com/xpath-contains/?source=leftnav, line 446: TypeError: jQuery(...).offset() is undefined
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 863: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1171: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1337: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1490: unreachable code after return statement
+1640280770730	Marionette	INFO	Stopped listening on port 61821
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640280804820	geckodriver	INFO	Listening on 127.0.0.1:63456
+1640280807849	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63457" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileQMao54"
+1640280809411	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileQMao54\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63457/devtools/browser/9bcba527-8290-4d32-871e-53772cde726e
+1640280811889	Marionette	INFO	Listening on port 63463
+1640280812086	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.educba.com/xpath-contains/?source=leftnav, line 446: TypeError: jQuery(...).offset() is undefined
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 863: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1171: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1337: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1490: unreachable code after return statement
+JavaScript error: https://www.educba.com/xpath-contains/?source=leftnav, line 446: TypeError: jQuery(...).offset() is undefined
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 863: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1171: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1337: unreachable code after return statement
+JavaScript warning: https://www.educba.com/xpath-contains/?source=leftnav, line 1490: unreachable code after return statement
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 3234 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1 line 1 > eval line 4067 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: "Unable to find target with innerWindowId:8589934602"
+1640281840531	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://devtools/client/inspector/markup/markup.js, line 1445: TypeError: this.resourceCommand is null
+console.error: "Unable to find target with innerWindowId:8589934607"
+1640281844444	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://devtools/client/inspector/markup/markup.js, line 1445: TypeError: this.resourceCommand is null
+JavaScript warning: https://accounts.google.com/ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F line 1 > eval line 1656 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F line 1 > eval line 7004 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 3679 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 443 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: "Unable to find target with innerWindowId:10737418251"
+1640281903224	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://devtools/client/inspector/markup/markup.js, line 1445: TypeError: this.resourceCommand is null
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&followup=https%3A%2F%2Fdisplayvideo.google.com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin line 1 > eval line 3125 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&followup=https%3A%2F%2Fdisplayvideo.google.com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin line 1 > eval line 1157 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&followup=https%3A%2F%2Fdisplayvideo.google.com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin line 1 > eval line 5501 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640282123318	Marionette	INFO	Stopped listening on port 63463
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640285897202	geckodriver	INFO	Listening on 127.0.0.1:54526
+1640285900233	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54527" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofile1TD6Qi"
+1640285901819	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofile1TD6Qi\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54527/devtools/browser/0d9e22c0-9fc4-4f75-8fe3-1e5f91200756
+1640285904320	Marionette	INFO	Listening on port 54539
+1640285904462	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/f8gou5y2Dfq0zn72-W9hYw99gWviw2ua4IRi-orcC78.js line 1 > eval line 1642 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientManager::Msg_ExpectFutureClientSource Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientManager::Msg_ForgetFutureClientSource Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: https://www.diadia.pe/wp-content/themes/wp-bootstrap-starter-child/js/slick.min.js?ver=0.0.1, line 1: TypeError: o[i].slick is undefined
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-includes/css/dist/block-library/style.min.css?ver=5.8.1 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/animate-it/assets/css/animate-animo.css?ver=5.8.1 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/cf7-multi-step//assets/frontend/css/cf7mls.css?ver=2.6.2 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/cf7-multi-step//assets/frontend/animate/animate.min.css?ver=2.6.2 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.2 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-public.css?ver=2.0.6 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-gdpr.css?ver=2.0.6 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/wpcf7-redirect/build/css/wpcf7-redirect-frontend.min.css?ver=5.8.1 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/themes/wp-bootstrap-starter/inc/assets/css/bootstrap.min.css?ver=5.8.1 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/themes/wp-bootstrap-starter/inc/assets/css/fontawesome.min.css?ver=5.8.1 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/themes/wp-bootstrap-starter/style.css?ver=5.8.1 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/themes/wp-bootstrap-starter-child/css/slick.css?ver=3.3.6.1630420272 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/themes/wp-bootstrap-starter-child/css/slick-theme.css?ver=3.3.6.1630420272 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/themes/wp-bootstrap-starter-child/style.css?ver=3.3.6.1630420272 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/contact-form-7-conditional-fields-pro/style.css?ver=2.0.4 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-includes/css/dashicons.min.css?ver=5.8.1 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/cf7-google-map/public/css/cf7-googlemap.css?ver=1.8.2 without a browsingContextID set
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 110: Error: Got a request https://www.diadia.pe/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-table.css?ver=2.0.6 without a browsingContextID set
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640290283792	Marionette	INFO	Stopped listening on port 54539
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640290637633	geckodriver	INFO	Listening on 127.0.0.1:62180
+1640290640647	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62181" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofile9s7lgO"
+1640290642147	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofile9s7lgO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62181/devtools/browser/b0a254a7-89be-4abc-b618-9be671f92153
+1640290644869	Marionette	INFO	Listening on port 51881
+1640290644962	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/UrlbarInput.jsm, line 3674: TypeError: engines is undefined
+JavaScript error: https://www.atptour.com/assets/atpwt/scripts/vendor/require.js, line 8: Error: Script error for: modules/global/largeDropinAd
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://www.atptour.com/assets/atpwt/scripts/vendor/require.js, line 8: Error: Script error for: modules/page/filter
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://www.atptour.com/assets/atpwt/scripts/vendor/require.js, line 8: Error: Script error for: modules/featured/longForm
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript warning: https://pagead2.googlesyndication.com/bg/U_DPXy_vflqTjVU_YutWJm0axOJE633NQGMGFEhf2s0.js line 1 > eval line 7818 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 4198 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: "Unable to find target with innerWindowId:2147483701"
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&followup=https%3A%2F%2Fdisplayvideo.google.com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin line 1 > eval line 5319 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://fly.copilot.ai"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://fly.copilot.ai"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.credly.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.credly.com"
+JavaScript warning: https://53e1270541f5.cdn4.forter.com/sn/53e1270541f5/sha256-6FMuNcGvRNbLH%2Fa2Mmio38gtcmbGx81jMajq6pIzKYc%3D/script.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.fiverr.com/px/client/PXK3bezZfO/main.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.fiverr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://github.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://github.com"
+console.warn: ({})
+JavaScript warning: https://static-exp1.licdn.com/sc/h/6jblk5oqhlo45xbkmcr7s4zix, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://static-exp1.licdn.com/sc/h/6jblk5oqhlo45xbkmcr7s4zix, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.linkedin.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.linkedin.com"
+JavaScript warning: https://static-exp1.licdn.com/sc/h/6jblk5oqhlo45xbkmcr7s4zix, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://static-exp1.licdn.com/sc/h/6jblk5oqhlo45xbkmcr7s4zix, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://xandrtraining.litmos.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://xandrtraining.litmos.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.microsoftonline.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://ssow010.okta.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://ssow010.okta.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://thetradedesk.okta.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://thetradedesk.okta.com"
+JavaScript warning: https://ok7static.oktacdn.com/assets/js/vendor/lib/fingerprint2.min.68ab45bd98459cb766f3ab26d086e5f5.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new Error("Can not send request 'getAllSelectors' because front 'domnode' is already destroyed.", "resource://devtools/shared/protocol/Front/FrontClassWithSpec.js", 28))
+Error: Can not send request 'getAllSelectors' because front 'domnode' is already destroyed.: generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:28:15
+updateSelectionCssSelectors@resource://devtools/client/inspector/inspector.js:1451:32
+onNewSelection@resource://devtools/client/inspector/inspector.js:1522:10
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+setNodeFront@resource://devtools/client/framework/selection.js:204:10
+onDetached@resource://devtools/client/inspector/inspector.js:1650:20
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("nodeFront.walkerFront is null", "resource://devtools/client/inspector/markup/markup.js", 951))
+TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:951:7
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+setNodeFront@resource://devtools/client/framework/selection.js:204:10
+onDetached@resource://devtools/client/inspector/inspector.js:1650:20
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+JavaScript warning: https://ok7static.oktacdn.com/assets/js/vendor/lib/fingerprint2.min.68ab45bd98459cb766f3ab26d086e5f5.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://thetradedesk.okta.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://learningplatform.openenglish.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://learningplatform.openenglish.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.salesforce.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.salesforce.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://platform.sizmek.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://platform.sizmek.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1640297045636	Marionette	INFO	Stopped listening on port 51881
+[Parent 25488, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1640297093061	geckodriver	INFO	Listening on 127.0.0.1:64392
+1640297096100	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64393" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilefhsRcX"
+1640297097599	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilefhsRcX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64393/devtools/browser/6056cbf8-337f-41dc-bef6-e9b7c55d100f
+1640297099931	Marionette	INFO	Listening on port 64403
+1640297100322	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1640297177006	Marionette	INFO	Stopped listening on port 64403
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640297194575	geckodriver	INFO	Listening on 127.0.0.1:55597
+1640297197580	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55598" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileC6TGo5"
+1640297199160	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileC6TGo5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55598/devtools/browser/ca34571f-0ca0-4833-85ce-35ac7cf9a011
+1640297201637	Marionette	INFO	Listening on port 55606
+1640297201786	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20211219.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 2837 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://www.atptour.com/assets/atpwt/scripts/vendor/require.js, line 8: Error: Script error for: modules/page/filter
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://www.atptour.com/assets/atpwt/scripts/vendor/require.js, line 8: Error: Script error for: modules/global/largeDropinAd
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://www.atptour.com/assets/atpwt/scripts/vendor/require.js, line 8: Error: Script error for: modules/featured/longForm
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript warning: https://pagead2.googlesyndication.com/bg/U_DPXy_vflqTjVU_YutWJm0axOJE633NQGMGFEhf2s0.js line 1 > eval line 7161 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1640297806254	Marionette	INFO	Stopped listening on port 55606
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: OperationError: Could not move temporary file(C:\Users\albeiro.jimenez\AppData\Local\Temp\rust_mozprofileC6TGo5\sessionCheckpoints.json.tmp) to destination(C:\Users\albeiro.jimenez\AppData\Local\Temp\rust_mozprofileC6TGo5\sessionCheckpoints.json)
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641302320493	geckodriver	INFO	Listening on 127.0.0.1:61608
+1641302323462	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "61609" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileRaZuGD"
+*** You are running in headless mode.
+1641302325278	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileRaZuGD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61609/devtools/browser/a9489d89-4a03-4d91-8e13-5f9f28f0bc5e
+1641302326632	Marionette	INFO	Listening on port 61614
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1641302327062	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://assets.adobedtm.com/248d63c2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 18112, MediaDecoderStateMachine #1] WARNING: Decoder=2826bda6800 Decode error: NS_ERROR_OUT_OF_MEMORY (0x8007000e): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3568
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014A,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1641302485466	Marionette	INFO	Stopped listening on port 61614
+[Parent 15808, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+2ff6b/2565ed8af75a/launch-72ad17e37652.min.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.ford.com.co/fps/script/Ford/COL, line 4550: unreachable code after return statement
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1641302474530	Marionette	INFO	Stopped listening on port 64903
+[Parent 19404, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641303284926	geckodriver	INFO	Listening on 127.0.0.1:63542
+1641303287986	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "63543" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileovDmOB"
+*** You are running in headless mode.
+1641303289573	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileovDmOB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63543/devtools/browser/67a26d70-997c-42fe-af2d-bcb1879522a9
+1641303291042	Marionette	INFO	Listening on port 63550
+1641303291158	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1641307249685	Marionette	INFO	Stopped listening on port 63550
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641311190754	geckodriver	INFO	Listening on 127.0.0.1:63997
+1641311193718	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63998" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofile4tK0uy"
+1641311195325	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofile4tK0uy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63998/devtools/browser/2bd0f3dc-3b0e-4fcb-a008-ee905aa7b68d
+1641311198025	Marionette	INFO	Listening on port 64044
+1641311198081	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 1942 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+JavaScript warning: https://amerminsights.mplatform.com/main.cdf2ba4411dec1617224.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1641314082725	Marionette	INFO	Stopped listening on port 64044
+1641314104635	geckodriver	INFO	Listening on 127.0.0.1:63011
+1641314107632	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63012" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofile0LVIzF"
+1641314109163	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofile0LVIzF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63012/devtools/browser/236c38e9-18fe-487d-a8a2-ab456356668c
+1641314112041	Marionette	INFO	Listening on port 63018
+1641314112466	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://amerminsights.mplatform.com/main.cdf2ba4411dec1617224.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 4559 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: "Error while calling actor 'pagestyle's method 'getApplied'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 570))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal2147483668/pagestyle33 (resource://devtools/server/actors/page-style.js:570:5)", "resource://devtools/shared/protocol/Front.js", 365))
+1641320395732	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://devtools/client/inspector/markup/markup.js, line 1445: TypeError: this.resourceCommand is null
+JavaScript warning: https://accounts.google.com/signin/continue?sarp=1&scc=0&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&plt=AKgnsbuDGIyfeKjCMsrHUtma3alhJPRtAnmiP0LCi3c9O00-vd__fUCE0QO8PmfwHPUODba_Ypu91EHNblQSw2O02E-fJCpndvHL-iCJZou6i_jv8UzICfGv8DCe3SgTq68iuaXaAvuQ&PersistentCookie=1&service=xbid line 1 > eval line 6193 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1641320866057	Marionette	INFO	Stopped listening on port 63018
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641320896101	geckodriver	INFO	Listening on 127.0.0.1:64875
+1641320899120	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64876" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilegJlkLC"
+1641320900650	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilegJlkLC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64876/devtools/browser/a99375cb-c886-43f1-a92b-dc0e204d08c2
+1641320903055	Marionette	INFO	Listening on port 64881
+1641320903320	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 4765 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.error: (new TypeError("currentNode is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 66))
+TypeError: currentNode is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:66:20
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+1641325077071	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://devtools/client/inspector/markup/markup.js, line 1445: TypeError: this.resourceCommand is null
+JavaScript warning: https://accounts.google.com/signin/continue?sarp=1&scc=0&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&plt=AKgnsbsAonN36PsnUE1BferSHjTXS_wGCp-H-e4rcdo1j9sCRGpa6CTDKC8uKet3eI_4jvba-t4SM6G77mHNQOMh6wpy4v2On_q1-bQ3paTE4FObPs6_zFCVHuEjg8YPPtmLDhV_7wZk&PersistentCookie=1&service=xbid line 1 > eval line 4964 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/inspector/markup/markup.js, line 1445: TypeError: this.resourceCommand is null
+1641325092897	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+console.error: (new TypeError("currentNode is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 66))
+TypeError: currentNode is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:66:20
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 3667 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: "Unable to find target with innerWindowId:2147483720"
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&followup=https%3A%2F%2Fdisplayvideo.google.com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin line 1 > eval line 3351 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1641331779987	Marionette	INFO	Stopped listening on port 64881
+[Parent 18076, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641331813109	geckodriver	INFO	Listening on 127.0.0.1:56030
+1641331816147	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56031" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofile1znqFf"
+1641331817687	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofile1znqFf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56031/devtools/browser/832c4d66-b71a-4129-97d0-15f01ca0492e
+1641331820173	Marionette	INFO	Listening on port 56040
+1641331820375	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 3702 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1641332096234	Marionette	INFO	Stopped listening on port 56040
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641332115478	geckodriver	INFO	Listening on 127.0.0.1:55784
+1641332118511	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55785" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileGERrxq"
+1641332120051	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileGERrxq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55785/devtools/browser/c7e05ec1-f286-4d51-9732-1350986c5653
+1641332122371	Marionette	INFO	Listening on port 55791
+1641332122725	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 4606 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1641332284081	Marionette	INFO	Stopped listening on port 55791
+1641332328880	geckodriver	INFO	Listening on 127.0.0.1:64603
+1641332331887	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64604" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileanlBvp"
+1641332333400	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileanlBvp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64604/devtools/browser/ea43138e-9286-4f62-abeb-ee300ab6b13d
+1641332336290	Marionette	INFO	Listening on port 64610
+1641332336729	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 7187 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1641333291194	Marionette	INFO	Stopped listening on port 64610
+1641333319744	geckodriver	INFO	Listening on 127.0.0.1:59374
+1641333322759	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59375" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilebLefrx"
+1641333324275	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilebLefrx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59375/devtools/browser/4409846d-e6ba-4529-8151-e5a23c75ab86
+1641333327022	Marionette	INFO	Listening on port 59380
+1641333327095	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1641333420429	Marionette	INFO	Stopped listening on port 59380
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641333438085	geckodriver	INFO	Listening on 127.0.0.1:61721
+1641333441108	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61722" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilehUdy79"
+1641333442642	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilehUdy79\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61722/devtools/browser/b942d989-5b72-4a38-ae06-238a9ca13921
+1641333445305	Marionette	INFO	Listening on port 61727
+1641333445336	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220102.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 526 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: "Unable to find target with innerWindowId:2147483673"
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+getMutations@resource://devtools/client/fronts/walker.js:311:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2314))
+1641335385342	Marionette	INFO	Stopped listening on port 61727
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641335414697	geckodriver	INFO	Listening on 127.0.0.1:55801
+1641335417711	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55802" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilePGeNGG"
+1641335419221	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilePGeNGG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55802/devtools/browser/33eff31e-2df6-4235-84bd-72d47bd33149
+1641335421637	Marionette	INFO	Listening on port 55810
+1641335421930	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 24 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1641335707152	Marionette	INFO	Stopped listening on port 55810
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641335724715	geckodriver	INFO	Listening on 127.0.0.1:55995
+1641335727717	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55996" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileh6BUbq"
+1641335729339	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileh6BUbq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55996/devtools/browser/1c6860e1-9103-4579-bb27-d678ed29dc6b
+1641335731831	Marionette	INFO	Listening on port 56005
+1641335731919	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 2589 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1641335916032	Marionette	INFO	Stopped listening on port 56005
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1641335933376	geckodriver	INFO	Listening on 127.0.0.1:55280
+1641335936399	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55281" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileTBZFcS"
+1641335937974	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileTBZFcS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55281/devtools/browser/6ca93940-5ffd-4f7d-830b-fc2b40310de6
+1641335940676	Marionette	INFO	Listening on port 55288
+1641335940730	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 5868 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1641336112690	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://accounts.google.com/signin/continue?sarp=1&scc=0&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&plt=AKgnsbu_7-_jPwucIHVENwjDK7BA-AhY37ick1tNCCf2hoslHjtr5w6bVPOl5Oezu1yqZB8ApG_pvFaDJMvkaeFY7hO5cR80z7kIxmSs4NDb_fpItN6xCYAZiwXwtBL8GdT2QBaqtlUK&PersistentCookie=1&service=xbid line 1 > eval line 7758 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript warning: https://www.fiverr.com/px/client/PXK3bezZfO/main.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://53e1270541f5.cdn4.forter.com/sn/53e1270541f5/sha256-6FMuNcGvRNbLH%2Fa2Mmio38gtcmbGx81jMajq6pIzKYc%3D/script.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1641344813062	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1641344813068	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1641344813071	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1641344813076	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1641344813084	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1641344813087	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1641344813089	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1641344813093	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1641344813098	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1641344813104	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+SourceActor threw an exception: Error: Failed to fetch https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.IsloGm5DHq0.O/m=auth2/exm=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCNLqLj-f3R5mIaRCoBH1ZffQdA_eQ/cb=gapi.loaded_1. Code 2152398862.
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:556:16
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 556, column: 16
+console.error: (new Error("Failed to fetch https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.IsloGm5DHq0.O/m=auth2/exm=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCNLqLj-f3R5mIaRCoBH1ZffQdA_eQ/cb=gapi.loaded_1. Code 2152398862.", "resource://devtools/shared/DevToolsUtils.js", 556))
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 556: Error: Failed to fetch https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.IsloGm5DHq0.O/m=auth2/exm=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCNLqLj-f3R5mIaRCoBH1ZffQdA_eQ/cb=gapi.loaded_1. Code 2152398862.
+1641349493130	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: "Error while destroying front:" "accessibility" (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147483745/accessibilityActor14, type getSimulator failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ninitialize@resource://devtools/client/fronts/accessibility.js:534:39\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: 
+  InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment: sendPacket@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:437:10
+send@resource://devtools/shared/transport/js-window-actor-transport.js:53:25
+_getOrCreateActor@resource://devtools/server/devtools-server-connection.js:217:22
+onPacket@resource://devtools/server/devtools-server-connection.js:362:24
+_onPacketReceived@resource://devtools/shared/transport/js-window-actor-transport.js:48:18
+emit@resource://gre/modules/EventEmitter.jsm:160:20
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:513:21
+
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 106: Error: Connection closed, pending request to server0.conn0.windowGlobal2147483745/accessibilityActor14, type getSimulator failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:292:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19
+initialize@resource://devtools/client/fronts/accessibility.js:534:39
+
+console.warn: ({})
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 1001))
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal2147483746/pagestyle25 (resource://devtools/server/actors/page-style.js:1001:5)", "resource://devtools/shared/protocol/Front.js", 365))
+1641349614367	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: "Async method failed in safeAsyncMethod" (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147483749/performanceActor10, type connect failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\nconnect@resource://devtools/client/fronts/performance.js:63:36\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: "Failed to start [root-node] legacy listener for target null" (new TypeError("inspectorFront.walker is null", "resource://devtools/shared/commands/resource/legacy-listeners/root-node.js", 50))
+console.error: 
+  InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment: sendPacket@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:437:10
+send@resource://devtools/shared/transport/js-window-actor-transport.js:53:25
+_getOrCreateActor@resource://devtools/server/devtools-server-connection.js:217:22
+onPacket@resource://devtools/server/devtools-server-connection.js:362:24
+_onPacketReceived@resource://devtools/shared/transport/js-window-actor-transport.js:48:18
+emit@resource://gre/modules/EventEmitter.jsm:160:20
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:513:21
+
+console.warn: ({})
+1641349667958	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.error: "Tried to send a 'getApplied' method reply on an already destroyed actor 'pagestyle'"
+console.error: (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147483753/pagestyle24, type getApplied failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ngetApplied@resource://devtools/client/fronts/page-style.js:59:29\npopulate@resource://devtools/client/inspector/rules/models/element-style.js:124:8\n_populate@resource://devtools/client/inspector/rules/rules.js:1095:8\nselectElement/<@resource://devtools/client/inspector/rules/rules.js:988:23\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147483753/pagestyle24, type getApplied failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ngetApplied@resource://devtools/client/fronts/page-style.js:59:29\nupdateBoxModel/lastRequest<@resource://devtools/client/inspector/boxmodel/box-model.js:187:44\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147483753/pagestyle24, type getApplied failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ngetApplied@resource://devtools/client/fronts/page-style.js:59:29\npopulate@resource://devtools/client/inspector/rules/models/element-style.js:124:8\n_populate@resource://devtools/client/inspector/rules/rules.js:1095:8\nselectElement/<@resource://devtools/client/inspector/rules/rules.js:988:23\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147483753/pagestyle24, type getApplied failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ngetApplied@resource://devtools/client/fronts/page-style.js:59:29\npopulate@resource://devtools/client/inspector/rules/models/element-style.js:124:8\n_populate@resource://devtools/client/inspector/rules/rules.js:1095:8\nselectElement/<@resource://devtools/client/inspector/rules/rules.js:988:23\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: "Tried to send a 'getApplied' method reply on an already destroyed actor 'pagestyle'"
+1641349687189	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://devtools/client/inspector/shared/walker-event-listener.js, line 70: TypeError: can't convert null to object
+JavaScript error: resource://devtools/client/fronts/node.js, line 420: TypeError: this.parentFront is null
+JavaScript error: resource://devtools/client/fronts/node.js, line 420: TypeError: this.parentFront is null
+JavaScript error: resource://devtools/client/fronts/node.js, line 420: TypeError: this.parentFront is null
+JavaScript error: resource://devtools/client/fronts/node.js, line 420: TypeError: this.parentFront is null
+JavaScript error: resource://devtools/client/fronts/node.js, line 420: TypeError: this.parentFront is null
+JavaScript error: resource://devtools/client/fronts/node.js, line 420: TypeError: this.parentFront is null
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://devtools/client/inspector/markup/markup.js, line 1445: TypeError: this.resourceCommand is null
+1641349925904	Marionette	INFO	Stopped listening on port 55288
+1641909817339	geckodriver	INFO	Listening on 127.0.0.1:62273
+1641909820367	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "62274" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileieuVyL"
+*** You are running in headless mode.
+1641909821991	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileieuVyL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62274/devtools/browser/146bbc50-5d51-4441-9bc0-7dff165ec5dd
+1641909823383	Marionette	INFO	Listening on port 62279
+1641909823508	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1641911673887	Marionette	INFO	Stopped listening on port 62279
+1642016822000	geckodriver	INFO	Listening on 127.0.0.1:55193
+1642016825091	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55194" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileuqygvl"
+1642016826703	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileuqygvl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55194/devtools/browser/e1651fb1-a904-46a8-9eb8-dfaaaeb84aa0
+1642016829158	Marionette	INFO	Listening on port 55206
+1642016829301	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1642016863352	Marionette	INFO	Stopped listening on port 55206
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1642017058266	geckodriver	INFO	Listening on 127.0.0.1:60278
+1642017061343	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60279" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilewBN3Nb"
+1642017062953	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilewBN3Nb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60279/devtools/browser/7131a402-f7bd-403c-a569-99aa873dd47a
+1642017065295	Marionette	INFO	Listening on port 60286
+1642017065546	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1642017259893	Marionette	INFO	Stopped listening on port 60286
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1642017279533	geckodriver	INFO	Listening on 127.0.0.1:60544
+1642017282604	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60545" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileEj2lOI"
+1642017284199	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileEj2lOI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60545/devtools/browser/698efc3e-17b3-4db2-ad49-036d28b13258
+1642017287420	Marionette	INFO	Listening on port 60552
+1642017287934	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+1642017445416	Marionette	INFO	Stopped listening on port 60552
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1642017581472	geckodriver	INFO	Listening on 127.0.0.1:64157
+1642017584518	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64158" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilekT2E2s"
+1642017586120	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilekT2E2s\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64158/devtools/browser/a41fe1a1-2562-475d-a45d-851b0537b08c
+1642017588891	Marionette	INFO	Listening on port 64166
+1642017589326	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+1642017848177	Marionette	INFO	Stopped listening on port 64166
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1642017894654	geckodriver	INFO	Listening on 127.0.0.1:58381
+1642017897732	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58382" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileu9C5MR"
+1642017899346	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileu9C5MR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58382/devtools/browser/a662f9fd-54fd-4ccc-bcb2-cad8f19db784
+1642017901961	Marionette	INFO	Listening on port 58389
+1642017902054	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+1642017967429	Marionette	INFO	Stopped listening on port 58389
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1642018210867	geckodriver	INFO	Listening on 127.0.0.1:58752
+1642018213925	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58753" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileigKV2F"
+1642018215505	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileigKV2F\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58753/devtools/browser/16afd550-6346-4000-8c61-778651557562
+1642018218238	Marionette	INFO	Listening on port 58760
+1642018218747	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+1642018451578	Marionette	INFO	Stopped listening on port 58760
+[Parent 17744, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:542
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1642018945562	geckodriver	INFO	Listening on 127.0.0.1:60405
+1642018948639	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60406" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileCEYQVw"
+1642018950286	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileCEYQVw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60406/devtools/browser/51419207-4ebd-4b4f-8594-bade4bcdb740
+1642018952792	Marionette	INFO	Listening on port 60413
+1642018952855	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+1642019054399	Marionette	INFO	Stopped listening on port 60413
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
