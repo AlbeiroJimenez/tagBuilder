@@ -43,6 +43,7 @@ class urlDomains:
         self.__indexSearch = 0
         self.stop          = False
         self.thirdSubPath  = False
+        self.viewProgress  = 0
         #self.loadPage()
     
     # This function validate if a url has a valid connection to server in the internet
@@ -217,6 +218,7 @@ class urlDomains:
         self.deleteSubDomain('All')
         exist_url     = False
         exist_sitemap = False
+        self.viewProgress = 2
         if self.validURL(url):
             exist_url = True
             if self.searchXML:
@@ -243,10 +245,15 @@ class urlDomains:
                             self.findTagAttributes('a')
                             exist_sitemap = True if len(self.subDomains)>0 else False
                             break                 
+            self.viewProgress = 20
             self.setDriver(url, True if self.driver == None else False)
+            self.viewProgress = 30
             self.findAnchors()
+            self.viewProgress = 40
             self.getSubDomains()
+            self.viewProgress = 50
             self.deeperSubDomains()
+            self.viewProgress = 99
             exist_sitemap = True if len(self.subDomains)>0 else False
             return exist_url, exist_sitemap
         else:

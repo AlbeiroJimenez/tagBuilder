@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from threading import Thread
+import time
 
 from os import closerange, path as p
 from urllib.parse import urlparse
@@ -23,7 +24,7 @@ SPECIAL_CELLS   = (
     'C31', 'D31', 'G31'
 )
 
-PROGRAM_NAME = 'TagCalc'
+PROGRAM_NAME = 'PixelBot'
 
 class FrameWork2D(ttk.Frame):
     def __init__(self, root, *args, **kwargs):
@@ -140,6 +141,7 @@ class tagFrontEnd(FrameWork2D):
         self.maxCategory   = tk.IntVar()
         self.minSizeWord   = tk.IntVar()
         self.maxLandings   = tk.IntVar()
+        self.viewProgress  = tk.IntVar()
         self._init_params()
 
     def _init_params(self):
@@ -154,6 +156,7 @@ class tagFrontEnd(FrameWork2D):
         self.webDOM.setMaxLandings(self.maxLandings.get())
         self.searchXML.set(False)
         self.webDOM.setSearchXML(self.searchXML.get())
+        self.viewProgress.set(0)
         self.buildTab(0)
 
     # Function to build diferents tabs: Sitemap and GTM
@@ -187,7 +190,7 @@ class tagFrontEnd(FrameWork2D):
         ttk.Label(parameters_frame, text="URL Target:").grid(column=0, row=0, sticky=tk.W)
         tk.Entry(parameters_frame, width=30, textvariable = self.urlAdvertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=0, sticky=tk.W)
         ttk.Label(parameters_frame, text="Advertiser:").grid(column=2, row=0, sticky=tk.W)
-        tk.Entry(parameters_frame, textvariable = self.advertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=3, row=0, sticky=tk.W)
+        tk.Entry(parameters_frame, textvariable = self.advertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2, width=23).grid(column=3, row=0, sticky=tk.W)
         ttk.Label(parameters_frame, text="Only HomePV:").grid(column=4, row=0, sticky=tk.W)
         ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=5, row=0)
         
@@ -196,17 +199,21 @@ class tagFrontEnd(FrameWork2D):
         self.maxCategories.grid(column=1, row=2, sticky=tk.W)
         ttk.Label(parameters_frame, textvariable=self.maxCategory, font=('Arial',8,'italic')).grid(column=1, row=1, sticky=tk.W)
 
-        ttk.Label(parameters_frame, text="Min. Size Word:").grid(column=2, row=1, sticky=tk.W)
-        self.sizeWord = ttk.Scale(parameters_frame, from_=2, to=15, command=self.set_sizeWord, variable=self.minSizeWord)
-        self.sizeWord.grid(column=3, row=2)
-        self.sizeWord.set(3)
-        ttk.Label(parameters_frame, textvariable=self.minSizeWord, font=('Arial',8,'italic')).grid(column=3, row=1, sticky=tk.W)
+        ttk.Label(parameters_frame, text="Progress:").grid(column=2, row=1, sticky=tk.W)
+        self.progressbar = ttk.Progressbar(parameters_frame,variable=self.viewProgress, orient = tk.HORIZONTAL, length=140, maximum=100)
+        self.progressbar.grid(column=3, row=2)
+        
+        #ttk.Label(parameters_frame, text="Min. Size Word:").grid(column=2, row=1, sticky=tk.W)
+        #self.sizeWord = ttk.Scale(parameters_frame, from_=2, to=15, command=self.set_sizeWord, variable=self.minSizeWord)
+        #self.sizeWord.grid(column=3, row=2)
+        #self.sizeWord.set(3)
+        #ttk.Label(parameters_frame, textvariable=self.minSizeWord, font=('Arial',8,'italic')).grid(column=3, row=1, sticky=tk.W)
 
-        ttk.Label(parameters_frame, text="Max. Landings:").grid(column=4, row=1, sticky=tk.W)
-        self.landings = ttk.Scale(parameters_frame, from_=50, to=500, command=self.set_maxLandings, variable=self.maxLandings)
-        self.landings.grid(column=5, row=2)
-        self.landings.set(100)
-        ttk.Label(parameters_frame, textvariable=self.maxLandings, font=('Arial',8,'italic')).grid(column=5, row=1, sticky=tk.W)
+        #ttk.Label(parameters_frame, text="Max. Landings:").grid(column=4, row=1, sticky=tk.W)
+        #self.landings = ttk.Scale(parameters_frame, from_=50, to=500, command=self.set_maxLandings, variable=self.maxLandings)
+        #self.landings.grid(column=5, row=2)
+        #self.landings.set(100)
+        #ttk.Label(parameters_frame, textvariable=self.maxLandings, font=('Arial',8,'italic')).grid(column=5, row=1, sticky=tk.W)
         #ttk.Button(parameters_frame, text='.').grid(column=4, row=1)
         
     def createDataSection(self, indexTab):
@@ -336,6 +343,19 @@ class tagFrontEnd(FrameWork2D):
         thread = Thread(target = self.save)
         thread.start()
 
+    def updateProgress_threaded(self):
+        thread = Thread(target = self.updateProgress)
+        thread.start()
+
+    def updateProgress(self):
+        while self.webDOM.viewProgress > 0:
+            self.viewProgress.set(self.webDOM.viewProgress)
+            time.sleep(1)
+        else:
+            print('Se ha finalizado este hilo de seguimiento')
+            time.sleep(10)
+            self.viewProgress.set(0)
+
     def set_search(self):
         self.webDOM.setSearchXML(self.searchXML.get())
     
@@ -380,19 +400,25 @@ class tagFrontEnd(FrameWork2D):
                     self.dataTable.delete(item_)
 
     def find(self):
+        self.webDOM.viewProgress = 1
+        self.updateProgress_threaded()
         self.webDOM.setStop(False)
         self.btn_find.configure(state='disable')
         #self.maxCategories.configure(state='disable')
         self.btn_stop.configure(state='active')
         self.deleteItemsTreeView()
+        self.webDOM.setDriver('https://www.google.com/', True if self.webDOM.driver == None else False)
         exists_url, exists_sitemap = self.webDOM.buildSiteMap(self.urlAdvertiser.get())
-        self.lanchPopUps('Landings', 'The process of find landings has finished!', 'Press "Ok" to exit.')
         if exists_url:
-            self.lanchPopUps('Landings', 'The process of find landings has finished!', 'Press "Ok" to exit.')
+            if exists_sitemap:
+                self.lanchPopUps('Landings', 'The process of find landings has finished!', 'Press "Aceptar" to exit.')
+            else:
+                self.lanchPopUps('Landings', "Didn't build WebSite SiteMap!", 'Press "Aceptar" to exit.')
         else:
-            self.lanchPopUps('URL Error!', "The URL given not found or it's incorrect!", 'Press "Ok" to exit.')
+            self.lanchPopUps('URL Error!', "The URL given not found or it's incorrect!", 'Press "Aceptar" to exit.')
         self.btn_find.configure(state='active')
         self.btn_sections.configure(state='active')
+        self.webDOM.viewProgress = -1
         #self.maxCategories.configure(state='active')
         
     def stopSearch(self):
@@ -410,7 +436,7 @@ class tagFrontEnd(FrameWork2D):
         self.addItemTreeView(self.webDOM.arraySections)
         self.btn_sections.configure(state='active')
         self.btn_save.configure(state='active')
-        self.lanchPopUps('Sectioned', 'The process of categorized has finished!', 'Press "Ok" to exit.')
+        self.lanchPopUps('Sectioned', 'The process of categorized has finished!', 'Press "Aceptar" to exit.')
         
     def validsSections(self, mainSections, arraySections):
         sections = []
@@ -427,15 +453,34 @@ class tagFrontEnd(FrameWork2D):
         self.xlsxFile.writeCell('D31', 'Page View')
         self.xlsxFile.writeCell('G31', 'u')
         self.xlsxFile.writeCell('E31', self.xlsxFile.getNameSection(self.advertiser.get(), 'Home'))
+        #ADD THIS SNIPET TO THE DEVELOPMENT BRANCH
+        self.xlsxFile.writeCell('C32', 'Section')
+        self.xlsxFile.writeCell('D32', 'Page View')
+        self.xlsxFile.writeCell('F32', 'AllPages')
+        self.xlsxFile.writeCell('G32', 'u/p')
+        self.xlsxFile.writeCell('E32', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','PV'))
+        self.xlsxFile.writeCell('C34', 'Section')
+        self.xlsxFile.writeCell('D34', 'Scroll')
+        self.xlsxFile.writeCell('F34', 'AllPages')
+        self.xlsxFile.writeCell('G34', 'u/p')
+        self.xlsxFile.writeCell('E34', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','Scroll50'))
+        self.xlsxFile.writeCell('C35', 'Section')
+        self.xlsxFile.writeCell('D35', 'Timer')
+        self.xlsxFile.writeCell('F35', 'AllPages')
+        self.xlsxFile.writeCell('G35', 'u/p')
+        self.xlsxFile.writeCell('E35', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','T30ss'))
+        #END SNIPET
         self.loadData(self.webDOM.arraySections)
         self.xlsxFile.book.remove(self.xlsxFile.book['Sections'])
         directory = filedialog.askdirectory()
         if len(directory) > 0:
             self.xlsxFile.saveBook(directory)
+            self.lanchPopUps('Save', 'The TagCalc file has saved!', 'Press "Aceptar" to exit.')
         else:
-            self.xlsxFile.saveBook()
+            self.lanchPopUps('Save', "The TagCalc file hasn't saved!", 'Press "Aceptar" to exit.')
+            #self.xlsxFile.saveBook()
         self.btn_save.configure(state='active')
-        self.lanchPopUps('Save', 'The TagCalc file has saved!', 'Press "Ok" to exit.')
+        
         
     def lanchPopUps(self, title_, message_, detail_):
         messagebox.showinfo(
