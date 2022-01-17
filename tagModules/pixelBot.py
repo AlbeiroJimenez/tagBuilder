@@ -71,13 +71,16 @@ class pixelBot:
 
     def existWebElement(self, webElement='email'):
         if webElement=='email':
-            emails = self.driver.find_elements(By.XPATH,'//input[@type="email"]|//input[contains(@name,"user")]|//input[contains(@name,"login")]|//input[contains(@name,"session")]')
+            emails = self.driver.find_elements(By.XPATH,'//input[@type="email"]|//input[contains(@name,"user")]|//input[contains(@name,"login")]|//input[contains(@name,"session")]|//input[contains(@name,"email")]')
             for email in emails:
                 if not email.is_displayed():
                     emails.remove(email)
+            print(len(emails))
             if len(emails)>0:
                 return True, emails[0]
+                print(len(emails))
             else:
+                print(len(emails))
                 return False, None       
         elif webElement=='password':
             passwords = self.driver.find_elements(By.XPATH,'//input[@type="password"]')

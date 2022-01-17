@@ -1,3 +1,4 @@
+from concurrent.futures import thread
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk, simpledialog
 from threading import Thread
@@ -146,7 +147,6 @@ class tagFrontEnd(FrameWork2D):
         self.maxLandings   = tk.IntVar()
         self._init_params()
 
-    
     def _init_params(self):
         self.pathTR.set(self.xlsxFile.PATH)
         self.urlAdvertiser.set(self.webDOM.url_target)
@@ -159,6 +159,7 @@ class tagFrontEnd(FrameWork2D):
         self.webDOM.setMaxLandings(self.maxLandings.get())
         self.searchXML.set(False)
         self.webDOM.setSearchXML(self.searchXML.get())
+        self.codeVerify = None
         self.buildTab(0)
         self.buildTab(1)
 
@@ -261,7 +262,7 @@ class tagFrontEnd(FrameWork2D):
         pixel_button_frame = ttk.Frame(pixel_label_frame)
         pixel_button_frame.grid(column = 0, row=1)
         
-        self.btn_create = ttk.Button(pixel_button_frame, text='Create', command = self.createPixels)
+        self.btn_create = ttk.Button(pixel_button_frame, text='Create', command = self.createPixels_threaded)
         self.btn_create.grid(column=0, row=0)
 
         self.btn_stop_GTM = ttk.Button(pixel_button_frame, text='Stop', command = self.stopSearch, state = 'disable')
@@ -393,6 +394,10 @@ class tagFrontEnd(FrameWork2D):
         thread = Thread(target = self.createPixels)
         thread.start()
 
+    def updateCodeVerify_threaded(self):
+        thread = Thread(target = self.updateCodeVerify)
+        thread.start()
+
     def set_search(self):
         self.webDOM.setSearchXML(self.searchXML.get())
     
@@ -478,6 +483,7 @@ class tagFrontEnd(FrameWork2D):
         
     def createPixels(self):
         print('Hemos empezado')
+        self.updateCodeVerify_threaded()
         login = False
         self.pixelBot.setDriver('https://monetize.xandr.com/login')
         while True:
@@ -490,11 +496,21 @@ class tagFrontEnd(FrameWork2D):
                     return False
                 else:
                     return True
-            elif self.pixelBot.reqCode:
-                self.pixelBot.code = simpledialog.askstring('Verification','What is the code?')
-                print(self.pixelBot.code)
+            #elif self.pixelBot.reqCode:
+                #self.pixelBot.code = simpledialog.askstring('Verification','What is the code?')
+                #print(self.pixelBot.code)
             elif not login and not self.pixelBot.startLog:
                 return False
+
+    def updateCodeVerify(self):
+        while True:
+            if self.pixelBot.reqCode:
+                alertWin = tk.Tk()
+                alertWin.withdraw()
+                self.pixelBot.code = simpledialog.askstring('Verification','What is the code?',parent=alertWin)
+                time.sleep(1)
+                alertWin.destroy()
+                break
     
     def validsSections(self, mainSections, arraySections):
         sections = []
