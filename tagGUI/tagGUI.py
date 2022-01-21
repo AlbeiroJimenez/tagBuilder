@@ -1,4 +1,6 @@
+from cgitb import text
 from concurrent.futures import thread
+from statistics import variance
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk, simpledialog
 from threading import Thread
@@ -17,6 +19,12 @@ MENU_DEFINITION = (
             'View- URL Extractor//self.show_urlExtractor, GTM//self.show_GTM',
             'Help- Documentation/F2/self.documentation, About/F1/self.aboutTagCalc'
         )
+
+LOGIN_PAGES     = (
+    'https://monetize.xandr.com/login', 
+    'https://displayvideo.google.com/',
+    'https://authentication.taboola.com'
+)
 
 TABS_DEFINITION = (
     'SiteMap',
@@ -142,6 +150,8 @@ class tagFrontEnd(FrameWork2D):
         self.urlAdvertiser = tk.StringVar()
         self.advertiser    = tk.StringVar()
         self.searchXML     = tk.BooleanVar()
+        self.users         = [tk.StringVar(), tk.StringVar(), tk.StringVar()]
+        self.passwords     = [tk.StringVar(), tk.StringVar(), tk.StringVar()]
         self.maxCategory   = tk.IntVar()
         self.minSizeWord   = tk.IntVar()
         self.maxLandings   = tk.IntVar()
@@ -160,8 +170,22 @@ class tagFrontEnd(FrameWork2D):
         self.searchXML.set(False)
         self.webDOM.setSearchXML(self.searchXML.get())
         self.codeVerify = None
+        self.closeTopW  = False
+        for user, passwd in zip(self.users,self.passwords):
+            user.set("")
+            passwd.set("")
         self.buildTab(0)
         self.buildTab(1)
+        print(self.existAllCredentials())
+
+    def existAllCredentials(self):
+        for user, passwd in zip(self.users,self.passwords):
+            if user.get() == "":
+                return False
+            if passwd.get() == "":
+                return False
+        else:
+            return True
 
     # Function to build diferents tabs: Sitemap and GTM
     def buildTab(self, indexTab):
@@ -303,6 +327,49 @@ class tagFrontEnd(FrameWork2D):
             self.pixelTable.column('Variables', stretch=True, width=110)
             self.pixelTable.bind("<KeyPress-Delete>",self.deleteBranch)
             self.pixelTable.grid(column=0, row=0, sticky='NESW')
+
+    def settingWindow(self):
+        self.setWindow = tk.Toplevel(self.root)
+        self.setWindow.title('PixelBot Settings')
+        self.setWindow.iconbitmap('xaxis32x32.ico')
+        self.setWindow.geometry("395x430+300+100")
+
+        sitemap_label_frame = ttk.LabelFrame(self.setWindow, text='SiteMap', width=390, height=200)
+        sitemap_frame       = ttk.Frame(sitemap_label_frame)
+        sitemap_label_frame.grid(column = 0, row=0)
+        sitemap_label_frame.grid_propagate(0)
+        sitemap_frame.grid(column = 0, row=0)
+
+        gtm_label_frame = ttk.LabelFrame(self.setWindow, text='Pixels', width=390, height=200)
+        gtm_frame       = ttk.Frame(gtm_label_frame)
+        gtm_label_frame.grid(column = 0, row=1)
+        gtm_label_frame.grid_propagate(0)
+        gtm_frame.grid(column = 0, row=0)
+
+        btn_frame       = ttk.Frame(self.setWindow)
+        btn_frame.grid(column = 0, row=3)
+
+        ttk.Button(btn_frame, text='Save', command = self.saveSettings).grid(column=0, row=0)
+        self.setExit = ttk.Button(btn_frame, text='exit', command = self.setWindow.destroy, state = 'disable')
+        self.setExit.grid(column=1, row=0)
+
+        ttk.Label(gtm_frame, text='Xandr: ').grid(column=0, row=0, sticky=tk.W)
+        ttk.Label(gtm_frame, text='DV360: ').grid(column=0, row=1, sticky=tk.W)
+        ttk.Label(gtm_frame, text='Taboola:').grid(column=0, row=2, sticky=tk.W)
+        ttk.Label(gtm_frame, text='Passwd: ').grid(column=2, row=0, sticky=tk.W)
+        ttk.Label(gtm_frame, text='Passwd: ').grid(column=2, row=1, sticky=tk.W)
+        ttk.Label(gtm_frame, text='Passwd: ').grid(column=2, row=2, sticky=tk.W)
+
+        tk.Entry(gtm_frame, textvariable=self.users[0], font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=0, sticky=tk.W)
+        tk.Entry(gtm_frame, textvariable=self.users[1], font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=1, sticky=tk.W)
+        tk.Entry(gtm_frame, textvariable=self.users[2], font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=2, sticky=tk.W)
+        tk.Entry(gtm_frame, textvariable=self.passwords[0], font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=3, row=0, sticky=tk.W)
+        tk.Entry(gtm_frame, textvariable=self.passwords[1], font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=3, row=1, sticky=tk.W)
+        tk.Entry(gtm_frame, textvariable=self.passwords[2], font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=3, row=2, sticky=tk.W)
+        
+    def saveSettings(self):
+        if self.existAllCredentials:
+            self.setExit.configure(state='active')
         
     def addItem(self, parent, itemID, data):
         try:
@@ -390,7 +457,7 @@ class tagFrontEnd(FrameWork2D):
         thread = Thread(target = self.save)
         thread.start()
 
-    def createPixels_threaded(self):
+    def createPixels_threaded(self): 
         thread = Thread(target = self.createPixels)
         thread.start()
 
@@ -483,24 +550,31 @@ class tagFrontEnd(FrameWork2D):
         
     def createPixels(self):
         print('Hemos empezado')
+        self.settingWindow() 
+        while not self.existAllCredentials() or self.setWindow.winfo_exists():
+            if not self.setWindow.winfo_exists():
+                self.settingWindow()  
         self.updateCodeVerify_threaded()
-        login = False
-        self.pixelBot.setDriver('https://monetize.xandr.com/login')
-        while True:
-            login = self.pixelBot.doLogin('albeiro.jimenez@groupm.com', 'xAXIS_2021*!')
-            time.sleep(7)
-            self.pixelBot.authFail = self.pixelBot.auth_alert()
-            if login or self.pixelBot.authFail:
-                if self.pixelBot.authFail:
-                    print('Ha habido un problema de authenticación')
-                    return False
-                else:
-                    return True
-            #elif self.pixelBot.reqCode:
-                #self.pixelBot.code = simpledialog.askstring('Verification','What is the code?')
-                #print(self.pixelBot.code)
-            elif not login and not self.pixelBot.startLog:
-                return False
+        for platform, user, password in zip(LOGIN_PAGES, self.users, self.passwords):
+            login = False
+            #self.pixelBot.setDriver('https://monetize.xandr.com/login')
+            self.pixelBot.setDriver(platform)
+            while True:
+                #login = self.pixelBot.doLogin('albeiro.jimenez@groupm.com', 'xAXIS_2021*!')
+                login = self.pixelBot.doLogin(user.get(), password.get())
+                time.sleep(15)
+                self.pixelBot.authFail = self.pixelBot.auth_alert()
+                if login or self.pixelBot.authFail:
+                    if self.pixelBot.authFail:
+                        print('Ha habido un problema de authenticación')
+                        break
+                    else:
+                        break
+                #elif self.pixelBot.reqCode:
+                    #self.pixelBot.code = simpledialog.askstring('Verification','What is the code?')
+                    #print(self.pixelBot.code)
+                elif not login and not self.pixelBot.startLog:
+                    break
 
     def updateCodeVerify(self):
         while True:
@@ -543,6 +617,10 @@ class tagFrontEnd(FrameWork2D):
             message = message_,
             detail  = detail_
             )
+
+    # Overwrite the setting's method from child class
+    def setting(self):
+        self.settingWindow()
         
     def exitCalcTag(self):
         self.webDOM.tearDown()
@@ -553,5 +631,6 @@ class tagFrontEnd(FrameWork2D):
               
 if __name__ == '__main__':
     root = tk.Tk()
+    tk.Toplevel()
     tagCalc = tagFrontEnd(root)
     tagCalc.mainloop()
