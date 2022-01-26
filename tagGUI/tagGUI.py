@@ -1,6 +1,3 @@
-from cgitb import text
-from concurrent.futures import thread
-from statistics import variance
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk, simpledialog
 from threading import Thread
@@ -174,9 +171,10 @@ class tagFrontEnd(FrameWork2D):
         for user, passwd in zip(self.users,self.passwords):
             user.set("")
             passwd.set("")
+        self.setWindow = tk.Toplevel()
+        self.setWindow.destroy()
         self.buildTab(0)
         self.buildTab(1)
-        print(self.existAllCredentials())
 
     def existAllCredentials(self):
         for user, passwd in zip(self.users,self.passwords):
@@ -550,18 +548,21 @@ class tagFrontEnd(FrameWork2D):
         
     def createPixels(self):
         print('Hemos empezado')
-        self.settingWindow() 
+        #self.settingWindow() 
         while not self.existAllCredentials() or self.setWindow.winfo_exists():
             if not self.setWindow.winfo_exists():
                 self.settingWindow()  
-        self.updateCodeVerify_threaded()
         for platform, user, password in zip(LOGIN_PAGES, self.users, self.passwords):
             login = False
             #self.pixelBot.setDriver('https://monetize.xandr.com/login')
             self.pixelBot.setDriver(platform)
+            windowCode = False
             while True:
                 #login = self.pixelBot.doLogin('albeiro.jimenez@groupm.com', 'xAXIS_2021*!')
                 login = self.pixelBot.doLogin(user.get(), password.get())
+                if self.pixelBot.reqCode and not windowCode: 
+                    self.updateCodeVerify_threaded()
+                    windowCode = True
                 time.sleep(15)
                 self.pixelBot.authFail = self.pixelBot.auth_alert()
                 if login or self.pixelBot.authFail:
@@ -577,14 +578,14 @@ class tagFrontEnd(FrameWork2D):
                     break
 
     def updateCodeVerify(self):
-        while True:
-            if self.pixelBot.reqCode:
-                alertWin = tk.Tk()
-                alertWin.withdraw()
-                self.pixelBot.code = simpledialog.askstring('Verification','What is the code?',parent=alertWin)
-                time.sleep(1)
-                alertWin.destroy()
-                break
+        #while True:
+        #if self.pixelBot.reqCode:
+        alertWin = tk.Tk()
+        alertWin.withdraw()
+        self.pixelBot.code = simpledialog.askstring('Verification','What is the code?',parent=alertWin)
+        time.sleep(1)
+        alertWin.destroy()
+                #break
     
     def validsSections(self, mainSections, arraySections):
         sections = []
@@ -601,6 +602,21 @@ class tagFrontEnd(FrameWork2D):
         self.xlsxFile.writeCell('D31', 'Page View')
         self.xlsxFile.writeCell('G31', 'u')
         self.xlsxFile.writeCell('E31', self.xlsxFile.getNameSection(self.advertiser.get(), 'Home'))
+        self.xlsxFile.writeCell('C32', 'Section')
+        self.xlsxFile.writeCell('D32', 'Page View')
+        self.xlsxFile.writeCell('F32', 'AllPages')
+        self.xlsxFile.writeCell('G32', 'u/p')
+        self.xlsxFile.writeCell('E32', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','PV'))
+        self.xlsxFile.writeCell('C34', 'Section')
+        self.xlsxFile.writeCell('D34', 'Scroll')
+        self.xlsxFile.writeCell('F34', 'AllPages')
+        self.xlsxFile.writeCell('G34', 'u/p')
+        self.xlsxFile.writeCell('E34', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','Scroll50'))
+        self.xlsxFile.writeCell('C35', 'Section')
+        self.xlsxFile.writeCell('D35', 'Timer')
+        self.xlsxFile.writeCell('F35', 'AllPages')
+        self.xlsxFile.writeCell('G35', 'u/p')
+        self.xlsxFile.writeCell('E35', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','T30ss'))
         self.loadData(self.webDOM.arraySections)
         self.xlsxFile.book.remove(self.xlsxFile.book['Sections'])
         directory = filedialog.askdirectory()

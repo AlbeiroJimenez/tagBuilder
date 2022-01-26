@@ -75,12 +75,9 @@ class pixelBot:
             for email in emails:
                 if not email.is_displayed():
                     emails.remove(email)
-            print(len(emails))
             if len(emails)>0:
                 return True, emails[0]
-                print(len(emails))
             else:
-                print(len(emails))
                 return False, None       
         elif webElement=='password':
             passwords = self.driver.find_elements(By.XPATH,'//input[@type="password"]')
@@ -170,6 +167,7 @@ class pixelBot:
             e_, passwd = self.existWebElement('password')
             if e and e_:
                 email.clear()
+                passwd.clear()
                 email.send_keys(user)
                 passwd.send_keys(password+Keys.ENTER)
             elif e:
