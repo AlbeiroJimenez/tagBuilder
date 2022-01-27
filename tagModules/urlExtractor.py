@@ -1,8 +1,11 @@
 from urllib.parse import urlparse
+from os import path as p
 import requests
 import time
 
 from selenium import webdriver
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.by import By
 
 from selenium.common.exceptions import StaleElementReferenceException
@@ -23,6 +26,8 @@ USER_AGENT    = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
 HEADERS       = {
         'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
     }
+
+DRIVER_PATH   = p.abspath('/WebDriver/bin/geckodriver')
 
 class urlDomains:
     def __init__(self, url_target = URL):
@@ -91,11 +96,12 @@ class urlDomains:
         self.mainSections  = []
         
     def setHeadlessMode(self):
+        service = FirefoxService(executable_path=GeckoDriverManager().install())
         fireFoxOptions = webdriver.FirefoxOptions()
         fireFoxOptions.headless = True
         fireFoxOptions.set_preference("general.useragent.override", USER_AGENT)
         fireFoxOptions.page_load_strategy = 'eager'
-        return webdriver.Firefox(options = fireFoxOptions)
+        return webdriver.Firefox(service=service, options = fireFoxOptions)
     
     def loadPage(self, url = None):
         if url == None:
@@ -151,6 +157,7 @@ class urlDomains:
     def setDriver(self, url, setDriver = False):
         if setDriver:
             self.driver = self.setHeadlessMode()
+        
         self.setUrlTarget(url)
         self.loadPage()
         

@@ -1,0 +1,34 @@
+1643313272456	geckodriver	INFO	Listening on 127.0.0.1:52356
+1643313275519	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52357" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileq57gbh"
+1643313275835	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileq57gbh\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52357/devtools/browser/c5018cf0-fadb-40d0-9779-c6206066283b
+1643313277700	Marionette	INFO	Listening on port 56059
+1643313278192	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643313295113	Marionette	INFO	Stopped listening on port 56059
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643313731335	geckodriver	INFO	Listening on 127.0.0.1:65367
+1643313734408	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "65368" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilegDN4q2"
+*** You are running in headless mode.
+1643313734658	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilegDN4q2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65368/devtools/browser/694f3588-ed7c-4fbd-90f5-5ee8126784c2
+1643313735535	Marionette	INFO	Listening on port 65373
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1643313735933	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643313791983	Marionette	INFO	Stopped listening on port 65373
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A014F,name=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
