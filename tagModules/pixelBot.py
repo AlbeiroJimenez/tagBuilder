@@ -172,8 +172,10 @@ class pixelBot:
                 passwd.send_keys(password+Keys.ENTER)
             elif e:
                 email.send_keys(user+Keys.ENTER)
-            else:
+            elif e_:
                 passwd.send_keys(password+Keys.ENTER)
+            else:
+                pass
         elif self.isVerifyPage():
             e,  verify = self.existWebElement('verify')
             e_, code   = self.existWebElement('code')
@@ -184,9 +186,10 @@ class pixelBot:
                 self.reqCode = True
                 if not self.code == None:
                     code.send_keys(self.code+Keys.ENTER)
-                    time.sleep(10)
+                    time.sleep(15)
                     self.reqCode = False
                     self.code = None
+                print(self.code)
         elif self.driver.title == 'Hello':
             try:
                 self.driver.find_element(By.PARTIAL_LINK_TEXT,'Taboola Ads').click()

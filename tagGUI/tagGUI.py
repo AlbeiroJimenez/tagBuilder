@@ -560,10 +560,10 @@ class tagFrontEnd(FrameWork2D):
             while True:
                 #login = self.pixelBot.doLogin('albeiro.jimenez@groupm.com', 'xAXIS_2021*!')
                 login = self.pixelBot.doLogin(user.get(), password.get())
+                time.sleep(10) if not self.pixelBot.reqCode else time.sleep(1)
                 if self.pixelBot.reqCode and not windowCode: 
                     self.updateCodeVerify_threaded()
                     windowCode = True
-                time.sleep(15)
                 self.pixelBot.authFail = self.pixelBot.auth_alert()
                 if login or self.pixelBot.authFail:
                     if self.pixelBot.authFail:
@@ -583,7 +583,6 @@ class tagFrontEnd(FrameWork2D):
         alertWin = tk.Tk()
         alertWin.withdraw()
         self.pixelBot.code = simpledialog.askstring('Verification','What is the code?',parent=alertWin)
-        time.sleep(1)
         alertWin.destroy()
                 #break
     

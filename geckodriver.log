@@ -2360,3 +2360,202 @@ JavaScript error: resource://gre/modules/Sqlite.jsm, line 1059: Error: Sqlite.js
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1643213192907	geckodriver	INFO	Listening on 127.0.0.1:50813
+1643213195986	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50814" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileSFHWrB"
+1643213197639	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileSFHWrB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50814/devtools/browser/3673b1c9-5636-48b6-a706-fcaaab49ebe3
+1643213200324	Marionette	INFO	Listening on port 50819
+1643213200796	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 5096 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1643213752826	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://accounts.google.com/signin/continue?sarp=1&scc=0&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&plt=AKgnsbtAFStiKczvnIVvfI5Bbs3m9GhXwYWL2BwRh-R_0cokEIcc5cRd_ymejuR9osKfqRTZjRZL6bZqfUP_tpqkBpazZ19H0vMR2wzn4mHoPVjGNkp6XcQ9KUBUrbX6_T1jdxzYYaaF&PersistentCookie=1&service=xbid line 1 > eval line 2268 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1643213790359	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://authentication.taboola.com/authentication/resources/components/requirejs/require.js, line 159: Error: Load timeout for modules: authentication.main
+http://requirejs.org/docs/errors.html#timeout
+JavaScript error: https://authentication.taboola.com/authentication/resources/components/requirejs/require.js, line 159: Error: Script error
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://authentication.taboola.com/authentication/resources/components/requirejs/require.js, line 159: Error: Script error
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 2: Script terminated by timeout at:
+fix@https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE:2:18308
+n@https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE:2:23488
+
+JavaScript warning: https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js, line 25319: Script terminated by timeout at:
+xQ@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:25319:3
+Z@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:25262:6
+b9N@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:81299:14
+bhq@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:81289:6
+$1@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:81323:25
+lgJ@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:2151:9
+c9M@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:81279:12
+uIR/<@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:678:57
+Qg@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:26613:12
+a1L@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:26590:10
+$1@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:26662:21
+x1m@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:632:17
+Kp/s@https://www.gstatic.com/acx/xbid/shard_manager/acx_xbid_shard_manager_auto_20220125-0015_RC000/app_production_constraints/app_production_constraints.dart.js:640:51
+
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize, line 43: Script terminated by timeout at:
+ce@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:5630
+n@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:7137
+n@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:7137
+fe@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:5966
+extractEvents@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:29923
+En@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:30352
+Cl@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:98272
+Fe@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:10265
+jn@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:30870
+AnxReactConsoleNav</Tl/<@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:98550
+AnxReactConsoleNav</</t.unstable_runWithPriority@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:52:3198
+Tl@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:98474
+Tn@https://anxconsole-a.akamaihd.net/core-ui-assets/nav/d050a16f060c1d695545711a45dc3671/bundle.js?forceProductKind=monetize:43:30613
+
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1643214583822	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://assets.taboola.com/set-expo-ab?ab=99, line 1: SyntaxError: unexpected token: identifier
+1643214664092	Marionette	INFO	Stopped listening on port 50819
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643217657023	geckodriver	INFO	Listening on 127.0.0.1:51669
+1643217660069	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51670" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileR8QHZm"
+1643217661683	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileR8QHZm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51670/devtools/browser/cbd051bc-92e7-4c15-b42c-7c57bdb26c5a
+1643217664675	Marionette	INFO	Listening on port 51675
+1643217664948	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 3969 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1643224240632	Marionette	INFO	Stopped listening on port 51675
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643229485407	geckodriver	INFO	Listening on 127.0.0.1:53787
+1643229488479	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53788" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileGcjlMt"
+1643229490250	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileGcjlMt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53788/devtools/browser/afe9ce9e-2b53-4e1e-8bb8-c723bfc9c741
+1643229492886	Marionette	INFO	Listening on port 53794
+1643229493303	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript error: javascript:doSubmit(), line 1: ReferenceError: doSubmit is not defined
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 4769 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1643232602238	Marionette	INFO	Stopped listening on port 53794
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643232833952	geckodriver	INFO	Listening on 127.0.0.1:61589
+1643232837039	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61590" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilezWaylc"
+1643232838650	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilezWaylc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61590/devtools/browser/47620178-46fc-4f5a-a038-0f3657ff5392
+1643232841147	Marionette	INFO	Listening on port 61597
+1643232841236	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 2457 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1643233327690	Marionette	INFO	Stopped listening on port 61597
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643233963706	geckodriver	INFO	Listening on 127.0.0.1:58605
+1643233966773	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58606" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofileNB8Sx5"
+1643233968425	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofileNB8Sx5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58606/devtools/browser/80ed1d14-9074-4339-84e6-b71b2e7e0618
+1643233971413	Marionette	INFO	Listening on port 58613
+1643233971623	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript error: javascript:doSubmit(), line 1: ReferenceError: doSubmit is not defined
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 2384 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1643234428465	Marionette	INFO	Stopped listening on port 58613
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643234512454	geckodriver	INFO	Listening on 127.0.0.1:59369
+1643234515536	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59370" "-no-remote" "-profile" "C:\\Users\\ALBEIR~1.JIM\\AppData\\Local\\Temp\\rust_mozprofilefYen2Z"
+1643234517213	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\albeiro.jimenez\\AppData\\Local\\Temp\\rust_mozprofilefYen2Z\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59370/devtools/browser/563c1603-b28a-40d1-8adf-89f5eb764f98
+1643234519706	Marionette	INFO	Listening on port 59375
+1643234519735	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript warning: https://accounts.google.com/ServiceLogin?service=xbid&passive=1209600&continue=https://displayvideo.google.com/&followup=https://displayvideo.google.com/ line 1 > eval line 3962 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1643234800100	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://accounts.google.com/signin/continue?sarp=1&scc=0&continue=https%3A%2F%2Fdisplayvideo.google.com%2F&plt=AKgnsbvVhKBG9sUD-nThmhtDki_e0ik3v8BZefuic67VqE5D-D5B0S91kIY_5lQj4bmtWn0CIm5Co4WVBrI68J_NoM2vxKkleCjzDr84oDQKeDJGVgfIeDM3y41k0QlBOxLRlyXfdksP&PersistentCookie=1&service=xbid line 1 > eval line 7342 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://authentication.taboola.com/authentication/resources/components/requirejs/require.js, line 159: Error: Load timeout for modules: authentication.main
+http://requirejs.org/docs/errors.html#timeout
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1643234903087	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://assets.taboola.com/set-expo-ab?ab=99, line 1: SyntaxError: unexpected token: identifier
+JavaScript error: https://monetize.xandr.com/login, line 72: TypeError: err.response is undefined
+JavaScript error: https://assets.taboola.com/set-expo-ab?ab=99, line 1: SyntaxError: unexpected token: identifier
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://assets.taboola.com/set-expo-ab?ab=99, line 1: SyntaxError: unexpected token: identifier
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220123.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://assets.taboola.com/set-expo-ab?ab=99, line 1: SyntaxError: unexpected token: identifier
+1643235270321	Marionette	INFO	Stopped listening on port 59375
