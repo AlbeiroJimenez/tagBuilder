@@ -3,6 +3,8 @@ import requests
 import time
 
 from selenium import webdriver
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.by import By
 
 from selenium.common.exceptions import StaleElementReferenceException
@@ -94,7 +96,8 @@ class urlDomains:
         fireFoxOptions.headless = True
         fireFoxOptions.set_preference("general.useragent.override", USER_AGENT)
         fireFoxOptions.page_load_strategy = 'eager'
-        return webdriver.Firefox(options = fireFoxOptions)
+        service = FirefoxService(executable_path=GeckoDriverManager().install())
+        return webdriver.Firefox(service=service, options = fireFoxOptions)
     
     def loadPage(self, url = None):
         if url == None:
@@ -596,14 +599,14 @@ class urlDomains:
 
 if __name__ == '__main__':
 #     write test code module
-    webSite = urlDomains('https://www.ford.com.co/')
+    webSite = urlDomains('https://compra.tusegurometlife.cl/')
     webSite.driver = webSite.setHeadlessMode()
     webSite.loadPage()
-    webSite.buildSiteMap('https://www.xaxis.com/')
-    index = 0
-    for section in webSite.getMainSections():
-        print('Section '+str(index)+':'+'  '+section)
-        index += 1
+    webSite.buildSiteMap('https://compra.tusegurometlife.cl/')
+##    index = 0
+##    for section in webSite.getMainSections():
+##        print('Section '+str(index)+':'+'  '+section)
+##        index += 1
 #     webSite.findAnchors()
 #     webSite.getSubDomains()
 #     for path in webSite.getPaths():

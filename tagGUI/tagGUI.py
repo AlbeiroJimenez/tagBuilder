@@ -25,7 +25,7 @@ LOGIN_PAGES     = (
 
 TABS_DEFINITION = (
     'SiteMap',
-    'GTM'
+    'Pixels'
     )
 
 SPECIAL_CELLS   = (
@@ -243,8 +243,22 @@ class tagFrontEnd(FrameWork2D):
             ttk.Label(parameters_frame, textvariable=self.maxLandings, font=('Arial',8,'italic')).grid(column=5, row=1, sticky=tk.W)
             #ttk.Button(parameters_frame, text='.').grid(column=4, row=1)
         elif indexTab == 1:
-            pass
-        
+            ttk.Label(parameters_frame, text="T. Request File: ", style = 'BW.TLabel').grid(column=0, row=0)
+            ttk.Entry(parameters_frame, width=75, textvariable = self.pathTR).grid(column=1, row=0, columnspan=3)
+            ttk.Button(parameters_frame, text='...', command=self.loadTemple).grid(column=4, row=0)  
+            
+            ttk.Label(parameters_frame, text='Advertiser: ').grid(column=0, row=1, sticky=tk.W) 
+            tk.Entry(parameters_frame, textvariable = self.advertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=1, sticky=tk.W)     
+            ttk.Label(parameters_frame, text="Scroll: ").grid(column=2, row=1, sticky=tk.W)
+            ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=3, row=1)
+            
+            ttk.Label(parameters_frame, text='Xandr: ').grid(column=0, row=2, sticky=tk.W)
+            ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=1, row=2, sticky=tk.W)
+            ttk.Label(parameters_frame, text='DV360: ').grid(column=2, row=2, sticky=tk.W)
+            ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=3, row=2, sticky=tk.W)
+            ttk.Label(parameters_frame, text='Taboola: ').grid(column=4, row=2, sticky=tk.W)
+            ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=6, row=2, sticky=tk.W)
+                
     def createDataSection(self, indexTab):
         data_label_frame  = ttk.LabelFrame(self.tabs[indexTab], text='Data', width=780, height=295)
         data_label_frame.grid(column = 0, row=1)
@@ -560,7 +574,7 @@ class tagFrontEnd(FrameWork2D):
             while True:
                 #login = self.pixelBot.doLogin('albeiro.jimenez@groupm.com', 'xAXIS_2021*!')
                 login = self.pixelBot.doLogin(user.get(), password.get())
-                time.sleep(10) if not self.pixelBot.reqCode else time.sleep(1)
+                #time.sleep(10) if not self.pixelBot.reqCode else time.sleep(1)
                 if self.pixelBot.reqCode and not windowCode: 
                     self.updateCodeVerify_threaded()
                     windowCode = True
