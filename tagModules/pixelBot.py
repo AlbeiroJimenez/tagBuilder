@@ -1,6 +1,7 @@
 from urllib.parse import urlparse
 import requests
 import time
+import re
 
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
@@ -280,6 +281,40 @@ class pixelBot:
         else:
             for i in range(list_.count(item)):
                 list_.pop(list_.index(item))
+                
+    def createPixel(self, advertiserId, pixelName, platform=0, pixelType='RTG'):
+        if platform == 0 and pixelType=='RTG':
+            query = 'advertiser_id=%s' % advertiserId
+            self.setDriver(urlparse('https://invest.xandr.com/dmp/segments/new')._replace(query=query).geturl())
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@placeholder="Enter a segment name"]')))[0].send_keys(pixelName)
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH,'//button/span[contains(text(),"Save")]')))[0].click()
+            time.sleep(5)
+            pixelId = urlparse(self.driver.current_url).path.split('/')[-1]
+            snipet_pixel = """<!-- Segment Pixel - %s - DO NOT MODIFY -->
+                            <script src="https://secure.adnxs.com/seg?add=%s&t=1" type="text/javascript"></script>
+                            <!-- End of Segment Pixel -->"""%(pixelName, pixelId)   
+            return  snipet_pixel
+        elif platform == 0 and pixelType=='CONV':
+            query = 'id=%s' % advertiserId
+            self.setDriver(urlparse('https://invest.xandr.com/pixel')._replace(query=query).geturl())
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH,'//button/span[contains(text(),"New")]')))[0].click()
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[contains(@class,"PixelModal-name")]')))[0].send_keys(pixelName)
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH,'//span[contains(text(),"Select...") or contains(text(),"View an item") or contains(text(),"Add to cart") or contains(text(),"Initiate checkout") or contains(text(),"Add payment info") or contains(text(),"Purchase") or contains(text(),"Generate lead")]')))[0].click()
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH,'//div[contains(text(),"Generate lead")]')))[0].click()
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH,'//div[contains(text(),"Count all conversions per user")]')))[0].click()
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH,'//button/span[contains(text(),"Save")]')))[0].click()
+            new_query = '//span[contains(@title,"%s")]'%pixelName
+            pixelId = re.findall(r'-?\d+\.?\d*', WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH,new_query)))[0].get_attribute('title'))[0]
+            snipet_pixel = """<!-- Conversion Pixel - %s - DO NOT MODIFY -->
+                            <script src="https://secure.adnxs.com/px?id=%s&t=1" type="text/javascript"></script>
+                            <!-- End of Conversion Pixel -->"""%(pixelName, pixelId)   
+            return  snipet_pixel
+        elif platform == 1:
+            pass
+        elif platform == 2:
+            pass
+        elif platform == 3:
+            pass
 
     def tearDown(self):
         if not self.driver == None:

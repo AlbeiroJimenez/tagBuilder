@@ -18,7 +18,7 @@ MENU_DEFINITION = (
         )
 
 LOGIN_PAGES     = (
-    'https://monetize.xandr.com/login', 
+    'https://invest.xandr.com/', 
     'https://displayvideo.google.com/',
     'https://authentication.taboola.com'
 )

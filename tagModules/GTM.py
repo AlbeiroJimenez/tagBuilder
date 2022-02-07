@@ -29,6 +29,10 @@ class googleCloudServices:
     def __init__(self):
         pass
     
+    """Establish and set up a conection with Google Cloud Services
+        Return:
+            Services: GTM, DV360 and so...
+    """
     def getService(self, parameters_):
         client_secrets_path = path.abspath(CREDENTIALS)
         flow_ = client.flow_from_clientsecrets(client_secrets_path, scope=parameters_[0],message=tools.message_if_missing(client_secrets_path))
@@ -40,7 +44,7 @@ class googleCloudServices:
         return build(parameters_[1], parameters_[2], http=http)
     
     def gtmService(self):
-        return getService(GTM)
+        return self.getService(GTM)
     
     def bigqueryService(self, parameters_, launch_browser=True):
         client_secrets_path = path.abspath(CREDENTIALS)
@@ -53,15 +57,38 @@ class googleCloudServices:
         return bigquery.Client(project=BIGQUERY[1], credentials=credentials) # Return a Client
 
     def dv360Service(self):
-        return getService(DV360)
+        return self.getService(DV360)
     
     def adhService(self):
         pass
 
-class containerGTM:
+class GTM:
     def __init__(self):
-        pass  
+        self.gtm_service =  googleCloudServices().gtmService()
+    
+    def getAccounts(self):
+        pass
+     
+    """This function get the all container that own to a especific account.add()
+        Return:
+            List: xxxx
+    """
+    def getContainers(self):
+        pass
+    
+    def getTag(self):
+        pass
+    
+    def createAccount(self):
+        pass
+    
+    def createContainer(self):
+        pass
+    
+    def createTag(self):
+        pass
 
 if __name__ == '__main__':
-    g_util.get_credentials()
-    print("Todo Ok")
+    #g_util.get_credentials()
+    googleCloud = googleCloudServices()
+    #gtm = googleCloud.gtmService()
