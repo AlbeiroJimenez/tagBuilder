@@ -249,8 +249,10 @@ class tagFrontEnd(FrameWork2D):
             
             ttk.Label(parameters_frame, text='Advertiser: ').grid(column=0, row=1, sticky=tk.W) 
             tk.Entry(parameters_frame, textvariable = self.advertiser, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=1, sticky=tk.W)     
-            ttk.Label(parameters_frame, text="Scroll: ").grid(column=2, row=1, sticky=tk.W)
-            ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=3, row=1)
+            ttk.Label(parameters_frame, text= 'ID: ').grid(column=2, row=1, sticky=tk.W)
+            tk.Entry(parameters_frame, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=3, row=1, sticky=tk.W) 
+            ttk.Label(parameters_frame, text="Scroll: ").grid(column=4, row=1, sticky=tk.W)
+            ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=5, row=1)
             
             ttk.Label(parameters_frame, text='Xandr: ').grid(column=0, row=2, sticky=tk.W)
             ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=1, row=2, sticky=tk.W)
@@ -561,35 +563,67 @@ class tagFrontEnd(FrameWork2D):
         self.lanchPopUps('Sectioned', 'The process of categorized has finished!', 'Press "Ok" to exit.')
         
     def createPixels(self):
-        print('Hemos empezado')
-        #self.settingWindow() 
         while not self.existAllCredentials() or self.setWindow.winfo_exists():
             if not self.setWindow.winfo_exists():
                 self.settingWindow()  
         for platform, user, password in zip(LOGIN_PAGES, self.users, self.passwords):
             login = False
-            #self.pixelBot.setDriver('https://monetize.xandr.com/login')
             self.pixelBot.setDriver(platform)
-            windowCode = False
+            self.windowCode = False
+            try_ = 0
             while True:
-                #login = self.pixelBot.doLogin('albeiro.jimenez@groupm.com', 'xAXIS_2021*!')
                 login = self.pixelBot.doLogin(user.get(), password.get())
-                #time.sleep(10) if not self.pixelBot.reqCode else time.sleep(1)
-                if self.pixelBot.reqCode and not windowCode: 
+                if self.pixelBot.reqCode and (not self.windowCode): 
                     self.updateCodeVerify_threaded()
-                    windowCode = True
+                    self.windowCode = True
                 self.pixelBot.authFail = self.pixelBot.auth_alert()
                 if login or self.pixelBot.authFail:
                     if self.pixelBot.authFail:
                         print('Ha habido un problema de authenticación')
-                        break
+                        if try_<2:
+                            self.pixelBot.setDriver(platform)
+                            try_+=3
+                        else:
+                            print('Ha habido un problema de authenticación')
+                            break
                     else:
                         break
-                #elif self.pixelBot.reqCode:
-                    #self.pixelBot.code = simpledialog.askstring('Verification','What is the code?')
-                    #print(self.pixelBot.code)
+                elif self.pixelBot.approve:
+                    print('Aprueba el ingreso por favor')
                 elif not login and not self.pixelBot.startLog:
                     break
+    
+    """
+        This method implement de Log-In Xandr platform.
+        Return:
+            LogIn:Boolean
+    """         
+    def logInXandr(self):
+        login = False
+        windowCode = False
+        try_ = 0
+        self.pixelBot.setDriver(LOGIN_PAGES[0])
+        while not login:
+            if self.pixelBot.reqCode and not windowCode:
+                self.updateCodeVerify_threaded()
+                windowCode = True
+            login = self.pixelBot.doLogin(self.users[0].get(), self.passwords[0].get())
+            self.pixelBot.authFail = self.pixelBot.auth_alert()
+            if self.pixelBot.approve:
+                print('Aprueba el ingreso por favor')
+            elif login or self.pixelBot.authFail:
+                if self.pixelBot.authFail:
+                    print('Ha habido un problema de authenticación')
+                    if try_<2:
+                        self.pixelBot.setDriver(platform)
+                        try_+=1
+                    else:
+                        print('Ha habido un problema de authenticación')
+                        break
+                else:
+                    break
+            elif not login and not self.pixelBot.startLog:
+                break
 
     def updateCodeVerify(self):
         #while True:
@@ -598,6 +632,7 @@ class tagFrontEnd(FrameWork2D):
         alertWin.withdraw()
         self.pixelBot.code = simpledialog.askstring('Verification','What is the code?',parent=alertWin)
         alertWin.destroy()
+        
                 #break
     
     def validsSections(self, mainSections, arraySections):

@@ -45,6 +45,7 @@ class pixelBot:
         self.submitWE = None
         self.startLog = False
         self.code     = None
+        self.approve  = False
 
     def setUrl(self, url):
         self.url = url
@@ -110,11 +111,11 @@ class pixelBot:
         else:
             return False
         
-    def existWebElement(self, webElement='email'):
+    def existWebElement(self, webElement='email', XPATH_=None, time_=1):
         if webElement=='email':
             try:
                 #emails = self.driver.find_elements(By.XPATH,'//input[@type="email"]|//input[contains(@name,"user")]|//input[contains(@name,"login")]|//input[contains(@name,"session")]|//input[contains(@name,"email")]')
-                emails = WebDriverWait(self.driver, 1).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@type="email"]|//input[contains(@name,"user")]|//input[contains(@name,"login")]|//input[contains(@name,"session")]|//input[contains(@name,"email")]')))
+                emails = WebDriverWait(self.driver, time_).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@type="email"]|//input[contains(@name,"user")]|//input[contains(@name,"login")]|//input[contains(@name,"session")]|//input[contains(@name,"email")]')))
                 for email in emails:
                     if not email.is_displayed():
                         emails.remove(email)
@@ -127,7 +128,7 @@ class pixelBot:
         elif webElement=='password':
             try:
                 #passwords = self.driver.find_elements(By.XPATH,'//input[@type="password"]')
-                passwords = WebDriverWait(self.driver, 1).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@type="password"]')))
+                passwords = WebDriverWait(self.driver, time_).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@type="password"]')))
                 for password in passwords:
                     if not password.is_displayed():
                         passwords.remove(password)
@@ -140,7 +141,7 @@ class pixelBot:
         elif webElement=='submit':
             try:
                 #buttons = self.driver.find_elements(By.XPATH,'//button[@type="button"]|//button[@type="submit"]|//input[@type="submit"]|//button[contains(@id,"submit")]')
-                buttons = WebDriverWait(self.driver, 1).until(EC.visibility_of_any_elements_located((By.XPATH,'//button[@type="button"]|//button[@type="submit"]|//input[@type="submit"]|//button[contains(@id,"submit")]')))
+                buttons = WebDriverWait(self.driver, time_).until(EC.visibility_of_any_elements_located((By.XPATH,'//button[@type="button"]|//button[@type="submit"]|//input[@type="submit"]|//button[contains(@id,"submit")]')))
                 for button in buttons:
                     if not button.is_displayed():
                         buttons.remove(button)
@@ -153,7 +154,7 @@ class pixelBot:
         elif webElement=='verify':
             try:
                 #texts = self.driver.find_elements(By.XPATH, '//div[contains(text(),"Enviar un mensaje de texto al")]')
-                texts = WebDriverWait(self.driver, 1).until(EC.visibility_of_any_elements_located((By.XPATH, '//div[contains(text(),"Enviar un mensaje de texto al")]')))
+                texts = WebDriverWait(self.driver, time_).until(EC.visibility_of_any_elements_located((By.XPATH, '//div[contains(text(),"Enviar un mensaje de texto al")]')))
                 for text in texts:
                     if not text.is_displayed():
                         texts.remove(text)
@@ -166,12 +167,24 @@ class pixelBot:
         elif webElement=='code':
             try:
                 #codes = self.driver.find_elements(By.XPATH, '//input[contains(@name,"code")]|//input[contains(@id,"code")]|//input[contains(@placeholder,"code")]|//input[contains(@placeholder,"Código")]')
-                codes = WebDriverWait(self.driver, 1).until(EC.visibility_of_any_elements_located((By.XPATH, '//input[contains(@name,"code")]|//input[contains(@id,"code")]|//input[contains(@placeholder,"code")]|//input[contains(@placeholder,"Código")]')))
+                codes = WebDriverWait(self.driver, time_).until(EC.visibility_of_any_elements_located((By.XPATH, '//input[contains(@name,"code")]|//input[contains(@id,"code")]|//input[contains(@placeholder,"code")]|//input[contains(@placeholder,"Código")]')))
                 for code in codes:
                     if not code.is_displayed():
                         codes.remove(code)
                 if len(codes)>0:
                     return True, codes[0]
+                else:
+                    return False, None
+            except:
+                return False, None
+        elif webElement=='other':
+            try:
+                OAuthWait = WebDriverWait(self.driver, time_).until(EC.visibility_of_any_elements_located((By.XPATH,XPATH_)))
+                for OAuth in OAuthWait:
+                    if not OAuth.is_displayed():
+                        OAuth.remove(code)
+                if len(OAuthWait)>0:
+                    return True, OAuthWait[0]
                 else:
                     return False, None
             except:
@@ -184,8 +197,9 @@ class pixelBot:
             if loginWord.casefold() in self.driver.title.casefold() and not self.isVerifyPage():
                 return True
         else:
-            exist,  h = self.existWebElement()
-            exist_, h = self.existWebElement('password')
+            print('Verificación Login Page de manera larga')
+            exist,  h = self.existWebElement(time_=0)
+            exist_, h = self.existWebElement('password', time_=0)
             if exist or exist_:
                 return True
             else:
@@ -198,8 +212,8 @@ class pixelBot:
             if verify_word.casefold() in self.driver.title.casefold():
                 return True
         else:
-            exist,  h = self.existWebElement('verify')
-            exist_, h = self.existWebElement('code')
+            exist,  h = self.existWebElement('verify', time_=5)
+            exist_, h = self.existWebElement('code', time_=0)
             if exist or exist_:
                 return True
             else:
@@ -225,32 +239,34 @@ class pixelBot:
         if self.isLoginPage():
             if not self.startLog: self.startLog = True 
             e,  email  = self.existWebElement()
-            e_, passwd = self.existWebElement('password')
+            e_, passwd = self.existWebElement('password', time_=0)
             if e and e_:
                 email.clear()
                 passwd.clear()
                 email.send_keys(user)
                 passwd.send_keys(password+Keys.ENTER)
             elif e:
+                email.clear()
                 email.send_keys(user+Keys.ENTER)
             elif e_:
+                passwd.clear()
                 passwd.send_keys(password+Keys.ENTER)
             else:
-                pass
+                e, OAuthWait = self.existWebElement('other','//*[contains(text(),"Approve sign") or contains(text(),"Aprobar")]', time_=0)
+                if e:
+                    self.approve = True
         elif self.isVerifyPage():
+            print('It is verify page!!!')
             e,  verify = self.existWebElement('verify')
-            e_, code   = self.existWebElement('code')
+            e_, code   = self.existWebElement('code', time_=0)
             if e:
                 verify.click()
             else:
-                #self.reqCode = True if self.reqCode == False else False
                 self.reqCode = True
                 if not self.code == None:
                     code.send_keys(self.code+Keys.ENTER)
-                    #time.sleep(15)
                     self.reqCode = False
                     self.code = None
-                print(self.code)
         elif self.driver.title == 'Hello':
             try:
                 self.driver.find_element(By.PARTIAL_LINK_TEXT,'Taboola Ads').click()
@@ -262,15 +278,18 @@ class pixelBot:
             else:
                 return False
         return False
-    def auth_alert(self):
-        alert = self.driver.find_elements(By.XPATH, "//input[contains(@class,'error')]|//input[@aria-invalid='true']|//div[contains(@class,'error')]")        
-        self.deleteItemList(alert, '')
-        for alert_ in alert:
-            if not alert_.is_displayed():
-                alert.remove(alert_)
-        if len(alert)>0:
-            return True
-        else:
+    
+    def auth_alert(self, time_=1):
+        try:
+            alert = WebDriverWait(self.driver, time_).until(EC.visibility_of_any_elements_located((By.XPATH, "//input[contains(@class,'error')]|//input[@aria-invalid='true']|//div[contains(@class,'error')]|//*[contains(text(),'No tenemos noticias') or contains(text(),'denegada') or contains(text(),'hear from you') or contains(text(),'denied')]")))
+            for alert_ in alert:
+                if not alert_.is_displayed():
+                    alert.remove(alert_)
+            if len(alert)>0:
+                return True
+            else:
+                return False
+        except:
             return False
 
     def deleteItemList(self, list_, item, WE=True):
