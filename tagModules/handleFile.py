@@ -15,25 +15,31 @@ TRIGGER = [
 
 SHEET_NAME = 'Tagging Request'
 
+PATH_      = 'TaggingRequest_2021.xlsx'
+
 class xlsxFile:
-    def __init__(self, sheet = 'Tagging Request',PATH='TaggingRequest_2021.xlsx'):
-        self.PATH = p.abspath(PATH)
+    def __init__(self, sheet = 'Tagging Request', PATH=PATH_):
+        self.PATH = PATH
         self.setBook()
         self.sheet = self.book[sheet]
         
-    def setPATH(self, path):
-        self.PATH = p.abspath(path)
+    def setPATH(self, path=PATH_):
+        self.PATH = path
     
     def setBook(self):
-        self.book = load_workbook(self.PATH)
+        self.book = load_workbook(p.abspath(self.PATH))
         
-    def saveBook(self, dir_path = None):
-        nameFile = self.getFileName('C13')
+    def saveBook(self, dir_path = None, add_name=True):
+        if add_name:
+            nameFile = self.getFileName('C13')
+        else:
+            nameFile=''
         if dir_path == None:
             self.book.save(nameFile)
+            return p.abspath(nameFile).replace('\\','/')
         else:
             self.book.save(p.join(dir_path, nameFile))
-        #self.book.save(self.PATH)
+            return dir_path+'/'+nameFile
         
     def setSheet(self, nameSheet = SHEET_NAME):
         self.sheet = self.book[nameSheet]
@@ -88,7 +94,7 @@ class xlsxFile:
     def getNameSection(self, advertiserName, sectionName, typeTrigger='PV'):
         month, year = self.getDate()
         return advertiserName+'_'+sectionName+typeTrigger+'_'+month+year
-    
+                  
     def getTagName(self, path, cell):
         advertiser  = self.readCell(cell) 
         month, year = self.getDate()

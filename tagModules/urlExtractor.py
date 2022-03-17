@@ -340,14 +340,13 @@ class urlDomains:
             list_.pop(list_.index(item))
     
     # This method creates all sections under that we can organize the landings founded       
-    def getMainSections(self):
+    def getMainSections_(self):
         mainSections = []
         for path in self.getPaths():
             path     = path.replace('.html','') 
             listPath = path.split('/')
             self.deleteItemList(listPath, '')
             # Create Posible Sections to the SiteMap
-            
             if len(listPath)>3:
                 continue
             elif len(listPath)>2 and self.thirdSubPath and listPath[2] not in mainSections:
@@ -384,7 +383,75 @@ class urlDomains:
             mainSections.insert(0, '')
         return mainSections
     
-    # Determine if a path is valid to be a candidate to section
+    def getMainSections(self):
+        mainSections = []
+        for path in self.getPaths():
+            path     = path.replace('.html','') 
+            listPath = path.split('/')
+            self.deleteItemList(listPath, '')
+            self.deleteSubPaths(listPath)
+            if len(listPath)>2:
+                continue
+            elif len(listPath)>1:
+                path_ = listPath[0]+'/'+listPath[1]
+                if self.valid_category(path_) and path_ not in mainSections and not self.similaritySubPath(mainSections, listPath[0]):
+                    mainSections.append(path_)
+                    # if not self.similarity_basic(mainSections, listPath[0]) and not self.similarity_basic(mainSections, listPath[1]):
+                    #     mainSections.append(path_)
+                    # elif not self.similarity_basic(mainSections, listPath[0]):
+                    #     mainSections.append(path_)
+            elif len(listPath)>0 and listPath[0] not in mainSections:
+                if self.valid_category(listPath[0]):
+                    mainSections.append(listPath[0])
+            else:
+                pass           
+        mainSections.sort(key=len)
+        #if len(mainSections)>self.maxCategories:
+            #self.debugMainSections(mainSections)
+        if not mainSections[0]=='':
+            mainSections.insert(0, '')
+        return mainSections
+    
+    def deleteSubPaths(self, subPaths, size_=3):
+        for subPath in subPaths:
+            if len(subPath)<size_:
+                subPaths.pop(subPaths.index(subPath))
+            elif subPath.replace('-','').isnumeric():
+                subPaths.pop(subPaths.index(subPath))
+                
+    """This function implement the search of exact coincidence by subpath.
+        Parameters:
+            list_paths:     Array list of paths.add()
+            subPath:        Subpath that we want to know if exist in the array list paths.
+            numSubPath:     Position of the subPath in the Paths.
+        Return:
+            Boolean:        True if the subpath exists in the array list of the paths.
+    """
+    def similaritySubPath(self, list_paths, subPath, numSubpath=0):
+        try: 
+            for path in list_paths:
+                path = path.split('/')
+                self.deleteItemList(path, '')
+                if numSubpath == 0:
+                    if len(path)>0:
+                        if path[0].casefold() == subPath.casefold():
+                            return True
+                elif numSubpath == 1:
+                    if len(path)>1:
+                        if path[1].casefold() == subPath.casefold():
+                            return True
+                elif numSubpath == 2:
+                    if len(path)>2:
+                        if path[2].casefold() == subPath.casefold():
+                            return True
+                else:
+                    continue
+            else:
+                return False
+        except:
+            return False
+                
+    # Determine if a path is valid to be a candidate to be a section
     def valid_category(self, path):
         path  = path.replace('.html','')
         paths = path.split('/')
@@ -397,7 +464,7 @@ class urlDomains:
                 for word in words[-1]:
                     if len(word)<self.sizeWord:
                         words[-1].remove(word)
-            if paths[1].isdigit() or len(words[0])>2 or len(words[1])>2 or '%' in subPath:
+            if paths[1].isdigit() or len(words[0])>3 or len(words[1])>3 or '%' in subPath:#We had changed the len(words[0/1])>2 to len(words)>3
                 return False
             elif len(words[0])<1 and len(words[1])<1:
                 return False
@@ -412,7 +479,7 @@ class urlDomains:
             for word in words:
                 if len(word)<self.sizeWord:
                     words.remove(word)
-            if paths[0].isdigit() or len(words)>2 or len(words)==0 or '_' in paths[0] or '%' in paths[0]:
+            if paths[0].isdigit() or len(words)>3 or len(words)==0 or '_' in paths[0] or '%' in paths[0]:#We had changed the len(words)>2 to len(words)>3
                 return False
             else:
                 return True
@@ -454,7 +521,7 @@ class urlDomains:
         return similarity
     
     def debugMainSections(self, mainSections):
-        sections   = mainSections[:]
+        sections = mainSections[:]
         for i in range(len(mainSections)-1, -1, -1):
             path_words = []
             section_words = mainSections[i] 
@@ -474,12 +541,20 @@ class urlDomains:
                     exist, h = self.searchWord(sections[:i], word, None)
                     #exist1, h = self.searchWord(sections[:i], word[:-1], None)
                     if exist:
-                        print('Delete Section:  '+mainSections[i])
+                        print('Delete Section:  '+ mainSections[i])
                         mainSections.pop(i)
                         break
+                    
+    def filterMainSections(self, mainSections):
+        sections = mainSections[:]
+        for i in range(len(mainSections)-1, -1, -1):
+            section_words = mainSections[i].split('/')
+            self.deleteItemList(section_words, '')
+            if len(section_words)>1:
+                pass
 
     # Dumping in the differents sections of the landings founded in the website
-    def getArraySections(self):
+    def getArraySections_(self):
         self.arraySections = []
         self.mainSections  = []
         arraySections      = []
@@ -575,6 +650,116 @@ class urlDomains:
         self.mainSections.insert(0,'') 
         self.arraySections = arraySections
         #return arraySections
+        
+    def getArraySections(self):
+        self.arraySections = []
+        self.mainSections  = []
+        arraySections      = []
+        mainSections  = self.getMainSections()
+        urls          = self.getArrayURLs()
+        paths         = self.getPaths()
+        
+        # Create and Fill out each Sections with urls
+        # Firts sort of the URLs by exact category
+        for section in mainSections[1:]:
+            print("Seccion I: "+section)
+            self.mainSections.append(section)
+            arraySections.append([])
+            # Strategy to labeled each section within the array of URLs
+            arraySections[-1].insert(0,section)
+            flat = 0
+            section_ = section.split('/')
+            self.deleteItemList(section_, '')
+            # Examine of urls finding to determine if own to the section or not
+            for path, url in zip(paths[1:],urls[1:]):
+                path_ = path.replace('.html','')
+                subpaths = path_.split('/')
+                self.deleteItemList(subpaths, '')
+                self.deleteSubPaths(subpaths)
+                if len(subpaths)>1:
+                    mainSubPath = subpaths[0]+'/'+subpaths[1]
+                    if mainSubPath in section:
+                        arraySections[-1].append(url)
+                        paths.pop(paths.index(path))
+                        urls.pop(urls.index(url))
+                        continue
+                    if subpaths[0] == section_[0]:
+                        arraySections[-1].append(url)
+                        paths.pop(paths.index(path))
+                        urls.pop(urls.index(url))
+                        continue
+                elif len(subpaths)>0 and subpaths[0] == section_[0]:
+                    arraySections[-1].append(url)
+                    paths.pop(paths.index(path))
+                    urls.pop(urls.index(url))
+                    continue
+        if len(paths)>1:
+            for path,url in zip(paths[1:],urls[1:]):
+                newCategory = []
+                path_ = path.replace('.html','')
+                subpaths = path_.split('/')
+                self.deleteItemList(subpaths, '')
+                self.deleteSubPaths(subpaths)
+                try:
+                    for p,u in zip(paths[paths.index(path)+1:],urls[paths.index(path)+1:]):
+                        p_ = p.replace('.html','')
+                        subPs = p_.split('/')
+                        self.deleteItemList(subPs, '')
+                        self.deleteSubPaths(subPs)
+                        if len(subPs)>0 and len(subpaths)>0 and subPs[0] == subpaths[0]:
+                            newCategory.append(u)
+                            paths.pop(paths.index(p))
+                            urls.pop(urls.index(u))
+                except:
+                    pass
+                if len(newCategory)>0:
+                    self.mainSections.append(subpaths[0])
+                    arraySections.append([])
+                    arraySections[-1].insert(0,subpaths[0])
+                    paths.pop(paths.index(path))
+                    urls.pop(urls.index(url))
+                    for url_ in newCategory:
+                        arraySections[-1].append(url_)
+                        
+        #Process to sort of the most dominants categories by number of landings
+        arraySections.sort(key=len, reverse=True)
+        for i in range(len(arraySections)):
+            self.mainSections[i] = arraySections[i][0]
+            arraySections[i].pop(0)
+        
+        #arraySections.sort(reverse=True, key=len)
+        if len(urls)>1:
+            self.mainSections.append('Otros')
+            arraySections.append(urls[1:])
+            
+        for arraySection, mainSection in zip(arraySections,self.mainSections):
+            if len(arraySection) == 0:
+                arraySections.remove(arraySection)
+                self.mainSections.remove(mainSection)
+           
+        if len(arraySections)>self.maxCategories:
+            for i, j in zip(range(len(arraySections)-1, -1, -1), range(len(self.mainSections)-1, -1, -1)):
+                if len(arraySections[i]) > 2:
+                    continue
+                elif len(arraySections[i]) > 1:
+                    print('Delete Section: '+ self.mainSections[j]+'  With index: '+str(j))
+                    self.mainSections.pop(j)
+                    arraySections[-1].insert(0, arraySections[i][0])
+                    arraySections[-1].insert(0, arraySections[i][1])
+                    arraySections.pop(i)
+                elif len(arraySections[i]) > 0:
+                    print('Delete Section: '+ self.mainSections[j]+'  With index: '+str(j))
+                    self.mainSections.pop(j)
+                    arraySections[-1].append(arraySections[i][0])
+                    arraySections.pop(i)
+                elif len(arraySections[i]) == 0:
+                    self.mainSections.pop(j)
+                    arraySections.pop(i)
+        for i in range(len(arraySections)):
+            arraySections[i].sort()
+        self.mainSections.insert(0,'') 
+        self.arraySections = arraySections
+        #return arraySections
     
     def getArraySectionsII(self):
         arraySections = []
@@ -613,4 +798,3 @@ if __name__ == '__main__':
 #         print(path)
 #     webSite.deeperSubDomains()
 #     sections = webSite.getArraySections() 
-    
