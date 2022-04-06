@@ -93,7 +93,7 @@ class urlDomains:
         
     def setHeadlessMode(self):
         fireFoxOptions = webdriver.FirefoxOptions()
-        fireFoxOptions.headless = True
+        #fireFoxOptions.headless = True
         fireFoxOptions.set_preference("general.useragent.override", USER_AGENT)
         fireFoxOptions.page_load_strategy = 'eager'
         service = FirefoxService(executable_path=GeckoDriverManager().install())
@@ -787,7 +787,7 @@ if __name__ == '__main__':
     webSite = urlDomains('https://compra.tusegurometlife.cl/')
     webSite.driver = webSite.setHeadlessMode()
     webSite.loadPage()
-    webSite.buildSiteMap('https://compra.tusegurometlife.cl/')
+    #webSite.buildSiteMap('https://compra.tusegurometlife.cl/')
 ##    index = 0
 ##    for section in webSite.getMainSections():
 ##        print('Section '+str(index)+':'+'  '+section)
