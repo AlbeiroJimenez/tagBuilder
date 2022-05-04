@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk, simpledialog
 from threading import Thread
-import time
+import time, sys
 import json
 import re
 
@@ -15,7 +15,7 @@ from tagModules.pixelBot import pixelBot
 MENU_DEFINITION = (
             'File- &New/Ctrl+N/self.newFile, Save/Ctrl+S/self.save_file, SaveAs/Ctrl+Shift+S/self.save_as, sep, Exit/Ctrl+Q/self.exitCalcTag',
             'Edit- Setting/Ctrl+Z/self.setting, sep, Show Offline/Alt+F5/self.offline',
-            'View- URL Extractor//self.show_urlExtractor, GTM//self.show_GTM',
+            'View- SiteMap Builder//self.show_siteMapTab, Pixel Creator//self.show_PixelTab',
             'Help- Documentation/F2/self.documentation, About/F1/self.aboutTagCalc'
         )
 
@@ -40,7 +40,7 @@ MONTHS          = [
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 ]
 
-PROGRAM_NAME = 'TagCalc'
+PROGRAM_NAME = 'TagBuilder'
 
 class FrameWork2D(ttk.Frame):
     def __init__(self, root, *args, **kwargs):
@@ -49,7 +49,8 @@ class FrameWork2D(ttk.Frame):
         self.tabPages = ttk.Notebook(self.root)
         self.build_menu(MENU_DEFINITION)
         self.build_tabs(TABS_DEFINITION)
-        self.GTM = False
+        self.pixelTab   = False
+        self.sitemapTab = True
         self.set_CCS()
         
     def set_CCS(self):
@@ -128,12 +129,16 @@ class FrameWork2D(ttk.Frame):
     def offline(self):
         pass
     
-    def show_urlExtractor(self):
-        pass
+    def show_siteMapTab(self):
+        self.sitemapTab = not self.sitemapTab
+        if self.sitemapTab:
+            self.tabPages.add(self.tabs[0])
+        else:
+            self.tabPages.hide(0)
     
-    def show_GTM(self):
-        self.GTM = not self.GTM
-        if self.GTM:
+    def show_PixelTab(self):
+        self.pixelTab = not self.pixelTab
+        if self.pixelTab:
             self.tabPages.add(self.tabs[1])
         else:
             self.tabPages.hide(1)
@@ -151,6 +156,12 @@ class tagFrontEnd(FrameWork2D):
         self.xlsxFile      = xlsxFile
         self.pixelBot      = pixelBot
         self.arrayPixels   = []
+        self.xandrSeg      = []
+        self.xandrConv     = []
+        self.DV360         = []
+        self.minsights     = []
+        self.taboolaSeg    = []
+        self.taboolaConv   = []
         self.pathTR        = tk.StringVar()  
         self.directoryTR   = tk.StringVar()
         self.urlAdvertiser = tk.StringVar()
@@ -309,6 +320,7 @@ class tagFrontEnd(FrameWork2D):
         
     def loadTR(self):
         self.btn_create.configure(state='disable')
+        self.btn_save_pixels.configure(state='disable')
         tempDir = filedialog.askopenfilename(title = 'Select a Tagging Request Temple', filetypes=[('XLSX', '*.xlsx *.XLSX')])
         try:
             if tempDir.split('/')[-1].startswith('TagReq_') and (tempDir.split('/')[-1][-12:-9] in MONTHS) and tempDir.split('/')[-1][-9:-5].isnumeric():
@@ -355,7 +367,7 @@ class tagFrontEnd(FrameWork2D):
             ttk.Label(parameters_frame, text="Container ID").grid(column=0, row=1, sticky=tk.W)
             tk.Entry(parameters_frame, width=30, textvariable = self.GTM_ID, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=1, sticky=tk.W)
             ttk.Label(parameters_frame, text="Progress:").grid(column=2, row=1, sticky=tk.W)
-            self.progressbar = ttk.Progressbar(parameters_frame,variable=self.viewProgress, orient = tk.HORIZONTAL, length=125, maximum=100)
+            self.progressbar = ttk.Progressbar(parameters_frame, variable=self.viewProgress, orient = tk.HORIZONTAL, length=125, maximum=100)
             self.progressbar.grid(column=3, row=1, sticky=tk.W)
             ttk.Label(parameters_frame, text="Only HomePV:").grid(column=4, row=1, sticky=tk.W)
             ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=5, row=1)
@@ -396,7 +408,7 @@ class tagFrontEnd(FrameWork2D):
             self.agencies['values'] = ['Xaxis', 'Ford', 'Colgate']
             self.agencies.set('Xaxis')
             self.agencies.grid(column=1, row=2)
-            ttk.Label(parameters_frame, text='Country: ').grid(column=2, row=2, sticky=tk.W)
+            ttk.Label(parameters_frame, text='Market: ').grid(column=2, row=2, sticky=tk.W)
             self.countries = ttk.Combobox(parameters_frame, state='readonly', font=('Arial',8,'italic'))
             self.countries['values'] = ['Argentina', 'Brazil', 'Chile', 'Colombia', 'Mexico', 'Peru', 'Puerto Rico', 'Uruguay', 'Venezuela']
             self.countries.set('Colombia')
@@ -462,8 +474,8 @@ class tagFrontEnd(FrameWork2D):
         self.btn_create = ttk.Button(pixel_button_frame, text='Create', command = self.createPixels_threaded, state = 'disable')
         self.btn_create.grid(column=1, row=0)
         
-        self.btn_save_GTM = ttk.Button(pixel_button_frame, text='Save', command = self.save_threaded, state = 'disable')
-        self.btn_save_GTM.grid(column=2, row=0)
+        self.btn_save_pixels = ttk.Button(pixel_button_frame, text='Save', command = self.savePixels_threaded, state = 'disable')
+        self.btn_save_pixels.grid(column=2, row=0)
         
         ttk.Button(pixel_button_frame, text='exit', command = self.exitCalcTag).grid(column=3, row=0)
         self.createTableData(1)
@@ -471,12 +483,12 @@ class tagFrontEnd(FrameWork2D):
     def createTableData(self, indexTab=0):
         if indexTab == 0:
             self.dataTable = ttk.Treeview(self.data_table_frame, columns=['Landing', 'Path'], selectmode='extended')
-            self.dataTable.heading('#0', text='Section', anchor='w')
+            self.dataTable.heading('#0', text='Category', anchor='w')
             self.dataTable.heading('Landing', text='Landing', anchor='w')
             self.dataTable.heading('Path', text='Path', anchor='w')
-            self.dataTable.column('#0', stretch=True, width=140)
-            self.dataTable.column('Landing', stretch=True, width=520)
-            self.dataTable.column('Path', stretch=True, width=110)
+            self.dataTable.column('#0', stretch=True, width=200)
+            self.dataTable.column('Landing', stretch=True, width=450)
+            self.dataTable.column('Path', stretch=True, width=120)
             self.dataTable.bind("<KeyPress-Delete>",self.deleteBranch)
             #self.scrollbar = ttk.Scrollbar(self.data_table_frame, orient=tk.VERTICAL, command=self.dataTable.yview)
             #self.dataTable.configure(yscrollcommand=self.scrollbar.set)
@@ -492,11 +504,11 @@ class tagFrontEnd(FrameWork2D):
             self.pixelTable.heading('Trigger', text='Trigger', anchor='w')
             self.pixelTable.heading('Variables', text='Variables', anchor='w')
             self.pixelTable.heading('URL/PATH', text='URL/PATH', anchor='w')
-            self.pixelTable.column('#0', stretch=True, width=140)
-            self.pixelTable.column('Pixel Name', stretch=True, width=150)
+            self.pixelTable.column('#0', stretch=True, width=180)
+            self.pixelTable.column('Pixel Name', stretch=True, width=260)
             self.pixelTable.column('Trigger', stretch=True, width=75)
             self.pixelTable.column('Variables', stretch=True, width=75)
-            self.pixelTable.column('URL/PATH', stretch=True, width=330)
+            self.pixelTable.column('URL/PATH', stretch=True, width=180)
             self.pixelTable.bind("<KeyPress-Delete>",self.deleteBranch)
             self.pixelTable.grid(column=0, row=0, sticky='NESW')
 
@@ -759,11 +771,16 @@ class tagFrontEnd(FrameWork2D):
         thread.start()
         
     def pixels_threaded(self):
+        #thread = Thread(target = self.loginAllPlatforms)
         thread = Thread(target = self.pixels)
         thread.start()
         
     def save_threaded(self):
         thread = Thread(target = self.save)
+        thread.start()
+        
+    def savePixels_threaded(self):
+        thread = Thread(target = self.savePixels)
         thread.start()
 
     def createPixels_threaded(self): 
@@ -826,6 +843,8 @@ class tagFrontEnd(FrameWork2D):
     
     def find(self):
         if self.validURL(self.urlAdvertiser.get()):
+            self.webDOM.viewProgress = 1
+            self.updateProgress_threaded()
             self.webDOM.setStop(False)
             self.btn_find.configure(state='disable')
             #self.maxCategories.configure(state='disable')
@@ -834,13 +853,23 @@ class tagFrontEnd(FrameWork2D):
             existContainer, containerID = self.pixelBot.existGTM(self.urlAdvertiser.get())
             self.GTM_ID.set(containerID)
             exists_url, exists_sitemap = self.webDOM.buildSiteMap(self.urlAdvertiser.get())
-            self.lanchPopUps('Landings', 'The process of find landings has finished!', 'Press "Ok" to exit.')
             if exists_url:
-                self.lanchPopUps('Landings', 'The process of find landings has finished!', 'Press "Ok" to exit.')
+                if exists_sitemap and len(self.webDOM.subDomains)>0:
+                    self.lanchPopUps('Landings', 'The process of find landings has finished!', 'Press "Ok" to exit.')
+                else:
+                    self.webDOM.findAnchors()
+                    self.webDOM.getSubDomains()
+                    self.webDOM.deeperSubDomains()
+                    exist_sitemap = True if len(self.webDOM.subDomains)>0 else False 
+                    if exist_sitemap:
+                        self.lanchPopUps('Landings', 'The process of find landings has finished!', 'Press "Ok" to exit.')
+                    else:
+                        self.lanchPopUps('Landings', 'TagBuilder does not find landings!', 'Press "Ok" to exit.')
             else:
                 self.lanchPopUps('URL Error!', "The URL given not found or it's incorrect!", 'Press "Ok" to exit.')
             self.btn_find.configure(state='active')
             self.btn_sections.configure(state='active')
+            self.webDOM.viewProgress = -1
             #self.maxCategories.configure(state='active')
         else:
             self.lanchPopUps('URL Error!', "The URL given is incorrect!", 'Press "Ok" to exit.')
@@ -866,111 +895,136 @@ class tagFrontEnd(FrameWork2D):
         self.btn_save.configure(state='active')
         
     def createPixels(self):
-        self.btn_create.configure(state='disable')
-        if self.directoryTR.get() == '' or not self.advertiserId.get().isdigit() or self.advertiser_.get() == '' or self.advertiser_.get() == 'None':
-            self.lanchPopUps('Incomplete Fields', 'Check the  fields:\n- T. Request File.\n- Advertiser.\n- Advertiser ID.', 'Press "Ok" to exit.')
-        else:
-            if self.platforms.get() == 'Xandr Seg' or self.platforms.get() == 'Xandr Conv':
-                pixelType = 'RTG' if self.platforms.get() == 'Xandr Seg' else 'CONV'
-                if self.logInPlatform(LOGIN_PAGES[0], self.users[0].get(), self.passwords[0].get()):
-                    if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
-                        for pixel in self.arrayPixels:
-                            if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
-                                snippet =  self.pixelBot.createPixel(self.advertiserId.get(), pixel[1], platform=0, pixelType=pixelType)
-                                pixel.append(snippet)
-                            else:
-                                snippet = self.pixelBot.getSnippetCode(self.advertiserId.get(),pixel[1], self.platforms.get())
-                                pixel.append(snippet)
-                                self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
-                                #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
-                        print('The snippet are: ')
-                        for pixel in self.arrayPixels:
-                            print(pixel[-1])
-                    else:
-                        self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
-                else:
-                    self.lanchPopUps('Xandr login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
-            elif self.platforms.get() == 'DV360':
-                if self.logInPlatform(LOGIN_PAGES[1], self.users[0].get(), self.passwords[1].get()):
-                    if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
-                        for pixel in self.arrayPixels:
-                            if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
-                                snippet =  self.pixelBot.createPixel(self.advertiserId.get(), pixel[1], platform=1)
-                                pixel.append(snippet)
-                            else:
-                                snippet = self.pixelBot.getSnippetCode(self.advertiserId.get(),pixel[1], self.platforms.get())
-                                pixel.append(snippet)
-                                self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
-                                #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
-                        print('The snippet are: ')
-                        for pixel in self.arrayPixels:
-                            print(pixel[-1])
-                    else:
-                        self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
-                else:
-                    self.lanchPopUps('DV360 login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
-            elif self.platforms.get() == 'Taboola Seg' or self.platforms.get() == 'Taboola Conv':
-                if self.logInPlatform(LOGIN_PAGES[2], self.users[0].get(), self.passwords[2].get()):
-                    if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
-                        for pixel in self.arrayPixels:
-                            if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
-                                print('El pixel: '+pixel[1]+', no existe y se puede crear!!!')
-                            else:
-                                print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
-                    else:
-                        self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
-                else:
-                    self.lanchPopUps('Taboola login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
-                #self.createPixel(self.platforms.get(), 'AllPagesTest', None)
+        try:
+            self.btn_create.configure(state='disable')
+            if self.directoryTR.get() == '' or not self.advertiserId.get().isdigit() or self.advertiser_.get() == '' or self.advertiser_.get() == 'None':
+                self.lanchPopUps('Incomplete Fields', 'Check the  fields:\n- T. Request File.\n- Advertiser.\n- Advertiser ID.', 'Press "Ok" to exit.')
             else:
-                if self.logInPlatform(LOGIN_PAGES[3], self.users[0].get(), self.passwords[3].get()):
-                    minsightId = self.pixelBot.existMinsightsId(self.advertiser_.get(), self.countries.get(), self.agencies.get())
-                    if minsightId != -1:
-                        self.advertiserId.set(minsightId)
-                        for pixel in self.arrayPixels:
-                            if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
-                                #print('El pixel: '+pixel[1]+', no existe y se puede crear!!!')
-                                snippet =  self.pixelBot.createPixel(self.advertiserId.get(), pixel[1], platform=3, customVariable=pixel[3])
-                                pixel.append(snippet)
-                            else:
-                                snippet = self.pixelBot.getSnippetCode(self.advertiserId.get(),pixel[1], self.platforms.get())
-                                pixel.append(snippet)
-                                self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
-                                #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
-                        print('The snippet are: ')
-                        for pixel in self.arrayPixels:
-                            print(pixel[-1])
+                if self.platforms.get() == 'Xandr Seg' or self.platforms.get() == 'Xandr Conv':
+                    pixelType = 'RTG' if self.platforms.get() == 'Xandr Seg' else 'CONV'
+                    if self.logInPlatform(LOGIN_PAGES[0], self.users[0].get(), self.passwords[0].get()):
+                        if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
+                            self.xandrSeg, self.xandrConv = ([], self.xandrConv) if pixelType=='RTG' else (self.xandrSeg, [])
+                            for pixel in self.arrayPixels:
+                                if pixelType == 'RTG' and (pixel[6]==None or pixel[6]=='' or pixel[6]=='NO'):
+                                    self.xandrSeg.append('')
+                                elif pixelType == 'CONV' and (pixel[7]==None or pixel[7]=='' or pixel[7]=='NO'):
+                                    self.xandrSeg.append('')   
+                                else:
+                                    if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
+                                        snippet =  self.pixelBot.createPixel(self.advertiserId.get(), pixel[1], platform=0, pixelType=pixelType)
+                                        #pixel.append(snippet)
+                                        self.xandrSeg.append(snippet) if pixelType=='RTG' else self.xandrConv.append(snippet)
+                                    else:
+                                        snippet = self.pixelBot.getSnippetCode(self.advertiserId.get(),pixel[1], self.platforms.get())
+                                        self.xandrSeg.append(snippet) if pixelType=='RTG' else self.xandrConv.append(snippet)
+                                        #pixel.append(snippet)
+                                        self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
+                                        #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
+                            print('The snippet are: ')
+                            print(self.xandrSeg)
+                            print(self.xandrConv)
+                        else:
+                            self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
                     else:
-                        self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
+                        self.lanchPopUps('Xandr login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
+                elif self.platforms.get() == 'DV360':
+                    if self.logInPlatform(LOGIN_PAGES[1], self.users[0].get(), self.passwords[1].get()):
+                        if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
+                            self.DV360 = []
+                            for pixel in self.arrayPixels:
+                                if pixel[8] in [None,'','No','NO','no', 'nO']:
+                                    self.DV360.append('')
+                                else:
+                                    if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
+                                        snippet =  self.pixelBot.createPixel(self.advertiserId.get(), pixel[1], platform=1)
+                                        self.DV360.append(snippet)
+                                        #pixel.append(snippet)
+                                    else:
+                                        snippet = self.pixelBot.getSnippetCode(self.advertiserId.get(),pixel[1], self.platforms.get())
+                                        self.DV360.append(snippet)
+                                        #pixel.append(snippet)
+                                        self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
+                                        #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
+                            print('The snippet are: ')
+                            for pixel in self.DV360:
+                                print(pixel)
+                        else:
+                            self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
+                    else:
+                        self.lanchPopUps('DV360 login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
+                elif self.platforms.get() == 'Taboola Seg' or self.platforms.get() == 'Taboola Conv':
+                    if self.logInPlatform(LOGIN_PAGES[2], self.users[0].get(), self.passwords[2].get()):
+                        if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
+                            for pixel in self.arrayPixels:
+                                if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
+                                    print('El pixel: '+pixel[1]+', no existe y se puede crear!!!')
+                                else:
+                                    print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
+                        else:
+                            self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
+                    else:
+                        self.lanchPopUps('Taboola login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
+                    #self.createPixel(self.platforms.get(), 'AllPagesTest', None)
                 else:
-                    self.lanchPopUps('Minsights login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
-                
-                
-            # if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
-            #     self.xlsxFile.setPATH(self.directoryTR.get())
-            #     self.xlsxFile.setBook()
-            #     for sheetname in self.xlsxFile.book.sheetnames:
-            #         if sheetname == 'Home':
-            #             print('Esta es la pestaña de:', sheetname)
-            #             self.xlsxFile.setSheet(sheetname)
-            #             print('en esta pestaña se crearán los siguientes pixeles')
-            #             print(self.xlsxFile.readCell('E31'))
-            #             print(self.xlsxFile.readCell('E32'))
-            #             print(self.xlsxFile.readCell('E34'))
-            #             print(self.xlsxFile.readCell('E35'))
-            #         elif sheetname == 'Hoja1' or sheetname.strip() == 'Concept Tagging Request':
-            #             pass
-            #         else:
-            #             print(sheetname)
-            #             self.xlsxFile.setSheet(sheetname)
-            #             print('en esta pestaña se crearán los siguientes pixeles')
-            #             print(self.xlsxFile.readCell('E31'))
-                #self.createPixel(self.platforms.get())
-            # else:
-            #     self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
+                    if self.logInPlatform(LOGIN_PAGES[3], self.users[0].get(), self.passwords[3].get()):
+                        minsightId = self.pixelBot.existMinsightsId(self.advertiser_.get(), self.countries.get(), self.agencies.get())
+                        if minsightId != -1:
+                            self.advertiserId.set(minsightId)
+                            self.minsights = []
+                            for pixel in self.arrayPixels:
+                                if pixel[5] in [None,'','No','NO','no', 'nO']:
+                                    self.minsights.append('')
+                                else:
+                                    if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
+                                        #print('El pixel: '+pixel[1]+', no existe y se puede crear!!!')
+                                        snippet =  self.pixelBot.createPixel(self.advertiserId.get(), pixel[1], platform=3, customVariable=pixel[3])
+                                        self.minsights.append(snippet)
+                                        #pixel.append(snippet)
+                                    else:
+                                        snippet = self.pixelBot.getSnippetCode(self.advertiserId.get(),pixel[1], self.platforms.get())
+                                        self.minsights.append(snippet)
+                                        #pixel.append(snippet)
+                                        self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
+                                        #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
+                            print('The snippet are: ')
+                            for pixel in self.minsights:
+                                print(pixel)
+                        else:
+                            self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
+                    else:
+                        self.lanchPopUps('Minsights login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
+                    
+                    
+                # if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
+                #     self.xlsxFile.setPATH(self.directoryTR.get())
+                #     self.xlsxFile.setBook()
+                #     for sheetname in self.xlsxFile.book.sheetnames:
+                #         if sheetname == 'Home':
+                #             print('Esta es la pestaña de:', sheetname)
+                #             self.xlsxFile.setSheet(sheetname)
+                #             print('en esta pestaña se crearán los siguientes pixeles')
+                #             print(self.xlsxFile.readCell('E31'))
+                #             print(self.xlsxFile.readCell('E32'))
+                #             print(self.xlsxFile.readCell('E34'))
+                #             print(self.xlsxFile.readCell('E35'))
+                #         elif sheetname == 'Hoja1' or sheetname.strip() == 'Concept Tagging Request':
+                #             pass
+                #         else:
+                #             print(sheetname)
+                #             self.xlsxFile.setSheet(sheetname)
+                #             print('en esta pestaña se crearán los siguientes pixeles')
+                #             print(self.xlsxFile.readCell('E31'))
+                    #self.createPixel(self.platforms.get())
+                # else:
+                #     self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
+            self.lanchPopUps('Finished', 'Process of create Pixels have already finished.', 'Press "Ok" to exit.')
+            self.btn_create.configure(state='active')
+            self.btn_save_pixels.configure(state='active')
+        except:
+            self.lanchPopUps('Error!', str(sys.exc_info()[1]), 'Press "Ok" to exit.')
+            self.btn_create.configure(state='active')
         
-        self.btn_create.configure(state='active')
-    
     def createPixel(self, platform_, pixelName_, variables):
         if platform_ == 'Xandr Seg':
             if self.advertiserId.get() != '' and self.advertiserId.get().isnumeric():
@@ -1068,22 +1122,29 @@ class tagFrontEnd(FrameWork2D):
             login = self.pixelBot.doLogin(user, password)
             #self.pixelBot.authFail = self.pixelBot.auth_alert()
             if self.pixelBot.approve:
-                print('Aprueba el ingreso por favor')
-            elif self.pixelBot.reqCode and not windowCode:
+                self.lanchPopUps('Authorize', 'Authoriza the Access from your cellphone!', 'Press "Ok" to exit.')
+                self.pixelBot.approve = False
+            elif self.pixelBot.reqCode and not windowCode and self.pixelBot.isVerifyPage():
                 windowCode = True
                 self.updateCodeVerify_threaded()
                 #self.updateCodeVerify()
             elif self.pixelBot.auth_alert(time_=2):
-                print('Ha habido un problema de authenticación')
                 if try_<2:
                     self.pixelBot.setDriver(platform_)
                     windowCode = False
                     try_+=1
                 else:
+                    self.lanchPopUps('Auth Failed', 'There was a authentication problem!', 'Press "Ok" to exit.')
                     break
             elif not login and not self.pixelBot.startLog:
                 break
         return login
+    
+    def loginAllPlatforms(self):
+        self.logInPlatform(LOGIN_PAGES[0], self.users[0].get(), self.passwords[0].get())
+        self.logInPlatform(LOGIN_PAGES[1], self.users[0].get(), self.passwords[1].get())
+        self.logInPlatform(LOGIN_PAGES[2], self.users[0].get(), self.passwords[2].get())
+        self.logInPlatform(LOGIN_PAGES[3], self.users[0].get(), self.passwords[3].get())
 
     def updateCodeVerify(self):
         alertWin = tk.Tk()
@@ -1105,6 +1166,7 @@ class tagFrontEnd(FrameWork2D):
         if self.validTRFile():
             #self.arrayPixels = self.getArrayPixels()
             self.addItemTreeViewII(self.getArrayPixels())
+            self.lanchPopUps('Extracted!', 'The pixels had read from TR!', 'Press "Ok" to exit.')
         else:
             self.lanchPopUps('Invalid File', 'You must choice a valid file!', 'Press "Ok" to exit.')
         self.btn_create.configure(state='active')
@@ -1146,11 +1208,25 @@ class tagFrontEnd(FrameWork2D):
                         pixels[-1].append(self.xlsxFile.readCell('D'+str(31+i)))
                         pixels[-1].append(self.xlsxFile.readCell('G'+str(31+i)))
                         pixels[-1].append(self.xlsxFile.readCell('F'+str(31+i)))
+                        
+                        pixels[-1].append(self.xlsxFile.readCell('I'+str(31+i)))
+                        pixels[-1].append(self.xlsxFile.readCell('J'+str(31+i)))
+                        pixels[-1].append(self.xlsxFile.readCell('K'+str(31+i)))
+                        pixels[-1].append(self.xlsxFile.readCell('L'+str(31+i)))
+                        pixels[-1].append(self.xlsxFile.readCell('N'+str(31+i)))
+                        pixels[-1].append(self.xlsxFile.readCell('O'+str(31+i)))
                     else:
                         pixels[-1].append(self.xlsxFile.readCell('E'+str(31+i+1)))
                         pixels[-1].append(self.xlsxFile.readCell('D'+str(31+i+1)))
                         pixels[-1].append(self.xlsxFile.readCell('G'+str(31+i+1)))
                         pixels[-1].append(self.xlsxFile.readCell('F'+str(31+i+1)))
+                        
+                        pixels[-1].append(self.xlsxFile.readCell('I'+str(31+i+1)))
+                        pixels[-1].append(self.xlsxFile.readCell('J'+str(31+i+1)))
+                        pixels[-1].append(self.xlsxFile.readCell('K'+str(31+i+1)))
+                        pixels[-1].append(self.xlsxFile.readCell('L'+str(31+i+1)))
+                        pixels[-1].append(self.xlsxFile.readCell('N'+str(31+i+1)))
+                        pixels[-1].append(self.xlsxFile.readCell('O'+str(31+i+1)))
             else:
                 pixels.append([])
                 pixels[-1].insert(0, sheetname)
@@ -1163,8 +1239,16 @@ class tagFrontEnd(FrameWork2D):
                 try:
                     pixels[-1].append('/'+path_[0])
                 except:
-                    pixels[-1].append(None)         
-        print(pixels)
+                    pixels[-1].append(None)
+                pixels[-1].append(self.xlsxFile.readCell('I31'))
+                pixels[-1].append(self.xlsxFile.readCell('J31'))
+                pixels[-1].append(self.xlsxFile.readCell('K31'))
+                pixels[-1].append(self.xlsxFile.readCell('L31'))
+                pixels[-1].append(self.xlsxFile.readCell('N31'))
+                pixels[-1].append(self.xlsxFile.readCell('O31'))         
+        #print(pixels)
+        for pixel in pixels:
+            print(pixel[4])
         return pixels
     
     def save(self):
@@ -1208,7 +1292,61 @@ class tagFrontEnd(FrameWork2D):
             self.lanchPopUps('Save', 'The TagCalc file has saved!', 'Press "Ok" to exit.')
         else:
             self.lanchPopUps('Fields missing!', 'Check the Container ID and Advertiser ID!', 'Press "Ok" to exit.')
-        
+            
+    def savePixels(self):
+        self.btn_save_pixels.configure(state='disable')
+        snippet_Arrays = {'Xandr Seg': self.xandrSeg, 'Xandr Conv': self.xandrConv, 'DV360': self.DV360, 'Minsights': self.minsights, 'Taboola Seg': self.taboolaSeg, 'Taboola Conv': self.taboolaConv}
+        try:
+            for DSP in snippet_Arrays:
+                index = 0
+                for snippet in snippet_Arrays[DSP]:
+                    if index == 0 or index == 1 or index == 2 or index == 3:
+                        self.xlsxFile.setSheet('Home')
+                        if DSP == 'Xandr Seg': 
+                            cell = 'J3%s'%str(index+1) if index<2 else 'J3%s'%str(index+2)
+                            self.xlsxFile.writeCell(cell, snippet)
+                        elif DSP == 'Xandr Conv': 
+                            cell = 'K3%s'%str(index+1) if index<2 else 'K3%s'%str(index+2)
+                            self.xlsxFile.writeCell(cell, snippet)
+                        elif DSP == 'DV360': 
+                            cell = 'L3%s'%str(index+1) if index<2 else 'L3%s'%str(index+2)
+                            self.xlsxFile.writeCell(cell, snippet)
+                        elif DSP == 'Minsights': 
+                            cell = 'I3%s'%str(index+1) if index<2 else 'I3%s'%str(index+2)
+                            self.xlsxFile.writeCell(cell, snippet)
+                        elif DSP == 'Taboola Seg': 
+                            cell = 'N3%s'%str(index+1) if index<2 else 'N3%s'%str(index+2)
+                            self.xlsxFile.writeCell(cell, snippet)
+                        else: 
+                            cell = 'O3%s'%str(index+1) if index<2 else 'O3%s'%str(index+2)
+                            self.xlsxFile.writeCell(cell, snippet)
+                    else:
+                        self.xlsxFile.setSheet(self.xlsxFile.book.sheetnames[index-1])
+                        if DSP == 'Xandr Seg': 
+                            self.xlsxFile.writeCell('J31', snippet)
+                        elif DSP == 'Xandr Conv': 
+                            self.xlsxFile.writeCell('K31', snippet)
+                        elif DSP == 'DV360': 
+                            self.xlsxFile.writeCell('L31', snippet)
+                        elif DSP == 'Minsights': 
+                            self.xlsxFile.writeCell('I31', snippet)
+                        elif DSP == 'Taboola Seg': 
+                            self.xlsxFile.writeCell('N31', snippet)
+                        else: 
+                            self.xlsxFile.writeCell('O31', snippet)
+                    index += 1  
+            directory = filedialog.askdirectory()
+            if len(directory) > 0:
+                self.directoryTR.set(self.xlsxFile.saveBook(directory))
+            else:
+                self.directoryTR.set(self.xlsxFile.saveBook())
+            self.lanchPopUps('Save', 'The Tagging Request file has saved!', 'Press "Ok" to exit.')
+        except PermissionError:
+            self.lanchPopUps('Permission Error!', "The file is open or you haven't permissions.", 'Press "Ok" to exit.')
+        except:
+            self.lanchPopUps('Error!', str(sys.exc_info()[1]), 'Press "Ok" to exit.')
+        self.btn_save_pixels.configure(state='active')
+      
     def updateProgress_threaded(self):
         thread = Thread(target = self.updateProgress)
         thread.start()

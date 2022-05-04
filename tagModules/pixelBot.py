@@ -66,7 +66,7 @@ class pixelBot:
 
     def setHeadlessMode(self):
         fireFoxOptions = webdriver.FirefoxOptions()
-        #fireFoxOptions.headless = True
+        fireFoxOptions.headless = True
         fireFoxOptions.set_preference("general.useragent.override", USER_AGENT)
         #fireFoxOptions.page_load_strategy = 'eager'
         service = FirefoxService(executable_path=GeckoDriverManager().install())
@@ -82,10 +82,10 @@ class pixelBot:
         Return:
             WebElement, error: WebElement or -1, and error object or None     
     """   
-    def getWebElement(self, typeSearch, expression, timeout_=10, max_iteractions=6):
+    def getWebElement(self, typeSearch, expression, timeout_=10, max_iteractions=6, visible = True):
         flat = 0
         while flat<max_iteractions:
-            if typeSearch=='XPATH':
+            if typeSearch=='XPATH' and visible:
                 try:
                     webElement = WebDriverWait(self.driver, timeout_).until(EC.visibility_of_any_elements_located((By.XPATH, expression)))
                     return webElement, None
@@ -97,12 +97,45 @@ class pixelBot:
                     return -1, e
                 except:
                     return -1, sys.exc_info()
+            elif typeSearch=='XPATH' and  not visible:
+                try:
+                    while flat<max_iteractions:
+                        webElement = self.driver.find_elements(By.XPATH, expression)
+                        if len(webElement)>0:
+                            return webElement, None
+                        time.sleep(1)
+                        flat += 1
+                    else:
+                        return -1, None
+                except InvalidSelectorException as e:
+                    return -1, e
+                except:
+                    return -1, sys.exc_info()
             elif typeSearch == 'TAG_NAME':
                 pass
             elif typeSearch == 'CLASS':
                 pass
         return -1, None
         
+    def doWebElement(self, webElement, typeAction='click', timeout = 2, max_iteractions=35):
+        if webElement == -1: return False
+        if typeAction == 'click':
+            flat = 0
+            while flat<max_iteractions:
+                time.sleep(timeout)
+                if 'disable' in webElement.get_attribute('class'):
+                    flat += 1
+                else:
+                    flat = max_iteractions
+            else:
+                webElement.click()
+                return True
+        elif typeAction == 'write':
+            pass
+        else: 
+            pass
+                
+    
     def existGTM(self, url):
         GTMs = []
         GTM_ID = 'GTM-XXXXXXX'
@@ -236,13 +269,11 @@ class pixelBot:
     def isVerifyPage(self):
         for verify_word in VERIFY:
             if verify_word.casefold() in self.driver.title.casefold():
-                print('It is verify page!!!')
                 return True
         else:
             exist,  h = self.existWebElement('verify', time_=5)
             exist_, h = self.existWebElement('code', time_=0)
             if exist or exist_:
-                print('It is verify page!!!')
                 return True
             else:
                 return False
@@ -283,12 +314,14 @@ class pixelBot:
                 e, OAuthWait = self.existWebElement('other','//*[contains(text(),"Approve sign") or contains(text(),"Aprobar")]', time_=0)
                 if e:
                     self.approve = True
+                else:
+                    self.approve = False
         elif self.isVerifyPage():
             e,  verify = self.existWebElement('verify')
             e_, code   = self.existWebElement('code', time_=0)
             if e:
                 verify.click()
-                print('It is verify page!!!')
+                self.reqCode = False
             elif e_:
                 self.reqCode = True
                 if self.code != None and self.code != '':
@@ -343,7 +376,7 @@ class pixelBot:
             for i in range(list_.count(item)):
                 list_.pop(list_.index(item))
                 
-    def createPixel(self, advertiserId, pixelName, platform=0, pixelType='RTG', customVariable='u/p'):
+    def createPixel(self, advertiserId, pixelName, platform=0, pixelType='RTG', customVariable='u/p', event_=False, pathURL=None):
         if platform == 0 and pixelType=='RTG':
             query = 'advertiser_id=%s' % advertiserId
             self.setDriver(urlparse('https://invest.xandr.com/dmp/segments/new')._replace(query=query).geturl())
@@ -441,35 +474,188 @@ class pixelBot:
             else:
                 snippet = self.getSnippetCode(advertiserId, pixelName, 'DV360')
                 return  snippet
-        elif platform == 2 and pixelType=='RTG':
+        elif platform == 2 and pixelType=='RTG' and not event_:
             query = 'accountId=%s' % advertiserId
             self.setDriver(urlparse('https://ads.taboola.com/audiences/pixel-based/new')._replace(query=query).geturl())
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//div[@id="name"]')))[0].send_keys(pixelName)
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH,'//input[contains(@placeholder,"URL Address")]'))).send_keys('/test')
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH,'//button/span[contains(text(),"ADD")]'))).click()
+            webElement, error = bot.getWebElement('XPATH', '//button/span[contains(text(),"+ New Audience")]')
+            webElement[0].click()
+            webElement, error = bot.getWebElement('XPATH', '//button/span[contains(text(),"Continue")]')
+            webElement[0].click()
+            webElement, error = self.getWebElement('XPATH', '//div[@id="name"]')
+            if webElement !=-1: webElement[0].send_keys(pixelName)
+            webElement, error = self.getWebElement('XPATH', '//input[contains(@placeholder,"URL Address")]')
+            if webElement != -1:
+                if 'HomePV' in pixelName:
+                    operator, error = self.getWebElement('XPATH', '//span[contains(text(),"Contains")]')
+                    operator[0].click()
+                    operator, error = self.getWebElement('XPATH', '//span[contains(text(),"Equals")]')
+                    operator[0].click()
+                    URL = pathURL[:-1] if pathURL[-1] == '/' else pathURL
+                    webElement[0].send_keys(URL)
+                else:
+                    webElement[0].send_keys(pathURL)
+                webElement, error = self.getWebElement('XPATH', '//button/span[contains(text(),"ADD")]')
+                if webElement != -1: webElement[0].click()
+            exclude, error = self.getWebElement('XPATH', '//div[@id="exclude-audience"]')
+            exclude[0].find_elements(By.XPATH, 'label')[1].click()
+            webElement, error = self.getWebElement('XPATH', '//button/span[contains(text(),"Create Audience")]')
+            if webElement != -1: webElement[0].click()
+            webElement, error = self.getWebElement('XPATH', '//span[contains(text(),"This Audience Name already exists")]', timeout_=1)
+            if webElement != -1: 
+                return ''
+            else:
+                return 'NO TAG'
+            #WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//div[@id="name"]')))[0].send_keys(pixelName)
+            #WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH,'//input[contains(@placeholder,"URL Address")]'))).send_keys('/test')
+            #WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH,'//button/span[contains(text(),"ADD")]'))).click()
             #WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//button/span[contains(text(),"Create Audience")]')))[0].click()
-            return 'Test_Taboola'
-        elif platform == 2 and pixelType=='CONV':
+            #return 'Test_Taboola'
+        elif platform == 2 and pixelType=='RTG' and event_:
+            query = 'accountId=%s' % advertiserId
+            self.setDriver(urlparse('https://ads.taboola.com/audiences/pixel-based/new')._replace(query=query).geturl())
+            webElement, error = bot.getWebElement('XPATH', '//button/span[contains(text(),"+ New Audience")]')
+            webElement[0].click()
+            webElement, error = bot.getWebElement('XPATH', '//button/span[contains(text(),"Continue")]')
+            webElement[0].click()
+            webElement, error = self.getWebElement('XPATH', '//div[@id="name"]')
+            if webElement !=-1: webElement[0].send_keys(pixelName)
+            audienceType, error = self.getWebElement('XPATH', '//div[@id="audience-type"]')
+            audienceType[0].find_elements(By.XPATH, 'label')[1].click()
+            webElement, error = self.getWebElement('XPATH', '//div[@id="based-on-events"]', timeout_=1)
+            eventName = pixelName.split('_',1)[1] if len(pixelName.split('_',1))>1 else pixelName
+            if webElement !=-1: 
+                tableEvents, error = self.getWebElement('XPATH', '//div[@class="ag-pinned-left-cols-container"]')
+                if tableEvents !=-1:
+                    events = tableEvents[0].find_elements(By.XPATH, 'div')
+                    if len(events)>0:
+                        for event in events:
+                            eventName_ = event.text.split('\n')[0]
+                            if eventName == eventName_:
+                                event.click()
+                                break
+                        else:
+                            webElement[0].find_elements(By.XPATH,'label')[1].click()
+                            webElement, error = self.getWebElement('XPATH', '//div[@id="eventName"]')
+                            webElement[0].send_keys(eventName)
+                            webElement, error = self.getWebElement('XPATH', '//code[@class="code-snippet-text"]')
+                            snippet = webElement[0].text
+                            exclude, error = self.getWebElement('XPATH', '//div[@id="exclude-audience"]')
+                            exclude[0].find_elements(By.XPATH, 'label')[1].click()
+                            webElement, error = self.getWebElement('XPATH', '//button/span[contains(text(),"Create Audience")]')
+                            if webElement != -1: webElement[0].click()
+                            existAudience, error = self.getWebElement('XPATH', '//span[contains(text(),"This Audience Name already exists")]', timeout_=1)
+                            if existAudience != -1: 
+                                return '' 
+                            else: 
+                                return snippet       
+                    else:
+                        webElement[0].find_elements(By.XPATH,'label')[1].click()
+                        webElement, error = self.getWebElement('XPATH', '//div[@id="eventName"]')
+                        webElement[0].send_keys(eventName)
+                        webElement, error = self.getWebElement('XPATH', '//code[@class="code-snippet-text"]')
+                        snippet = webElement[0].text
+                        exclude, error = self.getWebElement('XPATH', '//div[@id="exclude-audience"]')
+                        exclude[0].find_elements(By.XPATH, 'label')[1].click()
+                        webElement, error = self.getWebElement('XPATH', '//button/span[contains(text(),"Create Audience")]')
+                        if webElement != -1: webElement[0].click()
+                        existAudience, error = self.getWebElement('XPATH', '//span[contains(text(),"This Audience Name already exists")]', timeout_=1)
+                        if existAudience != -1: 
+                            return '' 
+                        else: 
+                            return snippet
+            else:
+                webElement, error = self.getWebElement('XPATH', '//div[@id="eventName"]')
+                webElement[0].send_keys(eventName)
+                webElement, error = self.getWebElement('XPATH', '//code[@class="code-snippet-text"]')
+                snippet = webElement[0].text
+                exclude, error = self.getWebElement('XPATH', '//div[@id="exclude-audience"]')
+                exclude[0].find_elements(By.XPATH, 'label')[1].click()
+                webElement, error = self.getWebElement('XPATH', '//button/span[contains(text(),"Create Audience")]')
+                if webElement != -1: webElement[0].click()
+                existAudience, error = self.getWebElement('XPATH', '//span[contains(text(),"This Audience Name already exists")]', timeout_=1)
+                existEvent, error = self.getWebElement('XPATH', '//span[contains(text(),"This Event Name already exists")]', timeout_=1)
+                if existAudience == -1 and existEvent == -1: 
+                    return snippet
+                else: 
+                    return ''
+        elif platform == 2 and pixelType=='CONV' and event_:
             query = 'accountId=%s' % advertiserId
             self.setDriver(urlparse('https://ads.taboola.com/conversions')._replace(query=query).geturl())
-            print('Se ha cargado la primera pagina')
             time.sleep(10)
             iframe = WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//div/iframe[contains(@title,"Tracking")]')))
-            print(type(iframe))
             self.driver.switch_to.frame(iframe[0])
-            time.sleep(5)
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//a[@id="btn-new-rule"]')))[0].click()
-            time.sleep(10)
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//button[contains(text(),"Event")]')))[0].click()
-            print('Hemos seleccionado event????')
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//button[contains(text(),"Custom")]')))[0].click()
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@id="conversionName"]')))[0].send_keys(pixelName)
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@id="eventName"]')))[0].send_keys(pixelName)
+            #time.sleep(5)
+            #WebDriverWait(self.driver, 60).until(EC.visibility_of_any_elements_located((By.XPATH,'//a[@id="btn-new-rule"]')))[0].click()
+            createNew, error = self.getWebElement('XPATH', '//a[@id="btn-new-rule"]')
+            self.doWebElement(createNew[0])
+            event, error = self.getWebElement('XPATH', '//button[contains(text(),"Event")]')
+            self.doWebElement(event[0])
+            webElement, error = self.getWebElement('XPATH', '//button[contains(text(),"Custom")]')
+            self.doWebElement(webElement[0])
+            #time.sleep(10)
+            #WebDriverWait(self.driver, 60).until(EC.visibility_of_any_elements_located((By.XPATH,'//a[@id="btn-new-rule"]')))[0].click()
+            #WebDriverWait(self.driver, 60).until(EC.visibility_of_any_elements_located((By.XPATH,'//button[contains(text(),"Event")]')))[0].click()
+            #WebDriverWait(self.driver, 60).until(EC.visibility_of_any_elements_located((By.XPATH,'//button[contains(text(),"Custom")]')))[0].click()
+            WebDriverWait(self.driver, 60).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@id="conversionName"]')))[0].send_keys(pixelName)
+            eventName = pixelName.split('_',1)[1] if len(pixelName.split('_',1))>1 else pixelName
+            WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@id="eventName"]')))[0].clear()
+            WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[@id="eventName"]')))[0].send_keys(eventName)
             Select(self.driver.find_element(By.XPATH,'//select[contains(@id,"conversionCategory")]')).select_by_index(8)
             WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//button[@data-name="excludeFromCampaigns"]')))[0].click()
             snippet = self.driver.find_element(By.XPATH,'//textarea[@id="codeSnippet"]')
+            webElement, error = self.getWebElement('XPATH', '//button[@id="save"]')
+            if webElement != -1: webElement[0].click()
+            alert_error, error = self.getWebElement('XPATH', '//div[contains(@class,"alert-error")]', timeout_=1)
+            if alert_error != -1:
+                self.driver.switch_to.default_content()
+                return ''
+            else:
+                self.driver.switch_to.default_content()
+                return snippet
             self.driver.switch_to.default_content()
             return snippet
+        elif platform == 2 and pixelType=='CONV' and not event_:
+            query = 'accountId=%s' % advertiserId
+            self.setDriver(urlparse('https://ads.taboola.com/conversions')._replace(query=query).geturl())
+            iframe, error = self.getWebElement('XPATH', '//div/iframe[contains(@title,"Tracking")]')
+            if iframe != -1: self.driver.switch_to.frame(iframe[0])
+            time.sleep(30)
+            print('Hemos terminado la espera')
+            createNew, error = self.getWebElement('XPATH', '//a[@id="btn-new-rule"]')
+            print(createNew)
+            createNew[0].click()
+            webElement, error = self.getWebElement('XPATH', '//input[@placeholder="advertiser.com/thank-you"]', visible=False) 
+            if webElement != -1:
+                if 'HomePV' in pixelName:
+                    operator, error = self.getWebElement('XPATH', '//button/span[contains(text(),"contains")]')
+                    operator[0].click()
+                    option, error = self.getWebElement('XPATH', '//a[contains(text(),"equals")]')
+                    option[0].click()
+                    URL = pathURL[:-1] if pathURL[-1] == '/' else pathURL
+                    try:
+                        webElement[-1].send_keys(URL)
+                    except:
+                        print('No está enviando el mensaje')
+                        webElement, error = self.getWebElement('XPATH', '//input[@placeholder="advertiser.com/thank-you"]', visible=False)
+                        webElement[-1].send_keys(URL)
+                else:
+                    webElement[-1].send_keys(pathURL)
+            #webElement, error = self.getWebElement('XPATH', '//button[@id="addUrlConversion"]')
+            #if webElement != -1: webElement[0].click()
+            webElement, error = self.getWebElement('XPATH', '//input[@id="conversionName"]')
+            webElement[0].send_keys(pixelName)
+            webElement, error = self.getWebElement('XPATH', '//select[@id="conversionCategory"]')
+            if webElement != -1: Select(webElement[0]).select_by_index(8)
+            webElement, error = self.getWebElement('XPATH', '//button[@id="save"]')
+            if webElement != -1: webElement[0].click()
+            alert_error, error = self.getWebElement('XPATH', '//div[contains(@class,"alert-error")]', timeout_=1)
+            print(alert_error)
+            if alert_error != -1:
+                self.driver.switch_to.default_content()
+                return ''
+            else:
+                self.driver.switch_to.default_content()
+                return 'No Tag'
         elif platform == 3:
             fragment = 'client/%s/activities' % advertiserId
             self.setDriver(urlparse('https://amerminsights.mplatform.com')._replace(fragment=fragment).geturl())
@@ -501,6 +687,7 @@ class pixelBot:
             snippet = WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located((By.XPATH,'//textarea[@id="activityTagCode"]'))).get_attribute('value')
             self.driver.switch_to.default_content()
             return snippet
+        return 'No pixel'
     
     def getSnippetCode(self, advertiserId, pixelName, platform):
         if platform == 'Xandr Seg':
@@ -803,6 +990,10 @@ class pixelBot:
         
     def setMinsightsAgency(self, agency):
         self.setDriver('https://amerminsights.mplatform.com/')
+        try:
+            WebDriverWait(self.driver, 3).until(EC.visibility_of_element_located((By.XPATH,'//button[contains(text(),"Got it")]'))).click()
+        except:
+            pass
         WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//i')))[0].click()
         WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[contains(@placeholder,"Search")]')))[0].clear()
         WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[contains(@placeholder,"Search")]')))[0].send_keys(agency)
@@ -812,7 +1003,8 @@ class pixelBot:
         if platform == 'Taboola Seg' or platform == 'Taboola Conv':
             query = 'accountId=%s' % advertiserId
             if platform == 'Taboola Seg':
-                query = query + '&reportId=pixel-based'
+                #query = query + '&reportId=pixel-based'
+                query = query + '&reportId=taboola-pixel-audiences'
                 self.setDriver(urlparse('https://ads.taboola.com/audiences')._replace(query=query).geturl())
                 WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//button[contains(@aria-label,"Remove audienceStatus filter")]')))[0].click()
                 WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[contains(@id,"grid-quick-filter")]')))[0].send_keys(pixelName+Keys.ENTER)

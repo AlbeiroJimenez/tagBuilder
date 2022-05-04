@@ -45,6 +45,7 @@ class urlDomains:
         self.__indexSearch = 0
         self.stop          = False
         self.thirdSubPath  = False
+        self.viewProgress  = 0
         #self.loadPage()
     
     # This function validate if a url has a valid connection to server in the internet
@@ -93,9 +94,9 @@ class urlDomains:
         
     def setHeadlessMode(self):
         fireFoxOptions = webdriver.FirefoxOptions()
-        #fireFoxOptions.headless = True
+        fireFoxOptions.headless = True
         fireFoxOptions.set_preference("general.useragent.override", USER_AGENT)
-        fireFoxOptions.page_load_strategy = 'eager'
+        #fireFoxOptions.page_load_strategy = 'eager'
         service = FirefoxService(executable_path=GeckoDriverManager().install())
         return webdriver.Firefox(service=service, options = fireFoxOptions)
     
@@ -223,6 +224,7 @@ class urlDomains:
         self.deleteSubDomain('All')
         exist_url     = False
         exist_sitemap = False
+        self.viewProgress = 2
         if self.validURL(url):
             exist_url = True
             if self.searchXML:
@@ -250,11 +252,16 @@ class urlDomains:
                             print("With get in by Web Title")
                             self.findTagAttributes('a')
                             exist_sitemap = True if len(self.subDomains)>0 else False
-                            break                 
+                            break   
+            self.viewProgress = 20              
             self.setDriver(url, True if self.driver == None else False)
+            self.viewProgress = 30
             self.findAnchors()
+            self.viewProgress = 40
             self.getSubDomains()
+            self.viewProgress = 50
             self.deeperSubDomains()
+            self.viewProgress = 99
             exist_sitemap = True if len(self.subDomains)>0 else False
             print('Hemos terminado la validación')
             return exist_url, exist_sitemap
@@ -272,8 +279,15 @@ class urlDomains:
     # This fuction find all urls in a webpage, scraping all anchor elements in the webpage
     # This function stores urls that owns or not to the main domain as urlparse type
     def findAnchors(self):
+        flat = 0
         try:
             self.anchors = self.driver.find_elements(By.TAG_NAME, 'a')
+            while flat<3:
+                if len(self.anchors)>1:
+                    flat = 3
+                else:
+                    time.sleep(15)
+                    self.anchors = self.driver.find_elements(By.TAG_NAME, 'a')
             for anchor in self.anchors:
                 self.allDomains.append(urlparse(anchor.get_attribute('href')))
         except:
