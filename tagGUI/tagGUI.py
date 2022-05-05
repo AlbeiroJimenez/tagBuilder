@@ -514,7 +514,8 @@ class tagFrontEnd(FrameWork2D):
 
     def settingWindow(self):
         self.setWindow = tk.Toplevel(self.root)
-        self.setWindow.title('PixelBot Settings')
+        TITLE = PROGRAM_NAME+' Settings'
+        self.setWindow.title(TITLE)
         self.setWindow.iconbitmap('xaxis32x32.ico')
         self.setWindow.geometry("600x430+300+100")
         #General Section

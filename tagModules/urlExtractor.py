@@ -687,6 +687,7 @@ class urlDomains:
             # Examine of urls finding to determine if own to the section or not
             for path, url in zip(paths[1:],urls[1:]):
                 path_ = path.replace('.html','')
+                path_ = path.replace('.php','')
                 subpaths = path_.split('/')
                 self.deleteItemList(subpaths, '')
                 self.deleteSubPaths(subpaths)
@@ -697,7 +698,7 @@ class urlDomains:
                         paths.pop(paths.index(path))
                         urls.pop(urls.index(url))
                         continue
-                    if subpaths[0] == section_[0]:
+                    elif subpaths[0] == section_[0]:
                         arraySections[-1].append(url)
                         paths.pop(paths.index(path))
                         urls.pop(urls.index(url))
@@ -711,12 +712,14 @@ class urlDomains:
             for path,url in zip(paths[1:],urls[1:]):
                 newCategory = []
                 path_ = path.replace('.html','')
+                path_ = path.replace('.php','')
                 subpaths = path_.split('/')
                 self.deleteItemList(subpaths, '')
                 self.deleteSubPaths(subpaths)
                 try:
                     for p,u in zip(paths[paths.index(path)+1:],urls[paths.index(path)+1:]):
                         p_ = p.replace('.html','')
+                        p_ = p.replace('.php','')
                         subPs = p_.split('/')
                         self.deleteItemList(subPs, '')
                         self.deleteSubPaths(subPs)
@@ -742,9 +745,6 @@ class urlDomains:
             arraySections[i].pop(0)
         
         #arraySections.sort(reverse=True, key=len)
-        if len(urls)>1:
-            self.mainSections.append('Otros')
-            arraySections.append(urls[1:])
             
         for arraySection, mainSection in zip(arraySections,self.mainSections):
             if len(arraySection) == 0:
@@ -758,17 +758,27 @@ class urlDomains:
                 elif len(arraySections[i]) > 1:
                     print('Delete Section: '+ self.mainSections[j]+'  With index: '+str(j))
                     self.mainSections.pop(j)
-                    arraySections[-1].insert(0, arraySections[i][0])
-                    arraySections[-1].insert(0, arraySections[i][1])
+                    urls.append(arraySections[i][0])
+                    urls.append(arraySections[i][1])
+                    #arraySections[-1].insert(0, arraySections[i][0])
+                    #arraySections[-1].insert(0, arraySections[i][1])
                     arraySections.pop(i)
                 elif len(arraySections[i]) > 0:
                     print('Delete Section: '+ self.mainSections[j]+'  With index: '+str(j))
                     self.mainSections.pop(j)
-                    arraySections[-1].append(arraySections[i][0])
+                    urls.append(arraySections[i][0])
+                    #arraySections[-1].append(arraySections[i][0])
                     arraySections.pop(i)
                 elif len(arraySections[i]) == 0:
                     self.mainSections.pop(j)
                     arraySections.pop(i)
+                if len(arraySections)<self.maxCategories+1:
+                    break
+        
+        if len(urls)>1:
+            self.mainSections.append('Otros')
+            arraySections.append(urls[1:])
+            
         for i in range(len(arraySections)):
             arraySections[i].sort()
         self.mainSections.insert(0,'') 

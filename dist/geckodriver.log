@@ -1,0 +1,76 @@
+1651684651142	geckodriver	INFO	Listening on 127.0.0.1:56203
+1651684654076	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "56204" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileifxSci"
+*** You are running in headless mode.
+1651684654981	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileifxSci\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56204/devtools/browser/d3c44c9c-186a-4c52-885a-932ed7c01fa1
+1651684657035	Marionette	INFO	Listening on port 56225
+Read port: 56225
+1651684657081	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1651684660727	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.asos.com/uvIq-9/a/O/IlIcRtnftBZo/JYD5Qm8b7Sai/fQEkCFEB/PFh0bEp/wPRc, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.asosglobal.com"
+JavaScript warning: https://st-static.asos.com/sdk/securedtouch-sdk-3.12.0w.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://st-static.asos.com/sdk/securedtouch-sdk-3.12.0w.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://tr.snapchat.com"
+JavaScript warning: https://www.asos.com/uvIq-9/a/O/IlIcRtnftBZo/JYD5Qm8b7Sai/fQEkCFEB/PFh0bEp/wPRc, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.asosglobal.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://tr.snapchat.com"
+abled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile2iy0MX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56342/devtools/browser/b70c2c8e-ae22-4c95-b255-469d4897bf0e
+1651684707720	Marionette	INFO	Listening on port 56361
+Read port: 56361
+1651684707840	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1651684719967	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651684719979	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.asos.com/uvIq-9/a/O/IlIcRtnftBZo/JYD5Qm8b7Sai/fQEkCFEB/PFh0bEp/wPRc, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.asosglobal.com"
+JavaScript warning: https://st-static.asos.com/sdk/securedtouch-sdk-3.12.0w.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://st-static.asos.com/sdk/securedtouch-sdk-3.12.0w.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://tr.snapchat.com"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.asosglobal.com"
+JavaScript warning: https://www.asos.com/uvIq-9/a/O/IlIcRtnftBZo/JYD5Qm8b7Sai/fQEkCFEB/PFh0bEp/wPRc, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://tr.snapchat.com"
+1651700453626	geckodriver	INFO	Listening on 127.0.0.1:59168
+1651700456525	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "59169" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofiledV6JBW"
+*** You are running in headless mode.
+1651700457056	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofiledV6JBW\\search.json.mozlz4", (void 0)))
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+DevTools listening on ws://localhost:59169/devtools/browser/72f8ed7c-7a5b-4072-87a2-b44fd2752ca2
+1651700458796	Marionette	INFO	Listening on port 59174
+1651700459212	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 615: SyntaxError: expected expression, got '<'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 1: ReferenceError: _satellite is not defined
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 4: TypeError: window.app.loadRecommendations is not a function
+erAqUVp"
+*** You are running in headless mode.
+1651700500231	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilerAqUVp\\search.json.mozlz4", (void 0)))
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+DevTools listening on ws://localhost:59277/devtools/browser/3df9ac0c-4be8-4d99-beeb-c57d40043233
+1651700502090	Marionette	INFO	Listening on port 59282
+1651700502277	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 615: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/, line 615: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/artificial-intelligence/, line 531: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/solutions/, line 552: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/services-and-solutions/outcome-media/, line 531: SyntaxError: expected expression, got '<'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 1: ReferenceError: _satellite is not defined
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 4: TypeError: window.app.loadRecommendations is not a function

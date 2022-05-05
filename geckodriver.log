@@ -1,0 +1,235 @@
+1651714357420	geckodriver	INFO	Listening on 127.0.0.1:62950
+1651714360492	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "62951" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile8YZOoX"
+*** You are running in headless mode.
+1651714360747	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile8YZOoX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62951/devtools/browser/730bd8c6-f730-4eee-9c32-54123eeceef8
+1651714361553	Marionette	INFO	Listening on port 62957
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1651714362038	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 4: TypeError: window.app.loadRecommendations is not a function
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 1: ReferenceError: _satellite is not defined
+JavaScript error: https://chat01.wolkvox.com/chat/js/clicktocall.php?xyz=YWRlaW5jby1zYWM=&jjj=NDc=, line 499: TypeError: document.getElementById(...) is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1651715429815	Marionette	INFO	Stopped listening on port 62957
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilekYHapM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63082/devtools/browser/7e31b37d-382f-4399-836b-263db9e845a7
+1651714394860	Marionette	INFO	Listening on port 63087
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1651714395322	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 1: ReferenceError: _satellite is not defined
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 4: TypeError: window.app.loadRecommendations is not a function
+JavaScript error: https://chat01.wolkvox.com/chat/js/clicktocall.php?xyz=YWRlaW5jby1zYWM=&jjj=NDc=, line 499: TypeError: document.getElementById(...) is null
+JavaScript error: https://masonlineprod.vtexassets.com/_v/public/assets/v1/published/vtex.render-runtime@8.132.4/public/react/apollo.min.js?async=2&workspace=master, line 2: Error: Network error: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1651715428920	Marionette	INFO	Stopped listening on port 63087
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1651715505643	geckodriver	INFO	Listening on 127.0.0.1:64057
+1651715508708	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "64058" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilepyncbJ"
+*** You are running in headless mode.
+1651715508947	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilepyncbJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64058/devtools/browser/eb45c469-f243-4793-946a-23ea1a065d55
+1651715509753	Marionette	INFO	Listening on port 64064
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1651715510252	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651715847722	Marionette	INFO	Stopped listening on port 64064
+1715561471	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "64187" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileQztrtC"
+*** You are running in headless mode.
+1651715561713	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileQztrtC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64187/devtools/browser/8a4fc4d4-485c-489c-824a-09ac136988bb
+1651715562579	Marionette	INFO	Listening on port 64197
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1651715563007	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.masonline.com.ar"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.masonline.com.ar"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.masonline.com.ar"
+1651715847049	Marionette	INFO	Stopped listening on port 64197
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1651716383478	geckodriver	INFO	Listening on 127.0.0.1:65021
+1651716386571	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "65022" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileFWdo8B"
+*** You are running in headless mode.
+1651716386810	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileFWdo8B\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65022/devtools/browser/34823647-042c-427e-8154-62338ccd62e6
+1651716387615	Marionette	INFO	Listening on port 65028
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+1651716388103	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+1651717485868	Marionette	INFO	Stopped listening on port 65028
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+rrors will be ignored for this session
+JavaScript error: https://masonlineprod.vtexassets.com/_v/public/assets/v1/published/vtex.render-runtime@8.132.4/public/react/common.min.js?async=2&workspace=master, line 2: Error: Unable to fetch component lyracons.region-login@0.0.19/RegionTrigger
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1651717482720	Marionette	INFO	Stopped listening on port 65236
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1651717583888	geckodriver	INFO	Listening on 127.0.0.1:49863
+1651717586949	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "49864" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileUSmmeT"
+*** You are running in headless mode.
+1651717587474	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileUSmmeT\\search.json.mozlz4", (void 0)))
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+DevTools listening on ws://localhost:49864/devtools/browser/40a78ec7-fd54-457c-95c6-6ead2c0f59c4
+1651717589333	Marionette	INFO	Listening on port 49871
+1651717589619	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 1: ReferenceError: _satellite is not defined
+JavaScript error: https://www.avon.co/ line 309 > injectedScript, line 4: TypeError: window.app.loadRecommendations is not a function
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1651718933521	Marionette	INFO	Stopped listening on port 49871
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+ Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_FailedAsyncOpen) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
