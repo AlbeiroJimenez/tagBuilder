@@ -1,0 +1,82 @@
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+=============== RESTART: D:\Xaxis\tagCalc\tagModules\pixelBot.py ===============
+bot.setDriver('https://ads.taboola.com/')
+
+
+====== WebDriver manager ======
+Current firefox version is 100.0
+Get LATEST geckodriver version for 100.0 firefox
+Driver [C:\Users\Ryoma\.wdm\drivers\geckodriver\win64\v0.31.0\geckodriver.exe] found in cache
+iframe, error = bot.getWebElement('XPATH', '//div/iframe[contains(@title,"Tracking")]')
+if iframe != -1: bot.driver.switch_to.frame(iframe[0])
+
+createNew, error = bot.getWebElement('XPATH', '//a[@id="btn-new-rule"]')
+self.doWebElement(createNew[0])
+Traceback (most recent call last):
+  File "<pyshell#5>", line 1, in <module>
+    self.doWebElement(createNew[0])
+NameError: name 'self' is not defined
+bot.doWebElement(createNew[0])
+True
+webElement, error = bot.getWebElement('XPATH', '//input[@placeholder="advertiser.com/thank-you"]', visible=False)
+webElement == -1
+False
+len(webElement)
+3
+webElement[-1].send_keys('albeiro')
+operator, error = bot.getWebElement('XPATH', '//button/span[contains(text(),"contains")]')
+operator
+[<selenium.webdriver.remote.webelement.WebElement (session="0c14c0ec-4674-435b-8ee7-c975a1814997", element="edbfa371-d761-456a-9be0-0ad02ce61352")>]
+if operator != -1: operator[0].click()
+
+option, error = bot.getWebElement('XPATH', '//a[contains(text(),"equals")]')
+option[0].click()
+webElement[-1].send_keys('Albeiro')
+
+=================================================================== RESTART: D:\Xaxis\tagCalc\tagModules\pixelBot.py ===================================================================
+bot.setDriver('https://ads.taboola.com/')
+
+
+====== WebDriver manager ======
+Current firefox version is 100.0
+Get LATEST geckodriver version for 100.0 firefox
+Driver [C:\Users\Ryoma\.wdm\drivers\geckodriver\win64\v0.31.0\geckodriver.exe] found in cache
+bot.createPixel('1424287', 'Ahumada_HomePV_May2022', 2, pathURL='https://www.farmaciasahumada.cl/')
+'No TAG'
+bot.createPixel('1424287', 'Ahumada_HomePV_May2022', 2, 'CONV', pathURL='https://www.farmaciasahumada.cl/')
+-1
+'No Tag'
+bot.createPixel('1424287', 'Ahumada_HomePV_May202632', 2, 'CONV', pathURL='https://www.farmaciasahumada.cl/')
+No está enviando el mensaje
+-1
+'No Tag'
+bot.createPixel('1424287', 'Ahumada_CronicosPV_May2019', 2, 'CONV', pathURL='/cronicos')
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    bot.createPixel('1424287', 'Ahumada_CronicosPV_May2019', 2, 'CONV', pathURL='/cronicos')
+  File "D:\Xaxis\tagCalc\tagModules\pixelBot.py", line 746, in createPixel
+    print('Estamos enviando el path')
+  File "C:\Users\Ryoma\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Users\Ryoma\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ryoma\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 424, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ryoma\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: Element <input class="wide-input" name="conditions[0].url" type="text"> is not reachable by keyboard
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.jsm:293:5
+webdriverSendKeysToElement@chrome://remote/content/marionette/interaction.js:624:13
+interaction.sendKeysToElement@chrome://remote/content/marionette/interaction.js:600:11
+sendKeysToElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:497:24
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:151:31
+
+bot.createPixel('1424287', 'HomePV_May2019', 2, 'CONV', pathURL='/cronicos')
+No está enviando el mensaje
+-1
+'No Tag'
+bot.driver.quit()

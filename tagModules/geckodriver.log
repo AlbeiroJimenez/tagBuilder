@@ -54,3 +54,896 @@ JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 
 ###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
 
+1652126679174	geckodriver	INFO	Listening on 127.0.0.1:65410
+1652126682115	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65411" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilef67abk"
+1652126682645	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilef67abk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65411/devtools/browser/6120ab89-746b-434a-bdaf-da123def650d
+1652126685666	Marionette	INFO	Listening on port 65436
+Read port: 65436
+1652126685709	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652129679675	Marionette	INFO	Stopped listening on port 65436
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1652130806945	geckodriver	INFO	Listening on 127.0.0.1:51340
+1652130809914	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51341" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile9jplTU"
+1652130810163	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile9jplTU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51341/devtools/browser/b0981d6c-bde1-440f-b6b6-2104439f7aac
+1652130811643	Marionette	INFO	Listening on port 51366
+Read port: 51366
+1652130811674	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652130820060	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 52: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 52: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 52: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 52: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652134279702	geckodriver	INFO	Listening on 127.0.0.1:53287
+1652134282715	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53288" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile3tnWEu"
+1652134282959	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile3tnWEu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53288/devtools/browser/4cfa441e-d65b-4894-8733-6a32d2aeab4a
+1652134284387	Marionette	INFO	Listening on port 53311
+Read port: 53311
+1652134284458	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652134293606	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652134854581	Marionette	INFO	Stopped listening on port 53311
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652134963245	geckodriver	INFO	Listening on 127.0.0.1:53778
+1652134966238	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53779" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileElIri2"
+1652134966489	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileElIri2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53779/devtools/browser/1367a887-b0a3-4a71-aba2-ec9c3c9099fc
+1652134967895	Marionette	INFO	Listening on port 53802
+Read port: 53802
+1652134967977	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652134975213	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 3: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 3: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652202327509	geckodriver	INFO	Listening on 127.0.0.1:61743
+1652202330165	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61744" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileqTGTON"
+1652202330860	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileqTGTON\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61744/devtools/browser/34e28067-328f-4c37-985f-7db32fe9b9f2
+1652202333954	Marionette	INFO	Listening on port 61751
+1652202334382	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652202343451	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1:64382
+1652203058081	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64383" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileMNVk0A"
+1652203058567	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileMNVk0A\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64383/devtools/browser/1d009a83-074f-4701-a111-13e9ac860245
+1652203061445	Marionette	INFO	Listening on port 64390
+1652203061760	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652203072361	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652211823118	Marionette	INFO	Stopped listening on port 64390
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652211995299	geckodriver	INFO	Listening on 127.0.0.1:65493
+1652211998216	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65494" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilekThJQP"
+1652211998760	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilekThJQP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65494/devtools/browser/bd821752-e6af-490c-ba67-31dd43b09035
+1652212001729	Marionette	INFO	Listening on port 65518
+Read port: 65518
+1652212001783	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652212009820	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652214698999	Marionette	INFO	Stopped listening on port 65518
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652214773317	geckodriver	INFO	Listening on 127.0.0.1:50596
+1652214776242	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50597" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileaCMpNL"
+1652214776766	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileaCMpNL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50597/devtools/browser/8c8cec32-70e8-4b52-b121-fd75c6b5e14c
+1652214779801	Marionette	INFO	Listening on port 50621
+Read port: 50621
+1652214779852	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652214788213	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+1652214970267	Marionette	INFO	Stopped listening on port 50621
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652215002277	geckodriver	INFO	Listening on 127.0.0.1:50810
+1652215005208	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50811" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilebLjSOU"
+1652215005735	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilebLjSOU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50811/devtools/browser/a242e87a-d8b5-4a1b-aad9-9861ed5ed371
+1652215008787	Marionette	INFO	Listening on port 50836
+Read port: 50836
+1652215008845	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652215018326	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652215670059	Marionette	INFO	Stopped listening on port 50836
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652215699021	geckodriver	INFO	Listening on 127.0.0.1:51277
+1652215701944	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51278" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile0vO2w8"
+1652215702562	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile0vO2w8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51278/devtools/browser/d1f3691c-e0b4-4bb3-9c43-22e3de031591
+1652215705542	Marionette	INFO	Listening on port 51303
+Read port: 51303
+1652215705682	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652215713206	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+1652222275811	Marionette	INFO	Stopped listening on port 51303
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652222468934	geckodriver	INFO	Listening on 127.0.0.1:54928
+1652222471871	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54929" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileV8R4iC"
+1652222472398	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileV8R4iC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54929/devtools/browser/a5d2a80d-0046-424a-9e6c-fab7dd2c2b2d
+1652222475318	Marionette	INFO	Listening on port 54954
+Read port: 54954
+1652222475443	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652222485291	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652223520466	Marionette	INFO	Stopped listening on port 54954
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652223717992	geckodriver	INFO	Listening on 127.0.0.1:55737
+1652223720945	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55738" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilejlD4cQ"
+1652223721474	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilejlD4cQ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55738/devtools/browser/e49b505c-b44e-4fdf-9554-4debcdd3180d
+1652223724211	Marionette	INFO	Listening on port 55795
+Read port: 55795
+1652223724319	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652223734356	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652233365929	Marionette	INFO	Stopped listening on port 55795
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652233593339	geckodriver	INFO	Listening on 127.0.0.1:62197
+1652233596353	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62198" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilez5rpqh"
+1652233596598	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilez5rpqh\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62198/devtools/browser/79cf1c16-8363-436c-9eb9-2c5b919d9127
+1652233597983	Marionette	INFO	Listening on port 62220
+Read port: 62220
+1652233598031	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652233610682	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652233784000	Marionette	INFO	Stopped listening on port 62220
+1652233798528	geckodriver	INFO	Listening on 127.0.0.1:62406
+1652233801561	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62407" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilehwLmLs"
+1652233801814	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilehwLmLs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62407/devtools/browser/43aad782-71e5-42dd-abd1-7a2b33329670
+1652233803233	Marionette	INFO	Listening on port 62430
+Read port: 62430
+1652233803339	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652233816657	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652234433279	Marionette	INFO	Stopped listening on port 62430
+1652234454072	geckodriver	INFO	Listening on 127.0.0.1:62985
+1652234457098	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62986" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileXrukJl"
+1652234457340	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileXrukJl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62986/devtools/browser/021a89c2-12da-4f8f-9175-0937371866c4
+1652234458719	Marionette	INFO	Listening on port 63007
+Read port: 63007
+1652234458757	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652234465674	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220510.10-RELEASE, line 50: ReferenceError: CodeMirror is not defined
+1652234698481	geckodriver	INFO	Listening on 127.0.0.1:63228
+1652234701505	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63229" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofiles3Ywof"
+1652234701753	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofiles3Ywof\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63229/devtools/browser/e8705e36-037c-4a17-a516-dc5e4439900f
+1652234703196	Marionette	INFO	Listening on port 63251
+Read port: 63251
+1652234703282	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652234714263	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652235112293	geckodriver	INFO	Listening on 127.0.0.1:63608
+1652235115303	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63609" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileULv9fS"
+1652235115547	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileULv9fS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63609/devtools/browser/57169d39-d456-4fd5-bc19-7a84746561e5
+1652235116930	Marionette	INFO	Listening on port 63632
+Read port: 63632
+1652235116986	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652235126058	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 70: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 70: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 70: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+1652235340141	Marionette	INFO	Stopped listening on port 63632
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 70: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652235361131	geckodriver	INFO	Listening on 127.0.0.1:63858
+1652235364117	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63859" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileH25dM7"
+1652235364366	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileH25dM7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63859/devtools/browser/1d93c49c-d69c-4eef-94f2-61a6cbb7acc8
+1652235365767	Marionette	INFO	Listening on port 63880
+Read port: 63880
+1652235365874	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652235373073	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652235560602	Marionette	INFO	Stopped listening on port 63880
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652282943135	geckodriver	INFO	Listening on 127.0.0.1:54961
+1652282946150	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54962" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileQPeYqt"
+1652282946423	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileQPeYqt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54962/devtools/browser/be72652e-cae9-4e4f-b4dd-13c052e3ec72
+1652282947949	Marionette	INFO	Listening on port 54985
+Read port: 54985
+1652282948014	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652282963043	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652286252747	geckodriver	INFO	Listening on 127.0.0.1:55468
+1652286255754	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55469" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileyGFvvz"
+1652286255993	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileyGFvvz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55469/devtools/browser/d1dbc356-3fb0-40e1-993d-8148008d33cb
+1652286257435	Marionette	INFO	Listening on port 55488
+Read port: 55488
+1652286257493	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652286264615	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 75: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652287119911	Marionette	INFO	Stopped listening on port 55488
+[Parent 11736, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652287218601	geckodriver	INFO	Listening on 127.0.0.1:55690
+1652287221592	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55691" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilej5ocsa"
+1652287221841	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilej5ocsa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55691/devtools/browser/335a1ee6-15e5-4ace-bb13-260e0d36df37
+1652287223273	Marionette	INFO	Listening on port 55711
+Read port: 55711
+1652287223328	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652287228915	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652287466194	Marionette	INFO	Stopped listening on port 55711
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652287489345	geckodriver	INFO	Listening on 127.0.0.1:55813
+1652287492326	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55814" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileFLfIds"
+1652287492571	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileFLfIds\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55814/devtools/browser/008a42ef-8031-4973-8cdb-cb177f6e190c
+1652287493934	Marionette	INFO	Listening on port 55833
+Read port: 55833
+1652287493959	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652287501160	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652288039710	Marionette	INFO	Stopped listening on port 55833
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+1652288062771	geckodriver	INFO	Listening on 127.0.0.1:56035
+1652288065792	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56036" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileQlWooE"
+1652288066047	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileQlWooE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56036/devtools/browser/2ea30225-00a6-41b0-a588-b7b159f5dc2d
+1652288067475	Marionette	INFO	Listening on port 56055
+Read port: 56055
+1652288067570	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652288075813	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+JavaScript error: https://backstage.taboola.com/backstage/resources/backstage.main.js?build_version=20220511.20-RELEASE, line 1: Error: Syntax error, unrecognized expression: button[value=]
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652289018015	Marionette	INFO	Stopped listening on port 56055
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652289692932	geckodriver	INFO	Listening on 127.0.0.1:56371
+1652289695940	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56372" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileFPQOXl"
+1652289696189	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileFPQOXl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56372/devtools/browser/208b78f6-4cf5-4608-bd45-d117cc9fc5c7
+1652289697629	Marionette	INFO	Listening on port 56395
+Read port: 56395
+1652289697701	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652289706105	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+1652295358648	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652295359384	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652295360439	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+1652295368239	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 38: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+1652320595615	Marionette	INFO	Stopped listening on port 56395
+1652383023343	geckodriver	INFO	Listening on 127.0.0.1:61126
+1652383026369	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61127" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileFz0rP3"
+1652383026627	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileFz0rP3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61127/devtools/browser/1686464a-0b38-46f3-8ccb-b302ed6045eb
+1652383028052	Marionette	INFO	Listening on port 61148
+Read port: 61148
+1652383028156	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652383038835	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652383323294	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652384038583	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652390161663	geckodriver	INFO	Listening on 127.0.0.1:50153
+1652390164671	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50154" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileeIs8P2"
+1652390164927	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileeIs8P2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50154/devtools/browser/29a8b0f9-bf05-4d4f-bccd-923dcc4b56b5
+1652390166348	Marionette	INFO	Listening on port 50175
+Read port: 50175
+1652390166459	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652390175373	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220508.1-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652407418094	Marionette	INFO	Stopped listening on port 50175
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652707304641	geckodriver	INFO	Listening on 127.0.0.1:57564
+1652707307618	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57565" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofiletoLR7k"
+1652707307982	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofiletoLR7k\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57565/devtools/browser/eb98d783-97b6-46c0-a902-21cbcee0e08c
+1652707309470	Marionette	INFO	Listening on port 57584
+Read port: 57584
+1652707309569	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652707340953	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 69: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 69: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+1652708928253	Marionette	INFO	Stopped listening on port 57584
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652709007065	geckodriver	INFO	Listening on 127.0.0.1:62099
+1652709009983	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62100" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileveAwML"
+1652709010515	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileveAwML\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62100/devtools/browser/b0b56147-0ed4-4fd6-b554-f156dbcc5ec5
+1652709013517	Marionette	INFO	Listening on port 62122
+Read port: 62122
+1652709013634	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652709023459	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 60: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 60: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 60: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+1652709329887	Marionette	INFO	Stopped listening on port 62122
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 60: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652709375995	geckodriver	INFO	Listening on 127.0.0.1:62201
+1652709378930	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62202" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilePPUqd6"
+1652709379449	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilePPUqd6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62202/devtools/browser/47d854f0-26aa-4dd1-af3a-84e0f34c622f
+1652709382386	Marionette	INFO	Listening on port 62224
+Read port: 62224
+1652709382518	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652709400627	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 52: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://cdn.taboola.com/libtrc/creativepreview/loader.js, line 52: TypeError: t.TRCImpl.getGlobalSessionData is undefined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652709831133	Marionette	INFO	Stopped listening on port 62224
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1652709894994	geckodriver	INFO	Listening on 127.0.0.1:62382
+1652709897939	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62383" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilez6eT3O"
+1652709898468	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilez6eT3O\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62383/devtools/browser/7ee8f714-82f4-4438-90e9-7ea8a4bad499
+1652709901426	Marionette	INFO	Listening on port 62407
+Read port: 62407
+1652709901525	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652709912191	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1652714499919	geckodriver	INFO	Listening on 127.0.0.1:62845
+1652714502866	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62846" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile6VMmVV"
+1652714503346	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile6VMmVV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62846/devtools/browser/2f745821-5446-4598-a36d-c04b126a1248
+1652714506213	Marionette	INFO	Listening on port 62868
+Read port: 62868
+1652714506304	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652714516273	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://authentication.taboola.com/authentication/resources/authentication.main.js?build_version=20220515.2-RELEASE, line 11: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://authentication.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://backstage.taboola.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1652714691580	Marionette	INFO	Stopped listening on port 62868

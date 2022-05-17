@@ -94,7 +94,7 @@ class urlDomains:
         
     def setHeadlessMode(self):
         fireFoxOptions = webdriver.FirefoxOptions()
-        fireFoxOptions.headless = True
+        #fireFoxOptions.headless = True
         fireFoxOptions.set_preference("general.useragent.override", USER_AGENT)
         #fireFoxOptions.page_load_strategy = 'eager'
         service = FirefoxService(executable_path=GeckoDriverManager().install())
@@ -156,6 +156,32 @@ class urlDomains:
             self.driver = self.setHeadlessMode()
         self.setUrlTarget(url)
         self.loadPage()
+    
+    def existGTM(self, url):
+        GTMs = []
+        GTM_ID = 'GTM-XXXXXXX'
+        self.setDriver(url)
+        time.sleep(10)
+        GTMs = self.driver.find_elements(By.XPATH,'//script[contains(text(),"(function(w,d,s,l,i)") or contains(text(),"googletagmanager")]')
+        if len(GTMs)>0:
+            IDs = self.driver.find_elements(By.XPATH,'//script[contains(@src,"googletagmanager") and contains(@src,"GTM")]')
+            for ID in IDs:
+                ID = urlparse(ID.get_attribute('src'))
+                for GTM in GTMs:
+                    if ID.query[3:] in GTM.get_attribute('textContent'):
+                        return True, ID.query[3:]
+            else:
+                for GTM in GTMs:
+                    if 'GTM-' in GTM.get_attribute('textContent'):
+                        try:
+                            GTM_ID = GTM.get_attribute('textContent')[GTM.get_attribute('textContent').find('GTM-'):GTM.get_attribute('textContent').find('GTM-')+11]
+                        except:
+                            pass
+                        return True, GTM_ID
+                else:
+                    return True, GTM_ID
+        else:
+            return False, GTM_ID
         
     def findTagAttributes(self, tag, return_attribute = 'url'):
         if tag == 'sitemapindex' and not self.stop:
@@ -401,6 +427,7 @@ class urlDomains:
         mainSections = []
         for path in self.getPaths():
             path     = path.replace('.html','') 
+            path     = path.replace('.php','')
             listPath = path.split('/')
             self.deleteItemList(listPath, '')
             self.deleteSubPaths(listPath)

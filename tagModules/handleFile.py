@@ -29,11 +29,11 @@ class xlsxFile:
     def setBook(self):
         self.book = load_workbook(p.abspath(self.PATH))
         
-    def saveBook(self, dir_path = None, add_name=True):
-        if add_name:
+    def saveBook(self, dir_path = None, default_name=True):
+        if default_name:
             nameFile = self.getFileName('C13')
         else:
-            nameFile=''
+            nameFile = self.getFileName('C13', 'Final')
         if dir_path == None:
             self.book.save(nameFile)
             return p.abspath(nameFile).replace('\\','/')
@@ -86,10 +86,10 @@ class xlsxFile:
                 month = MONTHS[i-1]
         return month, str(dt.today().year)
             
-    def getFileName(self, cell):
+    def getFileName(self, cell, custom_text=''):
         advertiser  = self.readCell(cell)
         month, year = self.getDate()
-        return 'TagReq_'+advertiser+'_'+month+year+'.xlsx'
+        return 'TagReq'+custom_text+'_'+advertiser+'_'+month+year+'.xlsx'
 
     def getNameSection(self, advertiserName, sectionName, typeTrigger='PV'):
         month, year = self.getDate()

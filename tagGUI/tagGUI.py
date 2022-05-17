@@ -133,6 +133,7 @@ class FrameWork2D(ttk.Frame):
         self.sitemapTab = not self.sitemapTab
         if self.sitemapTab:
             self.tabPages.add(self.tabs[0])
+            self.tabPages.select(0)
         else:
             self.tabPages.hide(0)
     
@@ -140,6 +141,7 @@ class FrameWork2D(ttk.Frame):
         self.pixelTab = not self.pixelTab
         if self.pixelTab:
             self.tabPages.add(self.tabs[1])
+            self.tabPages.select(1)
         else:
             self.tabPages.hide(1)
     
@@ -177,6 +179,7 @@ class tagFrontEnd(FrameWork2D):
         self.minSizeWord   = tk.IntVar()
         self.maxLandings   = tk.IntVar()
         self.viewProgress  = tk.IntVar()
+        self.pixelProgress = tk.IntVar()
         self.GTM_ID        = tk.StringVar()
         self._init_params()
         self._set_credentials_threaded()
@@ -198,6 +201,7 @@ class tagFrontEnd(FrameWork2D):
         self.show_.set(False)
         self.webDOM.setSearchXML(self.searchXML.get())
         self.viewProgress.set(0)
+        self.pixelProgress.set(0)
         self.GTM_ID.set(self.xlsxFile.readCell('C23'))
         self.codeVerify = None
         self.closeTopW  = False
@@ -392,17 +396,14 @@ class tagFrontEnd(FrameWork2D):
         elif indexTab == 1:
             ttk.Label(parameters_frame, text="T. Request File: ", style = 'BW.TLabel').grid(column=0, row=0)
             tk.Entry(parameters_frame, width=75, textvariable = self.directoryTR, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=0, columnspan=4)
-            ttk.Button(parameters_frame, text='...', command=self.loadTR).grid(column=5, row=0)  
+            ttk.Button(parameters_frame, text='...', command=self.loadTR, width=2).grid(column=5, row=0, sticky=tk.NW)  
             
             ttk.Label(parameters_frame, text='Advertiser: ').grid(column=0, row=1, sticky=tk.W) 
             tk.Entry(parameters_frame, textvariable = self.advertiser_, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=1, sticky=tk.W)     
             ttk.Label(parameters_frame, text= 'Advertiser ID: ').grid(column=2, row=1, sticky=tk.W)
             tk.Entry(parameters_frame, textvariable=self.advertiserId, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=3, row=1, sticky=tk.W) 
-            ttk.Label(parameters_frame, text="Platform: ").grid(column=4, row=1, sticky=tk.W)
-            self.platforms = ttk.Combobox(parameters_frame, state='readonly', font=('Arial',8,'italic'))
-            self.platforms['values'] = ['Xandr Seg', 'Xandr Conv', 'DV360', 'Taboola Seg', 'Taboola Conv', 'Minsights']
-            self.platforms.set('Xandr Seg')
-            self.platforms.grid(column=5, row=1)
+            ttk.Label(parameters_frame, text="Progress:").grid(column=4, row=1, sticky=tk.W)
+            ttk.Progressbar(parameters_frame, variable=self.pixelProgress, orient = tk.HORIZONTAL, length=125, maximum=100).grid(column=5, row=1, sticky=tk.W)
             ttk.Label(parameters_frame, text='Agency: ').grid(column=0, row=2, sticky=tk.W)
             self.agencies = ttk.Combobox(parameters_frame, state='readonly', font=('Arial',8,'italic'))
             self.agencies['values'] = ['Xaxis', 'Ford', 'Colgate']
@@ -413,6 +414,11 @@ class tagFrontEnd(FrameWork2D):
             self.countries['values'] = ['Argentina', 'Brazil', 'Chile', 'Colombia', 'Mexico', 'Peru', 'Puerto Rico', 'Uruguay', 'Venezuela']
             self.countries.set('Colombia')
             self.countries.grid(column=3, row=2)
+            ttk.Label(parameters_frame, text="Platform: ").grid(column=4, row=2, sticky=tk.W)
+            self.platforms = ttk.Combobox(parameters_frame, state='readonly', font=('Arial',8,'italic'))
+            self.platforms['values'] = ['Xandr Seg', 'Xandr Conv', 'DV360', 'Taboola Seg', 'Taboola Conv', 'Minsights']
+            self.platforms.set('Xandr Seg')
+            self.platforms.grid(column=5, row=2)
             #ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=5, row=1)
             
             # ttk.Label(parameters_frame, text='Xandr: ').grid(column=0, row=2, sticky=tk.W)
@@ -902,15 +908,21 @@ class tagFrontEnd(FrameWork2D):
                 self.lanchPopUps('Incomplete Fields', 'Check the  fields:\n- T. Request File.\n- Advertiser.\n- Advertiser ID.', 'Press "Ok" to exit.')
             else:
                 if self.platforms.get() == 'Xandr Seg' or self.platforms.get() == 'Xandr Conv':
+                    self.pixelProgress.set(0)
                     pixelType = 'RTG' if self.platforms.get() == 'Xandr Seg' else 'CONV'
                     if self.logInPlatform(LOGIN_PAGES[0], self.users[0].get(), self.passwords[0].get()):
+                        self.pixelProgress.set(2)
                         if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
+                            progress = 0
+                            self.pixelProgress.set(5)
                             self.xandrSeg, self.xandrConv = ([], self.xandrConv) if pixelType=='RTG' else (self.xandrSeg, [])
+                            step = (5+85/len(self.arrayPixels)) if len(self.arrayPixels)>0 else 90
+                            print('Initial Step:', step)
                             for pixel in self.arrayPixels:
                                 if pixelType == 'RTG' and (pixel[6]==None or pixel[6]=='' or pixel[6]=='NO'):
                                     self.xandrSeg.append('')
                                 elif pixelType == 'CONV' and (pixel[7]==None or pixel[7]=='' or pixel[7]=='NO'):
-                                    self.xandrSeg.append('')   
+                                    self.xandrConv.append('')   
                                 else:
                                     if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
                                         snippet =  self.pixelBot.createPixel(self.advertiserId.get(), pixel[1], platform=0, pixelType=pixelType)
@@ -922,17 +934,27 @@ class tagFrontEnd(FrameWork2D):
                                         #pixel.append(snippet)
                                         self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
                                         #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
+                                progress += step
+                                print('Intermediate Steps', progress)
+                                self.pixelProgress.set(progress)
                             print('The snippet are: ')
                             print(self.xandrSeg)
                             print(self.xandrConv)
+                            self.lanchPopUps('Finished', 'Process of create Pixels have already finished.', 'Press "Ok" to exit.')
                         else:
+                            self.pixelProgress.set(0)
                             self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
                     else:
                         self.lanchPopUps('Xandr login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
                 elif self.platforms.get() == 'DV360':
+                    self.pixelProgress.set(0)
                     if self.logInPlatform(LOGIN_PAGES[1], self.users[0].get(), self.passwords[1].get()):
+                        self.pixelProgress.set(2)
                         if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
                             self.DV360 = []
+                            progress = 0
+                            self.pixelProgress.set(5)
+                            step = (5+85/len(self.arrayPixels)) if len(self.arrayPixels)>0 else 90
                             for pixel in self.arrayPixels:
                                 if pixel[8] in [None,'','No','NO','no', 'nO']:
                                     self.DV360.append('')
@@ -947,34 +969,69 @@ class tagFrontEnd(FrameWork2D):
                                         #pixel.append(snippet)
                                         self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
                                         #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
+                                    progress += step
+                                    self.pixelProgress.set(progress)
                             print('The snippet are: ')
                             for pixel in self.DV360:
                                 print(pixel)
+                            self.lanchPopUps('Finished', 'Process of create Pixels have already finished.', 'Press "Ok" to exit.')
                         else:
+                            self.pixelProgress.set(0)
                             self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
                     else:
                         self.lanchPopUps('DV360 login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
                 elif self.platforms.get() == 'Taboola Seg' or self.platforms.get() == 'Taboola Conv':
+                    self.pixelProgress.set(0)
+                    pixelType = 'RTG' if self.platforms.get() == 'Taboola Seg' else 'CONV'
                     if self.logInPlatform(LOGIN_PAGES[2], self.users[0].get(), self.passwords[2].get()):
+                        self.pixelProgress.set(2)
                         if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
-                            for pixel in self.arrayPixels:
-                                if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
-                                    print('El pixel: '+pixel[1]+', no existe y se puede crear!!!')
-                                else:
-                                    print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
+                            self.pixelProgress.set(5)
+                            if self.pixelBot.existTaboolaPixel(self.advertiserId.get()):
+                                progress = 0
+                                self.pixelProgress.set(7)
+                                step = (7+83/len(self.arrayPixels)) if len(self.arrayPixels)>0 else 90
+                                self.taboolaSeg, self.taboolaConv = ([], self.taboolaConv) if pixelType=='RTG' else (self.taboolaSeg, [])
+                                for pixel in self.arrayPixels:
+                                    if pixelType == 'RTG' and pixel[9] in ['NO', 'No', 'no', 'nO', '', None]:
+                                        self.taboolaSeg.append('')
+                                    elif pixelType == 'CONV' and pixel[10] in ['NO', 'No', 'no', 'nO', '', None]:
+                                        self.taboolaConv.append('')
+                                    else:
+                                        event   = True if (pixelType == 'RTG' and pixel[9] in ['Event', 'event', 'EVENT']) or (pixelType == 'CONV' and pixel[10] in ['Event', 'event', 'EVENT']) else False
+                                        pathURL = pixel[4] if not event else None
+                                        if self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]): self.lanchPopUps('Pixel Exists!', "The pixel %s already existed!"%pixel[1], 'Press "Ok" to exit.')
+                                        snippet =  self.pixelBot.createPixel(self.advertiserId.get(), pixel[1], platform=2, pixelType=pixelType, event_=event, pathURL=pathURL)
+                                        self.taboolaSeg.append(snippet) if pixelType=='RTG' else self.taboolaConv.append(snippet)
+                                    progress += step
+                                    self.pixelProgress.set(progress)
+                                print('The snippet are: ')
+                                print(self.taboolaSeg)
+                                print(self.taboolaConv)
+                                self.lanchPopUps('Finished', 'Process of create Pixels have already finished.', 'Press "Ok" to exit.')
+                            else:
+                                self.lanchPopUps('Universal Pixel!', "The Taboola Universal Pixel hasn't implemented yet!", 'Press "Ok" to exit.')
+                                self.pixelProgress.set(0)
                         else:
                             self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
+                            self.pixelProgress.set(0)
                     else:
                         self.lanchPopUps('Taboola login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
                     #self.createPixel(self.platforms.get(), 'AllPagesTest', None)
                 else:
+                    self.pixelProgress.set(0)
                     if self.logInPlatform(LOGIN_PAGES[3], self.users[0].get(), self.passwords[3].get()):
+                        self.pixelProgress.set(2)
                         minsightId = self.pixelBot.existMinsightsId(self.advertiser_.get(), self.countries.get(), self.agencies.get())
                         if minsightId != -1:
+                            progress = 0
+                            self.pixelProgress.set(5)
+                            step = (7+83/len(self.arrayPixels)) if len(self.arrayPixels)>0 else 90
                             self.advertiserId.set(minsightId)
                             self.minsights = []
+                            self.pixelProgress.set(7)
                             for pixel in self.arrayPixels:
-                                if pixel[5] in [None,'','No','NO','no', 'nO']:
+                                if pixel[5] in [None,'','No','NO','no', 'nO', '']:
                                     self.minsights.append('')
                                 else:
                                     if not self.pixelBot.existPixel(self.platforms.get(), self.advertiserId.get(), pixel[1]):
@@ -988,38 +1045,17 @@ class tagFrontEnd(FrameWork2D):
                                         #pixel.append(snippet)
                                         self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
                                         #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
+                                progress += step
+                                self.pixelProgress.set(progress)
                             print('The snippet are: ')
                             for pixel in self.minsights:
                                 print(pixel)
+                            self.lanchPopUps('Finished', 'Process of create Pixels have already finished.', 'Press "Ok" to exit.')
                         else:
                             self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
+                            self.pixelProgress.set(0)
                     else:
                         self.lanchPopUps('Minsights login failed!', 'Check your credentials, please.', 'Press "Ok" to exit.')
-                    
-                    
-                # if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
-                #     self.xlsxFile.setPATH(self.directoryTR.get())
-                #     self.xlsxFile.setBook()
-                #     for sheetname in self.xlsxFile.book.sheetnames:
-                #         if sheetname == 'Home':
-                #             print('Esta es la pestaña de:', sheetname)
-                #             self.xlsxFile.setSheet(sheetname)
-                #             print('en esta pestaña se crearán los siguientes pixeles')
-                #             print(self.xlsxFile.readCell('E31'))
-                #             print(self.xlsxFile.readCell('E32'))
-                #             print(self.xlsxFile.readCell('E34'))
-                #             print(self.xlsxFile.readCell('E35'))
-                #         elif sheetname == 'Hoja1' or sheetname.strip() == 'Concept Tagging Request':
-                #             pass
-                #         else:
-                #             print(sheetname)
-                #             self.xlsxFile.setSheet(sheetname)
-                #             print('en esta pestaña se crearán los siguientes pixeles')
-                #             print(self.xlsxFile.readCell('E31'))
-                    #self.createPixel(self.platforms.get())
-                # else:
-                #     self.lanchPopUps('Not founded!', "The advertiser can't founded!", 'Press "Ok" to exit.')
-            self.lanchPopUps('Finished', 'Process of create Pixels have already finished.', 'Press "Ok" to exit.')
             self.btn_create.configure(state='active')
             self.btn_save_pixels.configure(state='active')
         except:
@@ -1338,10 +1374,10 @@ class tagFrontEnd(FrameWork2D):
                     index += 1  
             directory = filedialog.askdirectory()
             if len(directory) > 0:
-                self.directoryTR.set(self.xlsxFile.saveBook(directory))
+                self.directoryTR.set(self.xlsxFile.saveBook(directory, False))
+                self.lanchPopUps('Save', 'The Tagging Request file has saved!', 'Press "Ok" to exit.')
             else:
-                self.directoryTR.set(self.xlsxFile.saveBook())
-            self.lanchPopUps('Save', 'The Tagging Request file has saved!', 'Press "Ok" to exit.')
+                self.lanchPopUps('Save Error', 'You need to choose a directory!', 'Press "Ok" to exit.')
         except PermissionError:
             self.lanchPopUps('Permission Error!', "The file is open or you haven't permissions.", 'Press "Ok" to exit.')
         except:
