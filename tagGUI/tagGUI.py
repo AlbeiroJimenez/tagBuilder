@@ -969,8 +969,8 @@ class tagFrontEnd(FrameWork2D):
                                         #pixel.append(snippet)
                                         self.lanchPopUps('Pixel Exists!', 'The pixel, %s, exists.'%pixel[1], 'Press "Ok" to exit.')
                                         #print('El pixel: '+pixel[1]+', existe y no se puede crear!!!')
-                                    progress += step
-                                    self.pixelProgress.set(progress)
+                                progress += step
+                                self.pixelProgress.set(progress)
                             print('The snippet are: ')
                             for pixel in self.DV360:
                                 print(pixel)
