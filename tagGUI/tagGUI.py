@@ -15,7 +15,7 @@ from tagModules.pixelBot import pixelBot
 MENU_DEFINITION = (
             'File- &New/Ctrl+N/self.newFile, Save/Ctrl+S/self.save_file, SaveAs/Ctrl+Shift+S/self.save_as, sep, Exit/Ctrl+Q/self.exitCalcTag',
             'Edit- Setting/Ctrl+Z/self.setting, sep, Show Offline/Alt+F5/self.offline',
-            'View- SiteMap Builder//self.show_siteMapTab, Pixel Creator//self.show_PixelTab',
+            'View- SiteMap Builder//self.show_siteMapTab, Pixel Creator//self.show_PixelTab, GTM Integrator//self.show_GTMTab, CAPI Integrator//self.show_CAPITab',
             'Help- Documentation/F2/self.documentation, About/F1/self.aboutTagCalc'
         )
 
@@ -23,12 +23,16 @@ LOGIN_PAGES     = (
     'https://invest.xandr.com/', 
     'https://displayvideo.google.com/',
     'https://ads.taboola.com/',
-    'https://amerminsights.mplatform.com/'
+    'https://amerminsights.mplatform.com/',
+    'https://tagmanager.google.com/',
+    'https://business.facebook.com/latest/home'
 )
 
 TABS_DEFINITION = (
     'SiteMap',
-    'Pixels'
+    'Pixels',
+    'GTM',
+    'CAPI'
     )
 
 SPECIAL_CELLS   = (
@@ -49,8 +53,10 @@ class FrameWork2D(ttk.Frame):
         self.tabPages = ttk.Notebook(self.root)
         self.build_menu(MENU_DEFINITION)
         self.build_tabs(TABS_DEFINITION)
-        self.pixelTab   = False
         self.sitemapTab = True
+        self.pixelTab   = False
+        self.GTMTab     = False
+        self.CAPITab    = False
         self.set_CCS()
         
     def set_CCS(self):
@@ -106,7 +112,9 @@ class FrameWork2D(ttk.Frame):
         for definition in tabs_definition:
             self.tabs.append(ttk.Frame(self.tabPages))
             self.tabPages.add(self.tabs[-1], text = definition)
-        self.tabPages.hide(1)
+        for index in range(1,len(tabs_definition)):
+            self.tabPages.hide(index)
+        #self.tabPages.hide(1)
         self.tabPages.pack(expand=1, fill="both")
     
     def newFile(self):
@@ -144,6 +152,22 @@ class FrameWork2D(ttk.Frame):
             self.tabPages.select(1)
         else:
             self.tabPages.hide(1)
+            
+    def show_GTMTab(self):
+        self.GTMTab = not self.GTMTab
+        if self.GTMTab:
+            self.tabPages.add(self.tabs[2])
+            self.tabPages.select(2)
+        else:
+            self.tabPages.hide(2)
+    
+    def show_CAPITab(self):
+        self.CAPITab = not self.CAPITab
+        if self.CAPITab:
+            self.tabPages.add(self.tabs[3])
+            self.tabPages.select(3)
+        else:
+            self.tabPages.hide(3)
     
     def documentation(self):
         pass
@@ -173,8 +197,8 @@ class tagFrontEnd(FrameWork2D):
         self.searchXML     = tk.BooleanVar()
         self.show_         = tk.BooleanVar()
         self.seleniumDelay = tk.IntVar()
-        self.users         = [tk.StringVar(), tk.StringVar(), tk.StringVar(), tk.StringVar()]
-        self.passwords     = [tk.StringVar(), tk.StringVar(), tk.StringVar(), tk.StringVar()]
+        self.users         = [tk.StringVar(), tk.StringVar(), tk.StringVar(), tk.StringVar(), tk.StringVar()]
+        self.passwords     = [tk.StringVar(), tk.StringVar(), tk.StringVar(), tk.StringVar(), tk.StringVar()]
         self.maxCategory   = tk.IntVar()
         self.minSizeWord   = tk.IntVar()
         self.maxLandings   = tk.IntVar()
@@ -210,8 +234,8 @@ class tagFrontEnd(FrameWork2D):
             passwd.set("")
         self.setWindow = tk.Toplevel()
         self.setWindow.destroy()
-        self.buildTab(0)
-        self.buildTab(1)
+        for index in range(len(TABS_DEFINITION)):
+            self.buildTab(index)
     
     """
     This function allows to get the DSP's credentials without
@@ -314,6 +338,12 @@ class tagFrontEnd(FrameWork2D):
         elif indexTab == 1:
             self.createParameterSection(indexTab)
             self.createPixelSection(indexTab)
+        elif indexTab == 2:
+            self.createParameterSection(indexTab)
+            self.createGTMSection(indexTab)
+        elif indexTab == 3:
+            self.createParameterSection(indexTab)
+            self.createCAPISection(indexTab)
         
     def loadTemple(self):
         self.pathTR.set(filedialog.askopenfilename(title = 'Select a Tagging Request Temple', filetypes=[('XLSX', '*.xlsx *.XLSX')]))
@@ -411,7 +441,7 @@ class tagFrontEnd(FrameWork2D):
             self.agencies.grid(column=1, row=2)
             ttk.Label(parameters_frame, text='Market: ').grid(column=2, row=2, sticky=tk.W)
             self.countries = ttk.Combobox(parameters_frame, state='readonly', font=('Arial',8,'italic'))
-            self.countries['values'] = ['Argentina', 'Brazil', 'Chile', 'Colombia', 'Mexico', 'Peru', 'Puerto Rico', 'Uruguay', 'Venezuela']
+            self.countries['values'] = ['Argentina', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Mexico', 'Miami', 'Peru', 'Puerto Rico', 'Uruguay', 'Venezuela']
             self.countries.set('Colombia')
             self.countries.grid(column=3, row=2)
             ttk.Label(parameters_frame, text="Platform: ").grid(column=4, row=2, sticky=tk.W)
@@ -427,7 +457,10 @@ class tagFrontEnd(FrameWork2D):
             # ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=3, row=2, sticky=tk.W)
             # ttk.Label(parameters_frame, text='Taboola: ').grid(column=4, row=2, sticky=tk.W)
             # ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=6, row=2, sticky=tk.W)
-                
+        elif indexTab == 2:
+            pass
+        elif indexTab == 3:
+            pass   
     def createDataSection(self, indexTab):
         data_label_frame  = ttk.LabelFrame(self.tabs[indexTab], text='Data', width=780, height=295)
         data_label_frame.grid(column = 0, row=1)
@@ -486,6 +519,60 @@ class tagFrontEnd(FrameWork2D):
         ttk.Button(pixel_button_frame, text='exit', command = self.exitCalcTag).grid(column=3, row=0)
         self.createTableData(1)
         
+    def createGTMSection(self, indexTab):
+        GTM_label_frame  = ttk.LabelFrame(self.tabs[indexTab], text='Tags', width=780, height=295)
+        GTM_label_frame.grid(column = 0, row=1)
+        GTM_label_frame.grid_propagate(0)
+        
+        self.GTM_table_frame  = ttk.Frame(GTM_label_frame, borderwidth=3, relief='ridge', width=780, height=230)
+        self.GTM_table_frame.grid(column = 0, row=0)
+        self.GTM_table_frame.grid_propagate(0)
+        # Frame's child data_label_frame
+        GTM_button_frame = ttk.Frame(GTM_label_frame)
+        GTM_button_frame.grid(column = 0, row=1)
+
+        self.btn_pixels = ttk.Button(GTM_button_frame, text='Login', command = self.GTM_threaded)
+        self.btn_pixels.grid(column=0, row=0)
+        
+        self.btn_create = ttk.Button(GTM_button_frame, text='Create', command = self.createPixels_threaded, state = 'disable')
+        self.btn_create.grid(column=1, row=0)
+        
+        self.btn_save_pixels = ttk.Button(GTM_button_frame, text='Save', command = self.savePixels_threaded, state = 'disable')
+        self.btn_save_pixels.grid(column=2, row=0)
+        
+        ttk.Button(GTM_button_frame, text='exit', command = self.exitCalcTag).grid(column=3, row=0)
+        self.createTableData(2)
+    
+    def createCAPISection(self, indexTab):
+        CAPI_label_frame  = ttk.LabelFrame(self.tabs[indexTab], text='Events', width=780, height=295)
+        CAPI_label_frame.grid(column = 0, row=1)
+        CAPI_label_frame.grid_propagate(0)
+        
+        self.CAPI_table_frame  = ttk.Frame(CAPI_label_frame, borderwidth=3, relief='ridge', width=780, height=230)
+        self.CAPI_table_frame.grid(column = 0, row=0)
+        self.CAPI_table_frame.grid_propagate(0)
+        # Frame's child data_label_frame
+        CAPI_button_frame = ttk.Frame(CAPI_label_frame)
+        CAPI_button_frame.grid(column = 0, row=1)
+
+        self.btn_pixels = ttk.Button(CAPI_button_frame, text='Events', command = self.events_threaded)
+        self.btn_pixels.grid(column=0, row=0)
+        
+        self.btn_create = ttk.Button(CAPI_button_frame, text='Create', command = self.createPixels_threaded, state = 'disable')
+        self.btn_create.grid(column=1, row=0)
+        
+        self.btn_save_pixels = ttk.Button(CAPI_button_frame, text='Save', command = self.savePixels_threaded, state = 'disable')
+        self.btn_save_pixels.grid(column=2, row=0)
+        
+        ttk.Button(CAPI_button_frame, text='exit', command = self.exitCalcTag).grid(column=3, row=0)
+        self.createTableData(3)
+    
+    """This method implement a visualization field of data in the diferent funcionalities as Sitemap, Pixels, GTM and CAPI.
+       Parameters:
+            indexTab:   Index that corresponds to the funcionality in each that want to implement the visualization field.
+       Return:
+            None:   None
+    """    
     def createTableData(self, indexTab=0):
         if indexTab == 0:
             self.dataTable = ttk.Treeview(self.data_table_frame, columns=['Landing', 'Path'], selectmode='extended')
@@ -517,6 +604,34 @@ class tagFrontEnd(FrameWork2D):
             self.pixelTable.column('URL/PATH', stretch=True, width=180)
             self.pixelTable.bind("<KeyPress-Delete>",self.deleteBranch)
             self.pixelTable.grid(column=0, row=0, sticky='NESW')
+        elif indexTab == 2:
+            self.GTMTable = ttk.Treeview(self.GTM_table_frame, columns=['Tag Name', 'Trigger', 'Variables', 'URL/PATH'], selectmode='extended')
+            self.GTMTable.heading('#0', text='Category', anchor='w')
+            self.GTMTable.heading('Tag Name', text='Tag Name', anchor='w')
+            self.GTMTable.heading('Trigger', text='Trigger', anchor='w')
+            self.GTMTable.heading('Variables', text='Variables', anchor='w')
+            self.GTMTable.heading('URL/PATH', text='URL/PATH', anchor='w')
+            self.GTMTable.column('#0', stretch=True, width=180)
+            self.GTMTable.column('Tag Name', stretch=True, width=260)
+            self.GTMTable.column('Trigger', stretch=True, width=75)
+            self.GTMTable.column('Variables', stretch=True, width=75)
+            self.GTMTable.column('URL/PATH', stretch=True, width=180)
+            self.GTMTable.bind("<KeyPress-Delete>",self.deleteBranch)
+            self.GTMTable.grid(column=0, row=0, sticky='NESW')
+        elif indexTab == 3:
+            self.CAPITable = ttk.Treeview(self.CAPI_table_frame, columns=['Event Name', 'Trigger', 'Variables', 'URL/PATH'], selectmode='extended')
+            self.CAPITable.heading('#0', text='Category', anchor='w')
+            self.CAPITable.heading('Event Name', text='Event Name', anchor='w')
+            self.CAPITable.heading('Trigger', text='Trigger', anchor='w')
+            self.CAPITable.heading('Variables', text='Variables', anchor='w')
+            self.CAPITable.heading('URL/PATH', text='URL/PATH', anchor='w')
+            self.CAPITable.column('#0', stretch=True, width=180)
+            self.CAPITable.column('Event Name', stretch=True, width=260)
+            self.CAPITable.column('Trigger', stretch=True, width=75)
+            self.CAPITable.column('Variables', stretch=True, width=75)
+            self.CAPITable.column('URL/PATH', stretch=True, width=180)
+            self.CAPITable.bind("<KeyPress-Delete>",self.deleteBranch)
+            self.CAPITable.grid(column=0, row=0, sticky='NESW')
 
     def settingWindow(self):
         self.setWindow = tk.Toplevel(self.root)
@@ -557,7 +672,8 @@ class tagFrontEnd(FrameWork2D):
         ttk.Label(general_frame, text='DV360: ').grid(column=2, row=1, sticky=tk.W)
         ttk.Label(general_frame, text='Taboola: ').grid(column=4, row=1, sticky=tk.W)
         ttk.Label(general_frame, text='Minsights: ').grid(column=0, row=2, sticky=tk.W)
-        ttk.Label(general_frame, text='Show: ').grid(column=2, row=2, sticky=tk.W)
+        ttk.Label(general_frame, text='Facebook: ').grid(column=2, row=2, sticky=tk.W)
+        ttk.Label(general_frame, text='Show: ').grid(column=4, row=2, sticky=tk.W)
         tk.Entry(general_frame, textvariable=self.users[0], font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(row=0, column=1, columnspan=3, sticky=tk.W)
         self.xandr_passwd = tk.Entry(general_frame, textvariable=self.passwords[0], show='*', font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2)
         self.xandr_passwd.grid(column=1, row=1, sticky=tk.W)
@@ -567,7 +683,9 @@ class tagFrontEnd(FrameWork2D):
         self.taboo_passwd.grid(column=5, row=1, sticky=tk.W)
         self.minsi_passwd = tk.Entry(general_frame, textvariable=self.passwords[3], show='*', font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2)
         self.minsi_passwd.grid(column=1, row=2, sticky=tk.W)
-        ttk.Checkbutton(general_frame, command=self.show_credentials, variable=self.show_, onvalue=True, offvalue=False).grid(column=3, row=2, sticky=tk.W)
+        self.meta_passwd  = tk.Entry(general_frame, textvariable=self.passwords[4], show='*', font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2)
+        self.meta_passwd.grid(column=3, row=2, sticky=tk.W)
+        ttk.Checkbutton(general_frame, command=self.show_credentials, variable=self.show_, onvalue=True, offvalue=False).grid(column=5, row=2, sticky=tk.W)
         
         ttk.Button(btn_frame, text='Save', command = self.saveSettings).grid(column=0, row=0)
         self.setExit = ttk.Button(btn_frame, text='exit', command = self.setWindow.destroy, state = 'disable')
@@ -627,7 +745,7 @@ class tagFrontEnd(FrameWork2D):
     def saveSettings(self):
         if self.existAllCredentials:
             self.setExit.configure(state='active')
-        credentials = {'user':self.users[0].get(), 'passwords':{'Xandr':self.passwords[0].get(), 'DV360':self.passwords[1].get(), 'Taboola':self.passwords[2].get(), 'Minsights':self.passwords[3].get()}}
+        credentials = {'user':self.users[0].get(), 'passwords':{'Xandr':self.passwords[0].get(), 'DV360':self.passwords[1].get(), 'Taboola':self.passwords[2].get(), 'Minsights':self.passwords[3].get(), 'Meta':self.passwords[4].get()}}
         with open("platform_credentials.json", "w") as credentials_file:
             json.dump(credentials, credentials_file)  
             
@@ -637,11 +755,13 @@ class tagFrontEnd(FrameWork2D):
             self.dv360_passwd.configure(show='')
             self.taboo_passwd.configure(show='')
             self.minsi_passwd.configure(show='')
+            self.meta_passwd.configure(show='')
         else:
             self.xandr_passwd.configure(show='*')
             self.dv360_passwd.configure(show='*')
             self.taboo_passwd.configure(show='*') 
-            self.minsi_passwd.configure(show='*')       
+            self.minsi_passwd.configure(show='*') 
+            self.meta_passwd.configure(show='*')      
          
     def addItem(self, parent, itemID, data, numTree=0):
         if numTree == 0:
@@ -793,6 +913,12 @@ class tagFrontEnd(FrameWork2D):
     def createPixels_threaded(self): 
         thread = Thread(target = self.createPixels)
         thread.start()
+        
+    def events_threaded(self):
+        self.logInPlatform(LOGIN_PAGES[5], self.users[0].get(), self.passwords[4].get())
+    
+    def GTM_threaded(self):
+        pass
 
     def updateCodeVerify_threaded(self):
         thread = Thread(target = self.updateCodeVerify)
@@ -912,11 +1038,13 @@ class tagFrontEnd(FrameWork2D):
                     pixelType = 'RTG' if self.platforms.get() == 'Xandr Seg' else 'CONV'
                     if self.logInPlatform(LOGIN_PAGES[0], self.users[0].get(), self.passwords[0].get()):
                         self.pixelProgress.set(2)
+                        if not self.pixelBot.setMarketXandr(self.countries.get()): return self.lanchPopUps('Access', "You don't have access to this market", 'Press "Ok" to exit.') 
+                        self.pixelProgress.set(5)
                         if self.pixelBot.existAdvertiserId(self.platforms.get(), self.advertiserId.get()):
                             progress = 0
-                            self.pixelProgress.set(5)
+                            self.pixelProgress.set(7)
                             self.xandrSeg, self.xandrConv = ([], self.xandrConv) if pixelType=='RTG' else (self.xandrSeg, [])
-                            step = (5+85/len(self.arrayPixels)) if len(self.arrayPixels)>0 else 90
+                            step = (7+83/len(self.arrayPixels)) if len(self.arrayPixels)>0 else 90
                             print('Initial Step:', step)
                             for pixel in self.arrayPixels:
                                 if pixelType == 'RTG' and (pixel[6]==None or pixel[6]=='' or pixel[6]=='NO'):
@@ -1150,11 +1278,11 @@ class tagFrontEnd(FrameWork2D):
         Return:
             LogIn:  Boolean
     """         
-    def logInPlatform(self, platform_, user, password):
+    def logInPlatform(self, loginPage, user, password):
         login = False
         windowCode = False
         try_ = 0
-        self.pixelBot.setDriver(platform_)
+        self.pixelBot.setDriver(loginPage)
         while not login:
             login = self.pixelBot.doLogin(user, password)
             #self.pixelBot.authFail = self.pixelBot.auth_alert()
@@ -1167,7 +1295,7 @@ class tagFrontEnd(FrameWork2D):
                 #self.updateCodeVerify()
             elif self.pixelBot.auth_alert(time_=2):
                 if try_<2:
-                    self.pixelBot.setDriver(platform_)
+                    self.pixelBot.setDriver(loginPage)
                     windowCode = False
                     try_+=1
                 else:

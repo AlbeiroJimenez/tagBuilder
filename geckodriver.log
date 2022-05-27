@@ -3127,3 +3127,327 @@ JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a
 JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
 JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
 1652992435637	Marionette	INFO	Stopped listening on port 64047
+1653315727019	geckodriver	INFO	Listening on 127.0.0.1:54445
+1653315730067	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54446" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilei8mzV1"
+1653315730641	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilei8mzV1\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54446/devtools/browser/860a9135-58c5-49bb-8ed3-97558d729012
+1653315733610	Marionette	INFO	Listening on port 54470
+Read port: 54470
+1653315733660	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653316133070	Marionette	INFO	Stopped listening on port 54470
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ging-port" "54544" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileMB9CwR"
+*** You are running in headless mode.
+1653315759124	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileMB9CwR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54544/devtools/browser/2bd41163-97ed-46ae-bdc7-2831f6017c94
+1653315760951	Marionette	INFO	Listening on port 54566
+Read port: 54566
+1653315761052	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653316132034	Marionette	INFO	Stopped listening on port 54566
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1653420342547	geckodriver	INFO	Listening on 127.0.0.1:57841
+1653420345598	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57842" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilehJlKgD"
+1653420346105	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilehJlKgD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57842/devtools/browser/82ff588a-e179-401f-abad-9d03b4d0e512
+1653420348954	Marionette	INFO	Listening on port 57866
+Read port: 57866
+1653420349097	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://invest.xandr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.xandr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://login.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://invest.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://invest.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1653420656968	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://invest.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://invest.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1653420887372	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://invest.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://invest.xandr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1653422616477	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://iph.zoominsoftware.io/widget.js, line 1: WebGL context was lost.
+1653422720303	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1653422838265	Marionette	INFO	Stopped listening on port 57866
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1653579505755	geckodriver	INFO	Listening on 127.0.0.1:52123
+1653579508789	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52124" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilez2XnYn"
+1653579509459	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilez2XnYn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52124/devtools/browser/f3a5f304-c367-4a7a-bf01-f83e317eee70
+1653579512322	Marionette	INFO	Listening on port 52145
+Read port: 52145
+1653579512424	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://business.facebook.com"
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i2_p4/yu/l/es_ES/waujFC3AG07.js?_nc_x=Ij3Wp8lg5Kz, line 20: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://business.facebook.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://business.facebook.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ilM14/yH/l/en_US/B8gNi2SGrbQ.js?_nc_x=92StPt8c0FV, line 158: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1653579700993	Marionette	INFO	Stopped listening on port 52145
+1653579722423	geckodriver	INFO	Listening on 127.0.0.1:52235
+1653579725471	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52236" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilew0iSpB"
+1653579725990	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilew0iSpB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52236/devtools/browser/645e9b62-311b-4e53-9ad3-7b2c5044f7c1
+1653579728883	Marionette	INFO	Listening on port 52259
+Read port: 52259
+1653579728994	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i2_p4/yu/l/es_ES/waujFC3AG07.js?_nc_x=Ij3Wp8lg5Kz, line 20: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3iqES4/yV/l/en_US/mVM6MdvapKe.js?_nc_x=92StPt8c0FV, line 18: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653580342880	Marionette	INFO	Stopped listening on port 52259
+1653593530750	geckodriver	INFO	Listening on 127.0.0.1:60385
+1653593533797	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60386" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile9VQCIy"
+1653593534040	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile9VQCIy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60386/devtools/browser/703031b5-0365-4fc9-8388-4e1d9050578a
+1653593535463	Marionette	INFO	Listening on port 60409
+Read port: 60409
+1653593535581	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.makro.com.co/makro.php, line 132: TypeError: window.cookieconsent is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/6cqjaYtYR5p4aS5jA8U1PYkQZtxk_S9KNOFLKIL9tps.js line 1 > eval line 826 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653593683550	Marionette	INFO	Stopped listening on port 60409
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+cv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+

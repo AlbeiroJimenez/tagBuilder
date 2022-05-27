@@ -32,6 +32,10 @@ PASSWORDS  = {
     'Xandrs': 'xAXIS_2021*!', 'Taboola': 'Xaxis_2021*!', 'DV360': 'Xaxis_2021**'
     }
 
+MARKETS    = {
+    'Argentina': '1893', 'Brazil': '1663', 'Chile': '7534','Colombia': '1892', 'Ecuador': '13135', 'Mexico': '1891', 'Miami': '2038', 'Peru': '7348', 'Puerto Rico': '6982', 'Uruguay': '7535', 'Venezuela': None
+}
+
 class pixelBot:
     def __init__(self):
         self.driver       = None
@@ -68,7 +72,7 @@ class pixelBot:
 
     def setHeadlessMode(self):
         fireFoxOptions = webdriver.FirefoxOptions()
-        fireFoxOptions.headless = True
+        #fireFoxOptions.headless = True
         fireFoxOptions.set_preference("general.useragent.override", USER_AGENT)
         #fireFoxOptions.page_load_strategy = 'eager'
         service = FirefoxService(executable_path=GeckoDriverManager().install())
@@ -623,54 +627,6 @@ class pixelBot:
             iconCustom, iconCustomError = self.getWebElement('XPATH', '//material-icon[@id="open-custom-variables-icon"]')
             if name == -1 or formatt == -1 or typee == -1 or counting == -1 or exclude == -1 or remarketing == -1 or iconCustom == -1: return '401'
             if iconCustom != -1: self.doWebElement(iconCustom[0])
-            
-            #WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//material-button[contains(@class,"search _ngcontent")]')))[0].click()
-            #search = WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[contains(@placeholder,"Search by name or ID")]')))[0]
-            #preURL = self.driver.current_url
-            #search.send_keys(advertiserId)
-            #box = self.driver.find_elements(By.XPATH,'//input[contains(@placeholder,"Search by name or ID")]')[0]
-            #time.sleep(2)
-            #search.send_keys(Keys.ENTER)
-            #print('iniciamos espera')
-            #time.sleep(10)
-            #if self.driver.current_url == preURL:
-                #print(self.driver.current_url)
-                #return "The Advertiser with ID %s, there isn't be!" % advertiserId
-            #marketId, h = re.findall(r'-?\d+\.?\d*',self.driver.current_url)
-            # Details set up
-            #if self.existFloodlight(pixelName, marketId, advertiserId, 10): return "This Floodlight name there be exist yet!"
-            #fragment = 'ng_nav/p/%s/a/%s/fl/details'%(marketId,advertiserId)
-            #self.setDriver(urlparse(self.driver.current_url)._replace(fragment=fragment).geturl())
-            # Process
-            # Create floodlight: Valid last url in the basis details process
-
-            #existU = self.existVariableDV360('u')
-            #existP = self.existVariableDV360('p')
-            # if not existU and not existP:
-            #     self.createCustomVariable_('u')
-            #     time.sleep(5)
-            #     self.createCustomVariable_('p')
-            # elif not existU:
-            #     self.createCustomVariable_('u')
-            # elif not existP:
-            #     self.createCustomVariable_('p')
-            # else:
-            #     time.sleep(5)
-            # time.sleep(10)
-            # fragment = 'ng_nav/p/%s/a/%s/fl/events/new'%(marketId,advertiserId)
-            # self.setDriver(urlparse(self.driver.current_url)._replace(fragment=fragment).geturl())
-            # Process 
-            # WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH, '//div[contains(@id,"entity-type-card-activityWeb")]')))[0].click()
-            # WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH, '//input[contains(@debugid,"acx_177925851_179054344")]')))[0].send_keys(pixelName)
-            # WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH, '//div[contains(text(),"Image tag")]')))[0].click()
-            # WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH, '//div[contains(text(),"Counter")]')))[0].click()
-            # WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH, '//div[contains(text(),"Standard")]')))[0].click()
-            # WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH, '//div[contains(text(),"exclude")]')))[0].click()
-            # WebDriverWait(self.driver, 5).until(EC.visibility_of_any_elements_located((By.XPATH, '//div[contains(text(),"Enable this Display & Video 360 activity for remarketing.")]')))[0].click()
-            # WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH, '//material-icon[@id="open-custom-variables-icon"]')))[0].click()
-            
-            #New way
-            
             if customVariable == 'u/p':
                 existU, indexU = self.existVariable('u')
                 existP, indexP = self.existVariable('p')
@@ -688,26 +644,10 @@ class pixelBot:
             time.sleep(5)
             url = self.driver.current_url
             save, saveError = self.getWebElement('XPATH','//material-button[contains(@id,"save-button")]')
-            #save[0].click()
             if save != -1: self.doWebElement(save[0])
-            # if customVariable == 'u/p':
-            #     existU, indexU = self.existVariable('u')
-            #     existP, indexP = self.existVariable('p')
-            #     custom_check = WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH, '//picker-tree/div/material-checkbox')))
-            #     custom_check[indexU].click()
-            #     custom_check[indexP].click()
-            # else:
-            #     exist, index = self.existVariable(customVariable)
-            #     custom_check = WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH, '//picker-tree/div/material-checkbox')))
-            #     custom_check[index].click()
-            #WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH, '//material-button[contains(@id,"save-button")]')))[1].click()
-            #WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH, '//material-button[contains(@id,"save-button")]')))[0].click()
             alert, error = self.getWebElement('XPATH', '//div[contains(text(),"Floodlight activity name is not unique")]', 1, max_iteractions=10)
             if alert != -1:
-                #time.sleep(10)
-                print('Entramos aquí II')
                 if not self.waitChangeURL(url): return '402'
-                print('Entramos aquí II')
                 try:
                     marketId, advertiserId, floodlightId = re.findall(r'-?\d+\.?\d*',self.driver.current_url)
                 except:
@@ -717,12 +657,9 @@ class pixelBot:
                 fragment = 'ng_nav/p/%s/a/%s/fl/fle/%s/code'%(marketId,advertiserId,floodlightId)
                 self.setDriver(urlparse(self.driver.current_url)._replace(fragment=fragment).geturl())
                 if not self.waitChangeURL(url): return '402'
-                #time.sleep(10)
                 snippet, snippetError = self.getWebElement('XPATH','//div[contains(@class,"mirror-text") and contains(@class,"_ngcontent")]', visible = False)
-                #snippet = self.driver.find_elements(By.XPATH,'//div[contains(@class,"mirror-text") and contains(@class,"_ngcontent")]')[0].get_attribute('textContent')
                 return  snippet
             else:
-                print('Entramos aquí III')
                 snippet = self.getSnippetCode(advertiserId, pixelName, 'DV360')
                 return  snippet
         elif platform == 2 and pixelType=='RTG' and not event_:
@@ -1049,44 +986,6 @@ class pixelBot:
                 
             else:
                 return '401'
-            #self.setDriver('https://displayvideo.google.com/')
-            #WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//material-button[contains(@class,"search _ngcontent")]')))[0].click()
-            #search = WebDriverWait(self.driver, 10).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[contains(@placeholder,"Search by name or ID")]')))[0]
-            #search.send_keys(advertiserId)
-            #time.sleep(2)
-            #search.send_keys(Keys.ENTER)
-            #time.sleep(10)
-            # marketId, h = re.findall(r'-?\d+\.?\d*',self.driver.current_url)
-            # if self.existFloodlight(pixelName, marketId, advertiserId, 10):
-            #     fragment = 'ng_nav/p/%s/a/%s/fl/events'%(marketId,advertiserId)
-            #     self.setDriver(urlparse(self.driver.current_url)._replace(fragment=fragment).geturl())
-            #     time.sleep(10)
-            #     try:
-            #         WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//material-button[contains(@aria-label,"Remove all filters")]')))[0].click()
-            #     except:
-            #         pass
-            #     try:
-            #         floods = WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//div/ess-cell/name-id-cell')))
-            #     except:
-            #         floods = []
-            #     if len(floods)>0:
-            #         for flood in floods:
-            #             floodlightName, floodlightId = flood.text.split('\n')
-            #             if floodlightName == pixelName:
-            #                 fragment = 'ng_nav/p/%s/a/%s/fl/fle/%s/code'%(marketId,advertiserId,floodlightId)
-            #                 self.setDriver(urlparse(self.driver.current_url)._replace(fragment=fragment).geturl())
-            #                 time.sleep(10)
-            #                 snippet = self.driver.find_elements(By.XPATH,'//div[contains(@class,"mirror-text") and contains(@class,"_ngcontent")]')[0].get_attribute('textContent')
-            #                 return snippet
-            #         else:
-            #             return -1
-            #     else:
-            #         return -1
-            # else: 
-            #     return -1
-            #fragment = 'ng_nav/p/%s/a/%s/fl/details'%(marketId,advertiserId)
-            #self.setDriver(urlparse(self.driver.current_url)._replace(fragment=fragment).geturl())
-            #time.sleep(10)
         elif platform == 'Taboola Seg' or platform == 'Taboola Conv':
             pass
         else:
@@ -1276,19 +1175,56 @@ class pixelBot:
                 return -1
         except:
             return -1
-        
+    
+    """This method implement de Market set-up in Xandr DSP.
+            Parameters:
+                market: market that we want to set-up in Xandr DSP.
+            Return:
+                Boolean: True or False if the market set-up was posible.
+    """    
+    def setMarketXandr(self, market):
+        memberId = MARKETS[market]
+        menu, menuError = self.getWebElement('XPATH', '//div[contains(@id, "rightnav")]')
+        if menu != -1: 
+            menuMarket, menuMarketError = self.getWebElement('XPATH', 'ul/li', driver=menu[0])
+            if menuMarket != -1: 
+                if memberId in menuMarket[-1].get_attribute('textContent'): return True
+                self.doWebElement(menuMarket[-1])
+                switch, switchError = self.getWebElement('XPATH', 'div/ul/button', driver=menuMarket[-1])
+                if switch != -1: 
+                    self.doWebElement(switch[0])
+                else:
+                    return False
+            else:
+                return False
+            markets, error = self.getWebElement('XPATH', '//tbody/tr[@class = "nav-lucid-Table-Tr" or contains(@class, "nav-lucid-Table-is-active")]')
+            if markets == -1: return False
+            for market in markets:
+                fields, error = self.getWebElement('XPATH', 'td', driver=market)
+                if fields[2].get_attribute('textContent') == memberId:
+                    if fields[-1].get_attribute('textContent') != 'Default':
+                        self.doWebElement(fields[-1])
+                        self.doWebElement(fields[1])
+                    else:
+                        self.doWebElement(fields[1])
+                        closeIcon, error = self.getWebElement('XPATH', '//button[contains(@class,"nav-lucid-Dialog-close-button")]', timeout_=1, max_iteractions=10)
+                        try:
+                            if closeIcon != -1: self.doWebElement(closeIcon[0])
+                        except:
+                            pass
+                    return True
+            else:
+                closeIcon, error = self.getWebElement('XPATH', '//button[contains(@class,"nav-lucid-Dialog-close-button")]')
+                self.doWebElement(closeIcon[0])
+                return False
+        else:
+            return False
     """
         This method implement a function to search the advertiser in Minsights Platform.
         Return:
             AdvertiserId: String or -1 if the advertiserName there's not exist.     
     """         
     def existMinsightsId(self, advertiserName, advertiserCountry, agency):
-        #self.driver.switch_to.default_content()
-        #self.setDriver('https://amerminsights.mplatform.com/')
-        #WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//i')))[1].click()
-        #WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[contains(@placeholder,"Search")]')))[0].clear()
-        #WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[contains(@placeholder,"Search")]')))[0].send_keys(advertiserCountry)
-        #WebDriverWait(self.driver, 30).until(EC.visibility_of_any_elements_located((By.XPATH,'//input[contains(@placeholder,"Search")]')))[0].send_keys(Keys.ENTER)
         self.setMinsightsAgency(agency)
         self.setMinsightsCountry(advertiserCountry)
         self.setDriver('https://amerminsights.mplatform.com/#client')
