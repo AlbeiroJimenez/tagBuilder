@@ -1,4 +1,4 @@
-from openpyxl import Workbook,load_workbook
+from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment
 from datetime import date as dt
 
@@ -60,6 +60,9 @@ class xlsxFile:
 
     def readCell(self, cell):
         return self.sheet[cell].value
+    
+    def readRangeCell(self):
+        pass
     
     def writeCell(self, cell, value, aligment_=['center','center']):
         self.sheet[cell] = value

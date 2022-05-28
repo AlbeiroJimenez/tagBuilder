@@ -72,7 +72,7 @@ class pixelBot:
 
     def setHeadlessMode(self):
         fireFoxOptions = webdriver.FirefoxOptions()
-        #fireFoxOptions.headless = True
+        fireFoxOptions.headless = True
         fireFoxOptions.set_preference("general.useragent.override", USER_AGENT)
         #fireFoxOptions.page_load_strategy = 'eager'
         service = FirefoxService(executable_path=GeckoDriverManager().install())
