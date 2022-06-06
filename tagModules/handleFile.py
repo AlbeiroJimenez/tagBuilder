@@ -3,6 +3,7 @@ from openpyxl.styles import Alignment
 from datetime import date as dt
 
 from os import path as p
+import re
 
 MONTHS  = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -60,6 +61,38 @@ class xlsxFile:
 
     def readCell(self, cell):
         return self.sheet[cell].value
+    
+    def readNextCell(self, cell, direction='vertical'):
+        """Function to get the value store in the neighborhood cells.
+
+        Args:
+            cell (str): Name cell with excel nomenclature. e.g E32
+            direction (str, optional): Direction of the search of our cell neighborhood. Defaults to 'vertical'.
+
+        Returns:
+            Value Cell: The value stores in the neighborhood cell.
+        """
+        cell = cell.upper()
+        if direction == 'vertical':
+            nextCell = re.findall(r'\D+', cell)[0]+str(int(re.findall(r'\d+', cell)[0])+1)
+            return nextCell, self.readCell(nextCell)
+        else:
+            row, col = int(re.findall(r'\d+', cell)[0]), self.getColIndex(re.findall(r'\D+', cell)[0])+1
+            return self.sheet.cell(row, col).coordinate, self.sheet.cell(row, col).value
+            
+    def getColIndex(self, colString):
+        """Function to mappear from name column domain to numeric column index.
+
+        Args:
+            colString (str): Name of the column in excel format: AAK, A, etc
+
+        Returns:
+            colIndex: column index.
+        """
+        colIndex = 0
+        for c,e in zip(colString, range(len(colString)-1,-1,-1)):
+            colIndex = colIndex + (ord(c)-64)*pow(26, e)
+        return colIndex
     
     def writeCell(self, cell, value, aligment_=['center','center']):
         self.sheet[cell] = value

@@ -214,7 +214,7 @@ class tagFrontEnd(FrameWork2D):
         self.urlAdvertiser.set(self.webDOM.url_target)
         self.advertiser.set(self.xlsxFile.readCell('C13'))
         self.advertiser_.set('')
-        self.advertiserId.set(self.xlsxFile.readCell('C14')) #'1971197'
+        self.advertiserId.set(self.xlsxFile.readCell('C14'))
         self.maxCategory.set(15)
         self.webDOM.setMaxCategories(self.maxCategory.get())
         self.minSizeWord.set(3)
@@ -237,13 +237,13 @@ class tagFrontEnd(FrameWork2D):
         for index in range(len(TABS_DEFINITION)):
             self.buildTab(index)
     
-    """
-    This function allows to get the DSP's credentials without
-    blocking the main GUI at the start the program TagCalc.
-        Return:
-            None: None
-    """
     def _set_credentials_threaded(self):
+        """This function allows to get the DSP's credentials without
+            blocking the main GUI at the start the program TagCalc.
+
+        Returns:
+            None: None
+        """
         thread = Thread(target=self._set_credentials)
         thread.start()
     
@@ -531,14 +531,14 @@ class tagFrontEnd(FrameWork2D):
         GTM_button_frame = ttk.Frame(GTM_label_frame)
         GTM_button_frame.grid(column = 0, row=1)
 
-        self.btn_pixels = ttk.Button(GTM_button_frame, text='Login', command = self.GTM_threaded)
-        self.btn_pixels.grid(column=0, row=0)
+        self.btn_loadTags = ttk.Button(GTM_button_frame, text='Login', command = self.GTM_threaded)
+        self.btn_loadTags.grid(column=0, row=0)
         
-        self.btn_create = ttk.Button(GTM_button_frame, text='Create', command = self.createPixels_threaded, state = 'disable')
-        self.btn_create.grid(column=1, row=0)
+        self.btn_tagging = ttk.Button(GTM_button_frame, text='Create', command = self.createPixels_threaded, state = 'disable')
+        self.btn_tagging.grid(column=1, row=0)
         
-        self.btn_save_pixels = ttk.Button(GTM_button_frame, text='Save', command = self.savePixels_threaded, state = 'disable')
-        self.btn_save_pixels.grid(column=2, row=0)
+        self.btn_save_tags = ttk.Button(GTM_button_frame, text='Save', command = self.savePixels_threaded, state = 'disable')
+        self.btn_save_tags.grid(column=2, row=0)
         
         ttk.Button(GTM_button_frame, text='exit', command = self.exitCalcTag).grid(column=3, row=0)
         self.createTableData(2)
@@ -555,14 +555,14 @@ class tagFrontEnd(FrameWork2D):
         CAPI_button_frame = ttk.Frame(CAPI_label_frame)
         CAPI_button_frame.grid(column = 0, row=1)
 
-        self.btn_pixels = ttk.Button(CAPI_button_frame, text='Events', command = self.events_threaded)
-        self.btn_pixels.grid(column=0, row=0)
+        self.btn_load = ttk.Button(CAPI_button_frame, text='Events', command = self.events_threaded)
+        self.btn_load.grid(column=0, row=0)
         
-        self.btn_create = ttk.Button(CAPI_button_frame, text='Create', command = self.createPixels_threaded, state = 'disable')
-        self.btn_create.grid(column=1, row=0)
+        self.btn_createEvents = ttk.Button(CAPI_button_frame, text='Create', command = self.createPixels_threaded, state = 'disable')
+        self.btn_createEvents.grid(column=1, row=0)
         
-        self.btn_save_pixels = ttk.Button(CAPI_button_frame, text='Save', command = self.savePixels_threaded, state = 'disable')
-        self.btn_save_pixels.grid(column=2, row=0)
+        self.btn_save_events = ttk.Button(CAPI_button_frame, text='Save', command = self.savePixels_threaded, state = 'disable')
+        self.btn_save_events.grid(column=2, row=0)
         
         ttk.Button(CAPI_button_frame, text='exit', command = self.exitCalcTag).grid(column=3, row=0)
         self.createTableData(3)
@@ -870,9 +870,7 @@ class tagFrontEnd(FrameWork2D):
         pass
             
     def loadData(self, dataSections):
-        index_sheet = 4
-        print(len(dataSections))
-        print(self.xlsxFile.book.sheetnames)
+        index_sheet = 5 #before 4
         for dataSection in dataSections:
             self.xlsxFile.setSheet(self.xlsxFile.book.sheetnames[index_sheet])
             nameSection = self.xlsxFile.book.sheetnames[index_sheet]
@@ -886,7 +884,7 @@ class tagFrontEnd(FrameWork2D):
             self.xlsxFile.writeCell('E31', self.xlsxFile.getNameSection(self.advertiser.get(), nameSection))
             self.xlsxFile.loadList(dataSection, 'F30')
             index_sheet += 1
-        self.xlsxFile.setSheet(self.xlsxFile.book.sheetnames[1])
+        self.xlsxFile.setSheet(self.xlsxFile.book.sheetnames[2]) #before 1
         self.xlsxFile.loadList([self.urlAdvertiser.get()], 'F30')
         
     def find_threaded(self):
@@ -1362,58 +1360,46 @@ class tagFrontEnd(FrameWork2D):
         pixels = []
         for sheetname in self.xlsxFile.book.sheetnames:
             self.xlsxFile.setSheet(sheetname)
-            if sheetname == 'Concept Tagging Request ' or sheetname == 'Hoja1' or sheetname == 'Otros':
+            if sheetname in ['Concept Tagging Request ', 'Hoja1', 'Otros', 'Listas']:
                 continue
             if sheetname == 'Home':
-                for i in range(4):
+                flat, cell, indexes = True, 'E31', [1, 0, 3, 2, 5, 6, 7, 8, 9, 10]
+                if self.xlsxFile.readCell(cell) in [None, '']: flat = False
+                while flat:
+                    dataPixel = []
                     pixels.append([])
                     pixels[-1].insert(0,'General')
-                    if i<2:
-                        pixels[-1].append(self.xlsxFile.readCell('E'+str(31+i)))
-                        pixels[-1].append(self.xlsxFile.readCell('D'+str(31+i)))
-                        pixels[-1].append(self.xlsxFile.readCell('G'+str(31+i)))
-                        pixels[-1].append(self.xlsxFile.readCell('F'+str(31+i)))
-                        
-                        pixels[-1].append(self.xlsxFile.readCell('I'+str(31+i)))
-                        pixels[-1].append(self.xlsxFile.readCell('J'+str(31+i)))
-                        pixels[-1].append(self.xlsxFile.readCell('K'+str(31+i)))
-                        pixels[-1].append(self.xlsxFile.readCell('L'+str(31+i)))
-                        pixels[-1].append(self.xlsxFile.readCell('N'+str(31+i)))
-                        pixels[-1].append(self.xlsxFile.readCell('O'+str(31+i)))
-                    else:
-                        pixels[-1].append(self.xlsxFile.readCell('E'+str(31+i+1)))
-                        pixels[-1].append(self.xlsxFile.readCell('D'+str(31+i+1)))
-                        pixels[-1].append(self.xlsxFile.readCell('G'+str(31+i+1)))
-                        pixels[-1].append(self.xlsxFile.readCell('F'+str(31+i+1)))
-                        
-                        pixels[-1].append(self.xlsxFile.readCell('I'+str(31+i+1)))
-                        pixels[-1].append(self.xlsxFile.readCell('J'+str(31+i+1)))
-                        pixels[-1].append(self.xlsxFile.readCell('K'+str(31+i+1)))
-                        pixels[-1].append(self.xlsxFile.readCell('L'+str(31+i+1)))
-                        pixels[-1].append(self.xlsxFile.readCell('N'+str(31+i+1)))
-                        pixels[-1].append(self.xlsxFile.readCell('O'+str(31+i+1)))
+                    row = int(re.findall(r'\d+', cell)[0])
+                    table = self.xlsxFile.sheet._cells_by_row(4, row, 14, row)
+                    for r in table:
+                        for c in r:
+                            dataPixel.append(c.value)
+                    for index in indexes:
+                        pixels[-1].append(dataPixel[index])
+                    cell, value = self.xlsxFile.readNextCell(cell)
+                    if value in [None, '']: flat = False
+            elif sheetname == 'Funnel':
+                pass
             else:
+                dataPixel = []
+                indexes = [1, 0, 3, 2, 5, 6, 7, 8, 9, 10]
                 pixels.append([])
                 pixels[-1].insert(0, sheetname)
-                pixels[-1].append(self.xlsxFile.readCell('E31'))
-                pixels[-1].append(self.xlsxFile.readCell('D31'))
-                pixels[-1].append(self.xlsxFile.readCell('G31'))
-                path_ = urlparse(self.xlsxFile.readCell('F31')).path.split('/')
-                self.webDOM.deleteItemList(path_, '')
-                self.webDOM.deleteSubPaths(path_)
-                try:
-                    pixels[-1].append('/'+path_[0])
-                except:
-                    pixels[-1].append(None)
-                pixels[-1].append(self.xlsxFile.readCell('I31'))
-                pixels[-1].append(self.xlsxFile.readCell('J31'))
-                pixels[-1].append(self.xlsxFile.readCell('K31'))
-                pixels[-1].append(self.xlsxFile.readCell('L31'))
-                pixels[-1].append(self.xlsxFile.readCell('N31'))
-                pixels[-1].append(self.xlsxFile.readCell('O31'))         
-        #print(pixels)
-        for pixel in pixels:
-            print(pixel[4])
+                table = self.xlsxFile.sheet._cells_by_row(4, 31, 14, 31)
+                for r in table:
+                    for c in r:
+                        dataPixel.append(c.value)
+                for index in indexes:
+                    if index == 2:
+                        path_ = urlparse(dataPixel[2]).path.split('/')
+                        self.webDOM.deleteItemList(path_, '')
+                        self.webDOM.deleteSubPaths(path_)
+                        try:
+                            pixels[-1].append('/'+path_[0])
+                        except:
+                            pixels[-1].append(None)
+                    else:
+                        pixels[-1].append(dataPixel[index])        
         return pixels
     
     def save(self):
@@ -1434,16 +1420,16 @@ class tagFrontEnd(FrameWork2D):
             self.xlsxFile.writeCell('F32', 'AllPages')
             self.xlsxFile.writeCell('G32', 'u/p')
             self.xlsxFile.writeCell('E32', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','PV'))
+            self.xlsxFile.writeCell('C33', 'Section')
+            self.xlsxFile.writeCell('D33', 'Scroll')
+            self.xlsxFile.writeCell('F33', 'AllPages')
+            self.xlsxFile.writeCell('G33', 'u/p')
+            self.xlsxFile.writeCell('E33', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','Scroll50'))
             self.xlsxFile.writeCell('C34', 'Section')
-            self.xlsxFile.writeCell('D34', 'Scroll')
+            self.xlsxFile.writeCell('D34', 'Timer')
             self.xlsxFile.writeCell('F34', 'AllPages')
             self.xlsxFile.writeCell('G34', 'u/p')
-            self.xlsxFile.writeCell('E34', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','Scroll50'))
-            self.xlsxFile.writeCell('C35', 'Section')
-            self.xlsxFile.writeCell('D35', 'Timer')
-            self.xlsxFile.writeCell('F35', 'AllPages')
-            self.xlsxFile.writeCell('G35', 'u/p')
-            self.xlsxFile.writeCell('E35', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','T30ss'))
+            self.xlsxFile.writeCell('E34', self.xlsxFile.getNameSection(self.advertiser.get(), 'AllPages','T30ss'))
             self.loadData(self.webDOM.arraySections)
             self.xlsxFile.book.remove(self.xlsxFile.book['Sections'])
             directory = filedialog.askdirectory()
@@ -1462,31 +1448,40 @@ class tagFrontEnd(FrameWork2D):
         self.btn_save_pixels.configure(state='disable')
         snippet_Arrays = {'Xandr Seg': self.xandrSeg, 'Xandr Conv': self.xandrConv, 'DV360': self.DV360, 'Minsights': self.minsights, 'Taboola Seg': self.taboolaSeg, 'Taboola Conv': self.taboolaConv}
         try:
+            flat, cell, pixelsHome = True, 'E31', 1
+            self.xlsxFile.setSheet('Home')
+            if self.xlsxFile.readCell(cell) in [None, '']: flat, pixelsHome = False, 0
+            print(flat)
+            while flat:
+                cell, value = self.xlsxFile.readNextCell(cell)
+                flat, pixelsHome = (False, pixelsHome) if value in [None, ''] else (True, pixelsHome+1)
+            print('El numero de pixeles en sheet home es: ', pixelsHome)
             for DSP in snippet_Arrays:
-                index = 0
+                index, indexSection = 0, 4
+                print('Pixel Setting: ',snippet_Arrays[DSP])    
                 for snippet in snippet_Arrays[DSP]:
-                    if index == 0 or index == 1 or index == 2 or index == 3:
+                    if index<pixelsHome:
                         self.xlsxFile.setSheet('Home')
                         if DSP == 'Xandr Seg': 
-                            cell = 'J3%s'%str(index+1) if index<2 else 'J3%s'%str(index+2)
+                            cell = 'J3%s'%str(index+1)
                             self.xlsxFile.writeCell(cell, snippet)
                         elif DSP == 'Xandr Conv': 
-                            cell = 'K3%s'%str(index+1) if index<2 else 'K3%s'%str(index+2)
+                            cell = 'K3%s'%str(index+1)
                             self.xlsxFile.writeCell(cell, snippet)
                         elif DSP == 'DV360': 
-                            cell = 'L3%s'%str(index+1) if index<2 else 'L3%s'%str(index+2)
+                            cell = 'L3%s'%str(index+1)
                             self.xlsxFile.writeCell(cell, snippet)
                         elif DSP == 'Minsights': 
-                            cell = 'I3%s'%str(index+1) if index<2 else 'I3%s'%str(index+2)
+                            cell = 'I3%s'%str(index+1)
                             self.xlsxFile.writeCell(cell, snippet)
                         elif DSP == 'Taboola Seg': 
-                            cell = 'N3%s'%str(index+1) if index<2 else 'N3%s'%str(index+2)
+                            cell = 'M3%s'%str(index+1)
                             self.xlsxFile.writeCell(cell, snippet)
                         else: 
-                            cell = 'O3%s'%str(index+1) if index<2 else 'O3%s'%str(index+2)
+                            cell = 'N3%s'%str(index+1)
                             self.xlsxFile.writeCell(cell, snippet)
                     else:
-                        self.xlsxFile.setSheet(self.xlsxFile.book.sheetnames[index-1])
+                        self.xlsxFile.setSheet(self.xlsxFile.book.sheetnames[indexSection])
                         if DSP == 'Xandr Seg': 
                             self.xlsxFile.writeCell('J31', snippet)
                         elif DSP == 'Xandr Conv': 
@@ -1496,9 +1491,10 @@ class tagFrontEnd(FrameWork2D):
                         elif DSP == 'Minsights': 
                             self.xlsxFile.writeCell('I31', snippet)
                         elif DSP == 'Taboola Seg': 
-                            self.xlsxFile.writeCell('N31', snippet)
+                            self.xlsxFile.writeCell('M31', snippet)
                         else: 
-                            self.xlsxFile.writeCell('O31', snippet)
+                            self.xlsxFile.writeCell('N31', snippet)
+                        indexSection += 1
                     index += 1  
             directory = filedialog.askdirectory()
             if len(directory) > 0:

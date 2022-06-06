@@ -3451,3 +3451,516 @@ cv, messages will be lost
 
 ###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
 
+1654032832426	geckodriver	INFO	Listening on 127.0.0.1:63315
+1654032835489	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63316" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileo2LKWX"
+1654032835762	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileo2LKWX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63316/devtools/browser/792dc647-fc40-453f-b810-37a3d9c5b2f9
+1654032837291	Marionette	INFO	Listening on port 63340
+Read port: 63340
+1654032837389	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+1654044309720	Marionette	INFO	Stopped listening on port 63340
+4032877670	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "63428" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile3HSErF"
+*** You are running in headless mode.
+1654032877930	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile3HSErF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63428/devtools/browser/3c004f4e-0115-4aa5-bba8-ac7945bdea9e
+1654032878733	Marionette	INFO	Listening on port 63450
+Read port: 63450
+1654032878787	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/artificial-intelligence/, line 581: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/solutions/, line 602: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/services-and-solutions/outcome-media/, line 581: SyntaxError: expected expression, got '<'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654044308362	Marionette	INFO	Stopped listening on port 63450
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1654044411046	geckodriver	INFO	Listening on 127.0.0.1:63254
+1654044414111	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63255" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilebRtA34"
+1654044414379	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilebRtA34\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63255/devtools/browser/0a94f9cb-9116-4c23-a2e9-952e35132c68
+1654044415770	Marionette	INFO	Listening on port 63271
+Read port: 63271
+1654044415891	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+1654044819606	Marionette	INFO	Stopped listening on port 63271
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1654044836839	geckodriver	INFO	Listening on 127.0.0.1:63576
+1654044839888	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63577" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileZzhJOJ"
+1654044840136	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileZzhJOJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63577/devtools/browser/526360d3-0654-4292-85a3-db7fad4a4ae8
+1654044841475	Marionette	INFO	Listening on port 63595
+Read port: 63595
+1654044841570	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+1654044970857	Marionette	INFO	Stopped listening on port 63595
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654044990736	geckodriver	INFO	Listening on 127.0.0.1:63721
+1654044993794	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63722" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileJadncn"
+1654044994037	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileJadncn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63722/devtools/browser/0fd91b38-4473-4ed2-8853-46a582c0da2e
+1654044995444	Marionette	INFO	Listening on port 63742
+Read port: 63742
+1654044995471	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+1654045128655	Marionette	INFO	Stopped listening on port 63742
+1654045564035	geckodriver	INFO	Listening on 127.0.0.1:49865
+1654045567069	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49866" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileI3caI9"
+1654045567445	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileI3caI9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49866/devtools/browser/367bedfd-fd6f-4586-ba25-6f45ec93bee5
+1654045568972	Marionette	INFO	Listening on port 49884
+Read port: 49884
+1654045569077	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+1654053140823	Marionette	INFO	Stopped listening on port 49884
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ging-port" "50097" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileMarZAq"
+*** You are running in headless mode.
+1654045739040	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileMarZAq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50097/devtools/browser/40fe2d6c-3f82-43f7-a226-f8a5968f1070
+1654045739839	Marionette	INFO	Listening on port 50117
+Read port: 50117
+1654045739959	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/artificial-intelligence/, line 581: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/solutions/, line 602: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/services-and-solutions/outcome-media/, line 581: SyntaxError: expected expression, got '<'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654053138066	Marionette	INFO	Stopped listening on port 50117
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1654096894327	geckodriver	INFO	Listening on 127.0.0.1:56979
+1654096897394	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56980" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileQpN7mI"
+1654096898064	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileQpN7mI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56980/devtools/browser/72787317-67b5-4bb9-90e1-14c6d8c0e451
+1654096900969	Marionette	INFO	Listening on port 57004
+Read port: 57004
+1654096901037	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+1654116042695	Marionette	INFO	Stopped listening on port 57004
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ging-port" "57086" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileztWAdx"
+*** You are running in headless mode.
+1654096940404	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileztWAdx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57086/devtools/browser/ccb43c88-2556-437e-87cf-1bcbab4e19c2
+1654096941904	Marionette	INFO	Listening on port 57107
+Read port: 57107
+1654096941970	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/artificial-intelligence/, line 581: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/solutions/, line 602: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/services-and-solutions/outcome-media/, line 581: SyntaxError: expected expression, got '<'
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654116040203	Marionette	INFO	Stopped listening on port 57107
+1654116828375	geckodriver	INFO	Listening on 127.0.0.1:53314
+1654116831433	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53315" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilecGWwnG"
+1654116831962	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilecGWwnG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53315/devtools/browser/ecd110a3-3f3d-4f7a-b8cb-edcc179571a1
+1654116834952	Marionette	INFO	Listening on port 53339
+Read port: 53339
+1654116835008	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+1654117301763	Marionette	INFO	Stopped listening on port 53339
+4116888050	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "53430" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilezJZfcc"
+*** You are running in headless mode.
+1654116888630	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilezJZfcc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53430/devtools/browser/c7942d51-f3e0-4545-879f-bcb62970aee2
+1654116890459	Marionette	INFO	Listening on port 53452
+Read port: 53452
+1654116890530	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/artificial-intelligence/, line 581: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/solutions/, line 602: SyntaxError: expected expression, got '<'
+JavaScript error: https://www.xaxis.com/services-and-solutions/outcome-media/, line 581: SyntaxError: expected expression, got '<'
+1654117299673	Marionette	INFO	Stopped listening on port 53452
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+1654183670545	geckodriver	INFO	Listening on 127.0.0.1:50484
+1654183673626	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50485" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile7vcdCD"
+1654183674017	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile7vcdCD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50485/devtools/browser/972febf8-dfbc-4441-9fe2-f4c331403ea7
+1654183675491	Marionette	INFO	Listening on port 50509
+Read port: 50509
+1654183675593	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1654183990453	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marioneJavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654184578319	Marionette	INFO	Stopped listening on port 50613
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+15.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+1654184578769	Marionette	INFO	Stopped listening on port 50509
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654184886939	geckodriver	INFO	Listening on 127.0.0.1:51290
+1654184890010	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51291" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileHdseRk"
+1654184890272	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileHdseRk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51291/devtools/browser/25fbac63-2d39-409d-b847-4813f7b70ff6
+1654184891636	Marionette	INFO	Listening on port 51311
+Read port: 51311
+1654184891750	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 9: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript error: https://www.xaxis.com/, line 665: SyntaxError: expected expression, got '<'
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1654185702126	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 9: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+1654185709737	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: httpJavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654186327879	Marionette	INFO	Stopped listening on port 51816
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+ome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+1654185991236	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+1654186329146	Marionette	INFO	Stopped listening on port 51311
+1654285321609	geckodriver	INFO	Listening on 127.0.0.1:55001
+1654285324670	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55002" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileakHaCD"
+1654285350459	geckodriver	INFO	Listening on 127.0.0.1:55054
+1654285353538	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55055" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileUUdP98"
+1654285354088	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:55055
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileUUdP98\\search.json.mozlz4", (void 0)))
+1654285357116	Marionette	INFO	Listening on port 55078
+DevTools listening on ws://localhost:55055/devtools/browser/3e6e5a21-fb4c-4a08-80e7-4d6ac754f6e2
+Read port: 55078
+1654285357180	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+1654285996712	Marionette	INFO	Stopped listening on port 55078
+1654286071281	geckodriver	INFO	Listening on 127.0.0.1:55244
+1654286074355	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55245" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileeShwJb"
+1654286074869	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:55245
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileeShwJb\\search.json.mozlz4", (void 0)))
+1654286077858	Marionette	INFO	Listening on port 55269
+Read port: 55269
+1654286077900	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:55245/devtools/browser/bec837c7-c161-42d4-99ef-89551a66e5a7
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 9: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654291109050	Marionette	INFO	Stopped listening on port 55269
+1654291185160	geckodriver	INFO	Listening on 127.0.0.1:55959
+1654291188191	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55960" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileASbUw8"
+1654291188754	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:55960
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofileASbUw8\\search.json.mozlz4", (void 0)))
+1654291191905	Marionette	INFO	Listening on port 55984
+DevTools listening on ws://localhost:55960/devtools/browser/a5b7005a-164a-4461-af4d-e712d330e260
+Read port: 55984
+1654291192024	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 9: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654292208920	Marionette	INFO	Stopped listening on port 55984
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654292795962	geckodriver	INFO	Listening on 127.0.0.1:56203
+1654292799018	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56204" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile9uSHv2"
+1654292799592	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56204
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofile9uSHv2\\search.json.mozlz4", (void 0)))
+1654292802735	Marionette	INFO	Listening on port 56227
+DevTools listening on ws://localhost:56204/devtools/browser/cb0d3131-97c5-479b-b8ba-b3f47bc0517d
+Read port: 56227
+1654292802824	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1654292910706	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654293739373	Marionette	INFO	Stopped listening on port 56227
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654293931892	geckodriver	INFO	Listening on 127.0.0.1:56427
+1654293934936	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56428" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilel4XVq4"
+1654293935493	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56428
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilel4XVq4\\search.json.mozlz4", (void 0)))
+1654293938571	Marionette	INFO	Listening on port 56451
+DevTools listening on ws://localhost:56428/devtools/browser/21db0676-4547-43be-a45d-4d8438245cf5
+Read port: 56451
+1654293938639	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 9: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654294810821	Marionette	INFO	Stopped listening on port 56451
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654294907830	geckodriver	INFO	Listening on 127.0.0.1:56741
+1654294910876	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56742" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilelxYZyb"
+1654294911418	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56742
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ryoma\\AppData\\Local\\Temp\\rust_mozprofilelxYZyb\\search.json.mozlz4", (void 0)))
+1654294914512	Marionette	INFO	Listening on port 56765
+DevTools listening on ws://localhost:56742/devtools/browser/bd763e50-19a5-40f9-94f5-cb5d280a0d82
+Read port: 56765
+1654294914584	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://amerminsights.mplatform.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.1.d607a4313ffc098eb315.js, line 11: TypeError: this.config.widgets is undefined
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 9: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript warning: https://amerminsights.mplatform.com/main.ef2082fdcb3e7228bbcf.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/market/market.main.d607a4313ffc098eb315.js, line 3: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 6: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.main.a86eb8724ccfc555f1b8.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js, line 379: unreachable code after return statement
+JavaScript warning: https://amerminsights.mplatform.com/metadata/metadata.0.a86eb8724ccfc555f1b8.js line 1 > eval, line 379: unreachable code after return statement
+1654379952688	Marionette	INFO	Stopped listening on port 56765
+[Parent 2912, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
