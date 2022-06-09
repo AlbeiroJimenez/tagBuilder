@@ -11,6 +11,7 @@ from tkinter import font
 from tkinter.constants import OFF
 
 from tagModules.pixelBot import pixelBot
+from tagModules.GTM import GTM
 
 MENU_DEFINITION = (
             'File- &New/Ctrl+N/self.newFile, Save/Ctrl+S/self.save_file, SaveAs/Ctrl+Shift+S/self.save_as, sep, Exit/Ctrl+Q/self.exitCalcTag',
@@ -181,6 +182,9 @@ class tagFrontEnd(FrameWork2D):
         self.webDOM        = webDOM
         self.xlsxFile      = xlsxFile
         self.pixelBot      = pixelBot
+        self.gtmService    = None
+        self.gtmAccounts   = []
+        self.gtmContainers = []
         self.arrayPixels   = []
         self.xandrSeg      = []
         self.xandrConv     = []
@@ -188,6 +192,7 @@ class tagFrontEnd(FrameWork2D):
         self.minsights     = []
         self.taboolaSeg    = []
         self.taboolaConv   = []
+        self.typeContainer = tk.StringVar()
         self.pathTR        = tk.StringVar()  
         self.directoryTR   = tk.StringVar()
         self.urlAdvertiser = tk.StringVar()
@@ -209,6 +214,7 @@ class tagFrontEnd(FrameWork2D):
         self._set_credentials_threaded()
 
     def _init_params(self):
+        self.typeContainer.set('')
         self.pathTR.set(self.xlsxFile.PATH)
         self.directoryTR.set("")
         self.urlAdvertiser.set(self.webDOM.url_target)
@@ -378,6 +384,15 @@ class tagFrontEnd(FrameWork2D):
         pass
     
     def createParameterSection(self, indexTab):
+        """This GUI method implement the diferents parameters sections in each funcionality of TagBuilder. 
+
+        Args:
+            indexTab (int): ID that identify each functionality in TagBuilder. 
+                            0 - Sitemap Builder.
+                            1 - Pixel Creator.
+                            2 - GTM Integrator.
+                            3 - CAPI INtegrator.
+        """
         #Parameter Section
         parameters_label_frame = ttk.LabelFrame(self.tabs[indexTab], text='Parameters', width=780, height=100)
         parameters_frame       = ttk.Frame(parameters_label_frame)
@@ -385,10 +400,6 @@ class tagFrontEnd(FrameWork2D):
         
         parameters_label_frame.grid_propagate(0)
         parameters_frame.grid(column = 0, row=0)
-
-        # ttk.Label(parameters_frame, text="Temple TR: ", style = 'BW.TLabel').grid(column=0, row=0)
-        # ttk.Entry(parameters_frame, width=75, textvariable = self.pathTR).grid(column=1, row=0, columnspan=3)
-        # ttk.Button(parameters_frame, text='...', command=self.loadTemple).grid(column=4, row=0)
         
         if indexTab == 0:
             ttk.Label(parameters_frame, text="URL Target:").grid(column=0, row=0, sticky=tk.W)
@@ -458,7 +469,21 @@ class tagFrontEnd(FrameWork2D):
             # ttk.Label(parameters_frame, text='Taboola: ').grid(column=4, row=2, sticky=tk.W)
             # ttk.Checkbutton(parameters_frame, command=self.set_search, variable=self.searchXML, onvalue=False, offvalue=True).grid(column=6, row=2, sticky=tk.W)
         elif indexTab == 2:
-            pass
+            ttk.Label(parameters_frame, text="T.R Final File: ", style = 'BW.TLabel').grid(column=0, row=0)
+            tk.Entry(parameters_frame, width=75, textvariable = self.directoryTR, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=1, row=0, columnspan=4)
+            ttk.Button(parameters_frame, text='...', command=self.loadTR, width=2).grid(column=5, row=0, sticky=tk.NW) 
+            
+            ttk.Label(parameters_frame, text='Client Account: ').grid(column=0, row=1, sticky=tk.W) 
+            self.listAccounts = ttk.Combobox(parameters_frame, state='readonly', font=('Arial',8,'italic'))
+            self.listAccounts['values'] = self.gtmAccounts
+            self.listAccounts.grid(column=1, row=1)
+            ttk.Label(parameters_frame, text= 'Container ID: ').grid(column=2, row=1, sticky=tk.W)
+            self.listContainers = ttk.Combobox(parameters_frame, state='readonly', font=('Arial',8,'italic'))
+            self.listContainers['values'] = self.gtmContainers
+            self.listContainers.grid(column=3, row=1)
+            ttk.Label(parameters_frame, text="Container Type: ").grid(column=4, row=1, sticky=tk.W)
+            tk.Entry(parameters_frame, textvariable=self.typeContainer, font=('Arial',8,'italic'), relief=tk.SUNKEN, borderwidth=2).grid(column=5, row=1, sticky=tk.W)
+            
         elif indexTab == 3:
             pass   
     def createDataSection(self, indexTab):
@@ -531,16 +556,19 @@ class tagFrontEnd(FrameWork2D):
         GTM_button_frame = ttk.Frame(GTM_label_frame)
         GTM_button_frame.grid(column = 0, row=1)
 
-        self.btn_loadTags = ttk.Button(GTM_button_frame, text='Login', command = self.GTM_threaded)
+        self.btn_loadTags = ttk.Button(GTM_button_frame, text='Connect', command = self.gtmConnect_threaded)
         self.btn_loadTags.grid(column=0, row=0)
         
-        self.btn_tagging = ttk.Button(GTM_button_frame, text='Create', command = self.createPixels_threaded, state = 'disable')
+        self.btn_tagging = ttk.Button(GTM_button_frame, text='Load', command = self.tags_threaded, state = 'disable')
         self.btn_tagging.grid(column=1, row=0)
         
-        self.btn_save_tags = ttk.Button(GTM_button_frame, text='Save', command = self.savePixels_threaded, state = 'disable')
-        self.btn_save_tags.grid(column=2, row=0)
+        self.btn_tagging = ttk.Button(GTM_button_frame, text='Create', command = self.createTags_threaded, state = 'disable')
+        self.btn_tagging.grid(column=2, row=0)
         
-        ttk.Button(GTM_button_frame, text='exit', command = self.exitCalcTag).grid(column=3, row=0)
+        self.btn_save_tags = ttk.Button(GTM_button_frame, text='Save', command = self.saveTags_threaded, state = 'disable')
+        self.btn_save_tags.grid(column=3, row=0)
+        
+        ttk.Button(GTM_button_frame, text='exit', command = self.exitCalcTag).grid(column=4, row=0)
         self.createTableData(2)
     
     def createCAPISection(self, indexTab):
@@ -915,7 +943,16 @@ class tagFrontEnd(FrameWork2D):
     def events_threaded(self):
         self.logInPlatform(LOGIN_PAGES[5], self.users[0].get(), self.passwords[4].get())
     
-    def GTM_threaded(self):
+    def gtmConnect_threaded(self):
+        pass
+    
+    def tags_threaded(self):
+        pass
+    
+    def createTags_threaded(self):
+        pass
+    
+    def saveTags_threaded(self):
         pass
 
     def updateCodeVerify_threaded(self):

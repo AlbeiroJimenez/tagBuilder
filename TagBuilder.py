@@ -6,7 +6,7 @@ from tagModules.handleFile import xlsxFile
 
 if __name__ == '__main__':
     webSite = urlDomains('https://www.xaxis.com/')
-    bot     = pixelBot()
+    bot = pixelBot()
     excel = xlsxFile()
     root = tk.Tk()
     tagCalc = tagFrontEnd(root, webSite, excel, bot)

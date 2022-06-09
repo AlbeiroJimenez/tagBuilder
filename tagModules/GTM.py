@@ -8,7 +8,9 @@ from google.cloud import bigquery
 import httplib2
 
 from os import path
-import samples_util as g_util
+from datetime import date as dt
+from tagBuilderTools import Naming
+#import samples_util as g_util
 
 GTM_      = ['https://www.googleapis.com/auth/tagmanager.edit.containers', 'tagmanager', 'v2']
 
@@ -18,14 +20,13 @@ BIGQUERY = ['https://www.googleapis.com/auth/bigquery', 'api-ops-xaxis']
 
 CREDENTIALS = 'client_secrets.json' 
 
-"""This class generate the differents services and clients of the google services.
+FOLDER_NAME = ''
+class googleCloudServices:
+    """This class generate the differents services and clients of the google services.
     GTM, DV360: Handle through service and google client library. 
     BIGQUERY: Handle through client and google cloud library. 
     ADH: TBD
-    Returns:
-        None: None
-"""
-class googleCloudServices:
+    """
     def __init__(self):
         pass
     
@@ -203,18 +204,71 @@ class GTM:
         templates = self.gtm_service.accounts().containers().workspaces().templates().list(parent=workspaceID).execute()
         return templates['template']
     
-    def createAccount(self):
-        pass
-    
     def createContainer(self):
         pass
     
-    def createTag(self):
-        pass
+    def createVariable(self, accountID, containerID, workspaceID, body):
+        """This method implements a variable in GTM Platform
 
+        Args:
+            accountID (string): ID that identifies the client account in GTM.
+            containerID (string): ID that identifies a specific container.
+            workspaceID (string): Workspace ID.
+            body (Variable Dictionary): A dictionary that contains the set-up information about the variable.
+
+        Returns:
+            Tag: The variable element that was created.
+        """
+        workspaceID = 'accounts/%s/containers/%s/workspaces/%s'%(accountID, containerID, workspaceID)
+        return self.gtm_service.accounts().containers().workspaces().variables().create(parent=workspaceID,body=body).execute()
+    
+    def createTrigger(self, accountID, containerID, workspaceID, body):
+        """This method implements a Trigger in GTM Platform
+
+        Args:
+            accountID (string): ID that identifies the client account in GTM.
+            containerID (string): ID that identifies a specific container.
+            workspaceID (string): Workspace ID.
+            body (Trigger Dictionary): A dictionary that contains the set-up information about the trigger.
+
+        Returns:
+            Tag: The trigger element that was created.
+        """
+        workspaceID = 'accounts/%s/containers/%s/workspaces/%s'%(accountID, containerID, workspaceID)
+        return self.gtm_service.accounts().containers().workspaces().triggers().create(parent=workspaceID,body=body).execute()
+    
+    def createTag(self, accountID, containerID, workspaceID, body):
+        """This method implements a Tag in GTM Platform
+
+        Args:
+            accountID (string): ID that identifies the client account in GTM.
+            containerID (string): ID that identifies a specific container.
+            workspaceID (string): Workspace ID.
+            body (Tag Dictionary): A dictionary that contains the set-up information about the tag. 
+
+        Returns:
+            Tag: The tag element that was created.
+        """
+        workspaceID = 'accounts/%s/containers/%s/workspaces/%s'%(accountID, containerID, workspaceID)
+        return self.gtm_service.accounts().containers().workspaces().tags().create(parent=workspaceID,body=body).execute()
+    
+    def createTemple(self):
+        pass
+    
+    def createFolder(self, name):
+        pass
+    
+    def existElement(self, element='Tag'):
+        if element == 'Tag':
+            pass
+        elif element == 'Trigger':
+            pass
+        elif element == 'Variable':
+            pass
+        elif element == 'Template':
+            pass
+        elif element == 'Folder':
+            pass   
+    
 if __name__ == '__main__':
-    #g_util.get_credentials()
     gtm = GTM()
-    gtm.createAccount()
-    googleCloud = googleCloudServices()
-    #gtm = googleCloud.gtmService()
